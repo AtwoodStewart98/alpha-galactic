@@ -1,1 +1,1 @@
-Practice application to practice more Angular and use Angular 4.0.
+Practice application to practice more React and learn to use Redux.

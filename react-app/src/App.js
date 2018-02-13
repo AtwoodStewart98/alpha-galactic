@@ -5,13 +5,28 @@ import "./App.css";
 import router from "./router.js";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      hello: ""
+    };
+
+    this.handleHelloChange = this.handleHelloChange.bind(this);
+  }
+
+  handleHelloChange(event) {
+    this.setState({ hello: event.target.value });
+  }
+
   render() {
-    return (
-      <div className="App">
-        <h1>Hello World!</h1>
-      </div>
-    );
+    return <div>{router}</div>;
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    state
+  };
+}
+
+export default connect(mapStateToProps)(App);

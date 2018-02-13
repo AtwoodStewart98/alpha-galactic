@@ -4,18 +4,17 @@ import { connect } from "react-redux";
 
 import { updateHello } from "../../ducks/reducer.js";
 
-class testPage extends Component {
+class HomePage extends Component {
   render() {
     const { updateHello } = this.props;
 
     return (
       <div>
-        <h1>Hello World!</h1>
         <select onChange={e => updateHello(e.target.value)}>
-          <option type="text" value="Hello!">
+          <option type="text" value="Hello">
             Hello!
           </option>
-          <option type="text" value="Wazzup?">
+          <option type="text" value="Wazzup">
             Wazzup?
           </option>
         </select>{" "}
@@ -32,4 +31,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { updateHello })(testPage);
+export default connect(mapStateToProps, { updateHello })(HomePage);

@@ -1,5 +1,5 @@
 const initialState = {
-  hello: ""
+  hello: "Hello"
 };
 
 const UPDATE_HELLO = "UPDATE_HELLO";

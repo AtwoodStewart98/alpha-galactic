@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
 
+import HeaderFrame from "./components/HeaderFrame/HeaderFrame.js";
 import router from "./router.js";
 
 class App extends Component {
@@ -19,7 +20,12 @@ class App extends Component {
   }
 
   render() {
-    return <div>{router}</div>;
+    return (
+      <div>
+        <HeaderFrame />
+        <div>{router}</div>
+      </div>
+    );
   }
 }
 

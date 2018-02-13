@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import "./App.css";
+import "./react-scss/react-css/App.css";
 
 import HeaderFrame from "./components/HeaderFrame/HeaderFrame.js";
 import router from "./router.js";
@@ -21,7 +21,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <HeaderFrame />
         <div>{router}</div>
       </div>

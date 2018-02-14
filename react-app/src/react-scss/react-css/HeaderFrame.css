@@ -1,0 +1,17 @@
+.header-box h1 {
+  margin: 0;
+  padding: 20px 0px; }
+
+.app-title {
+  text-align: center;
+  color: #8ac6ef;
+  background-color: #8a8a8a; }
+
+.nav-flexer {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  color: #000; }
+  .nav-flexer a {
+    color: #8ac6ef;
+    text-decoration: none; }

@@ -1,0 +1,26 @@
+$my-blue: #8ac6ef;
+$my-background: #8a8a8a;
+
+.header-box {
+  h1 {
+    margin: 0;
+    padding: 20px 0px;
+  }
+}
+
+.app-title {
+  text-align: center;
+  color: $my-blue;
+  background-color: $my-background;
+}
+
+.nav-flexer {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  color: #000;
+  a {
+    color: $my-blue;
+    text-decoration: none;
+  }
+}

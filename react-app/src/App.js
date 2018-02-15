@@ -9,14 +9,30 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      hello: ""
+      questionNumber: 0,
+      alignment: "Lawful Good",
+      alignment2: "Good",
+      alignment3: "Neutral",
+      trueAlignment: "Neutral"
     };
 
-    this.handleHelloChange = this.handleHelloChange.bind(this);
+    this.handleQuestionNumber = this.handleQuestionNumber.bind(this);
+    this.handleAlignment = this.handleAlignment.bind(this);
+    this.handleAlignmentTwo = this.handleAlignmentTwo.bind(this);
+    this.handleAlignmentThree = this.handleAlignmentThree.bind(this);
   }
 
-  handleHelloChange(event) {
-    this.setState({ hello: event.target.value });
+  handleQuestionNumber(value) {
+    this.setState({ questionNumber: value });
+  }
+  handleAlignment(event) {
+    this.setState({ alignment: event.target.value });
+  }
+  handleAlignmentTwo(event) {
+    this.setState({ alignment2: event.target.value });
+  }
+  handleAlignmentThree(event) {
+    this.setState({ alignment3: event.target.value });
   }
 
   render() {

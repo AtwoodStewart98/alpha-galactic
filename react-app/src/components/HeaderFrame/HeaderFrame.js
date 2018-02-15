@@ -4,8 +4,12 @@ import { connect } from "react-redux";
 
 import "../../react-scss/react-css/HeaderFrame.css";
 
+import { updateQuestionNumber } from "../../ducks/reducer.js";
+
 class HeaderFrame extends Component {
   render() {
+    const { updateQuestionNumber } = this.props;
+
     return (
       <div className="header-box">
         <h1 className="app-title">Alpha Galactic Campaign Manager</h1>
@@ -14,7 +18,7 @@ class HeaderFrame extends Component {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <Link to="/characterMaker">
+            <Link to="/characterMaker" onClick={() => updateQuestionNumber(0)}>
               <li>Character Creator</li>
             </Link>
             <Link to="/weaponGenerator">
@@ -31,9 +35,11 @@ class HeaderFrame extends Component {
 }
 
 function mapStateToProps(state) {
+  const { questionNumber } = state;
+
   return {
-    state
+    questionNumber
   };
 }
 
-export default connect(mapStateToProps)(HeaderFrame);
+export default connect(mapStateToProps, { updateQuestionNumber })(HeaderFrame);

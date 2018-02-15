@@ -2,15 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { updateHello } from "../../ducks/reducer.js";
-
 class HomePage extends Component {
   render() {
-    const { updateHello } = this.props;
-
     return (
       <div>
-        <select onChange={e => updateHello(e.target.value)}>
+        <select>
           <option type="text" value="Hello">
             Hello!
           </option>
@@ -24,11 +20,9 @@ class HomePage extends Component {
 }
 
 function mapStateToProps(state) {
-  const { hello } = state;
-
   return {
-    hello
+    state
   };
 }
 
-export default connect(mapStateToProps, { updateHello })(HomePage);
+export default connect(mapStateToProps)(HomePage);

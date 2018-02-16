@@ -3,7 +3,9 @@ const initialState = {
   alignment: "Lawful Good",
   alignment2: "Good",
   alignment3: "Neutral",
-  trueAlignment: "Neutral"
+  trueAlignment: "Neutral",
+  race: "Porturuxean",
+  training: "Military background, learned in heavy arms and battlefield tactics"
 };
 
 const UPDATE_QUESTION = "UPDATE_QUESTION";
@@ -11,6 +13,8 @@ const UPDATE_ALIGNMENT = "UPDATE_ALIGNMENT";
 const UPDATE_ALIGNMENT_TWO = "UPDATE_ALIGNMENT_TWO";
 const UPDATE_ALIGNMENT_THREE = "UPDATE_ALIGNMENT_THREE";
 const UPDATE_TRUE_ALIGNMENT = "UPDATE_TRUE_ALIGNMENT";
+const UPDATE_RACE = "UPDATE_RACE";
+const UPDATE_TRAINING = "UPDATE_TRAINING";
 
 function reducer(state = initialState, action) {
   console.log("REDUCER HIT: Action -> ", action);
@@ -25,6 +29,10 @@ function reducer(state = initialState, action) {
       return Object.assign({}, state, { alignment3: action.payload });
     case UPDATE_TRUE_ALIGNMENT:
       return Object.assign({}, state, { trueAlignment: action.payload });
+    case UPDATE_RACE:
+      return Object.assign({}, state, { race: action.payload });
+    case UPDATE_TRAINING:
+      return Object.assign({}, state, { training: action.payload });
     default:
       return state;
   }
@@ -81,6 +89,20 @@ export function updateTrueAlignment(alignment, alignment2, alignment3) {
       payload: answer
     };
   }
+}
+
+export function updateRace(race) {
+  return {
+    type: UPDATE_RACE,
+    payload: race
+  };
+}
+
+export function updateTraining(training) {
+  return {
+    type: UPDATE_TRAINING,
+    payload: training
+  };
 }
 
 export default reducer;

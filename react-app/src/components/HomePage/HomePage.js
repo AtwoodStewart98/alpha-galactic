@@ -6,14 +6,11 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <select>
-          <option type="text" value="Hello">
-            Hello!
-          </option>
-          <option type="text" value="Wazzup">
-            Wazzup?
-          </option>
-        </select>{" "}
+        <p>
+          Welcome to the Alpha Galactic campaign manager. Build a character,
+          create random encounters, access extensive lore in the universe, and
+          randomly generate weapon drops.
+        </p>
       </div>
     );
   }

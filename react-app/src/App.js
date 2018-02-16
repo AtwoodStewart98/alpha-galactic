@@ -13,13 +13,18 @@ class App extends Component {
       alignment: "Lawful Good",
       alignment2: "Good",
       alignment3: "Neutral",
-      trueAlignment: "Neutral"
+      trueAlignment: "Neutral",
+      race: "Porturuxean",
+      training:
+        "Military background, learned in heavy arms and battlefield tactics"
     };
 
     this.handleQuestionNumber = this.handleQuestionNumber.bind(this);
     this.handleAlignment = this.handleAlignment.bind(this);
     this.handleAlignmentTwo = this.handleAlignmentTwo.bind(this);
     this.handleAlignmentThree = this.handleAlignmentThree.bind(this);
+    this.handleRace = this.handleRace.bind(this);
+    this.handleTraining = this.handleTraining.bind(this);
   }
 
   handleQuestionNumber(value) {
@@ -33,6 +38,12 @@ class App extends Component {
   }
   handleAlignmentThree(event) {
     this.setState({ alignment3: event.target.value });
+  }
+  handleRace(event) {
+    this.setState({ race: event.target.value });
+  }
+  handleTraining(event) {
+    this.setState({ training: event.target.value });
   }
 
   render() {

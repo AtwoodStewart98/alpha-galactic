@@ -21,8 +21,11 @@ class HeaderFrame extends Component {
             <Link to="/characterMaker" onClick={() => updateQuestionNumber(0)}>
               <li>Character Creator</li>
             </Link>
+            <Link to="/">
+              <li>Enemy Encounters</li>
+            </Link>
             <Link to="/weaponGenerator">
-              <li>Random Weapon Generator</li>
+              <li>Weapon Generator</li>
             </Link>
             <Link to="/login">
               <li>Login / Sign Up</li>

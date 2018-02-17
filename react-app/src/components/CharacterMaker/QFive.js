@@ -24,27 +24,72 @@ class QFive extends Component {
             on the battlefield. I am learned in many advanced assault tactics.
           </li>
           <li>
-            Growing up, my homeworld and community did not provide for me or
-            support me in any way, so I had to learn to fend for myself, if
-            sometimes a little dishonestly. I am very streetwise and dodging
-            through the alleys and layouts of the inner cities is second nature
-            to me. I can also establish a rapport with just about anyone
-            who&#39;s as down-to-the-ground as I am.
+            I have researched everything there is to know about the galaxy&#39;s
+            different religions and unnatural phenomena science has failed to
+            explain. My extensive knowledge of theology allows me to gain deeper
+            insights into some of the more bizarre objects I encounter.
           </li>
+          <li>
+            Despite the vast resources available to us in the galaxy, there is
+            still the potential to turn a profit off of scarce technologies and
+            innovative ideas. I know how affect captial in the market, spin a
+            favorable transaction, and entrepreneur economic genius.
+          </li>
+          <li>
+            Numbers and equations practically solve themselves in my head. I
+            have multiple certifications in chemistry, physics, and engineering,
+            all of which contribute to my drive to analyze and explain all
+            natural phenomena in the galaxy. Scientific knowledge now has the
+            potential to unlock our reality&#39;s secrets, and I will be the
+            first to discover them.
+          </li>
+          <li>
+            Individuals are drawn to me, and I am drawn to people. In a day and
+            age where technology and resources separate us somewhat, and we
+            aren&#39;t as acutely aware of our neighbors, I know how to reach
+            out others and empathize with them. I catalyze social change and
+            know how to stand up for my beliefs.
+          </li>
+          <li>Diplomat</li>
+          <li>Ecologist</li>
+          <li>Bard</li>
+          <li>Knight</li>
         </ol>
-        <select>
+        <select onChange={e => updateTraining(e.target.value)}>
           <option
             type="text"
             value="Military background, learned in heavy arms and battlefield tactics"
           >
             1.
           </option>
-          <option type="text" value="type2">
+          <option
+            type="text"
+            value="Religious background, learned in theological lore and mystical artifacts"
+          >
             2.
           </option>
-          <option type="text" value="type3">
+          <option
+            type="text"
+            value="Business background, learned in economics and brainstorming"
+          >
             3.
           </option>
+          <option
+            type="text"
+            value="Scientific background, learned in the hard sciences and critical analysis"
+          >
+            4.
+          </option>
+          <option
+            type="text"
+            value="Activist background, learned in social change and leadership"
+          >
+            5.
+          </option>
+          <option type="text">6.</option>
+          <option type="text">7.</option>
+          <option type="text">8.</option>
+          <option type="text">9.</option>
         </select>
         <br />
         <button onClick={() => updateQuestionNumber(6)}>Next Question</button>
@@ -62,4 +107,7 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { updateQuestionNumber })(QFive);
+export default connect(mapStateToProps, {
+  updateQuestionNumber,
+  updateTraining
+})(QFive);

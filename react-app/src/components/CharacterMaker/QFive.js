@@ -50,7 +50,13 @@ class QFive extends Component {
             out others and empathize with them. I catalyze social change and
             know how to stand up for my beliefs.
           </li>
-          <li>Diplomat</li>
+          <li>
+            From where I come from, I am known as a respected representative or
+            voice of the people&#39;s interests. My understanding of various
+            governances allows me to twist loopholes to my advantage, and gain a
+            legal advantage over my opposition. I know how to lighten a
+            sentence, or give someone a harsher punishment.
+          </li>
           <li>Ecologist</li>
           <li>Bard</li>
           <li>Knight</li>
@@ -86,7 +92,12 @@ class QFive extends Component {
           >
             5.
           </option>
-          <option type="text">6.</option>
+          <option
+            type="text"
+            value="Legal background, learned in legislature and politics"
+          >
+            6.
+          </option>
           <option type="text">7.</option>
           <option type="text">8.</option>
           <option type="text">9.</option>

@@ -15,6 +15,7 @@ class QResults extends Component {
         <h1>Results:</h1>
         <p>Alignment: {this.props.trueAlignment}</p>
         <p>Race: {this.props.race}</p>
+        <p>Experience: {this.props.training}</p>
         <br />
         <button onClick={() => updateQuestionNumber(0)}>Restart</button>
       </div>
@@ -29,7 +30,8 @@ function mapStateToProps(state) {
     alignment2,
     alignment3,
     trueAlignment,
-    race
+    race,
+    training
   } = state;
 
   return {
@@ -38,7 +40,8 @@ function mapStateToProps(state) {
     alignment2,
     alignment3,
     trueAlignment,
-    race
+    race,
+    training
   };
 }
 

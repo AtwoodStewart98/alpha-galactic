@@ -57,7 +57,7 @@ class QFive extends Component {
             legal advantage over my opposition. I know how to lighten a
             sentence, or give someone a harsher punishment.
           </li>
-          <li>Ecologist</li>
+          <li>Living creatures and ecosystems fascinate me. </li>
           <li>Bard</li>
           <li>Knight</li>
         </ol>
@@ -98,7 +98,12 @@ class QFive extends Component {
           >
             6.
           </option>
-          <option type="text">7.</option>
+          <option
+            type="text"
+            value="Ecological background, learned in environmentalism and biology"
+          >
+            7.
+          </option>
           <option type="text">8.</option>
           <option type="text">9.</option>
         </select>

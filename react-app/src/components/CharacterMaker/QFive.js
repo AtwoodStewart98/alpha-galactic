@@ -57,9 +57,22 @@ class QFive extends Component {
             legal advantage over my opposition. I know how to lighten a
             sentence, or give someone a harsher punishment.
           </li>
-          <li>Living creatures and ecosystems fascinate me. </li>
-          <li>Bard</li>
-          <li>Knight</li>
+          <li>
+            In this era, medical science has advanced to the point where
+            previously incurable diseases or severe physical injuries can be
+            completely reversible. But these technologies and medicines still
+            require a hand to utilize these tools, and I am that hand. I know
+            almost all configurations of biology, and what to do when any of it
+            goes wrong.
+          </li>
+          <li>
+            The galaxy is a treasure chest, and I am seeking to open it to find
+            out what riches and experiences lie inside. I have no specific trade
+            or speciality; I wander the galaxy picking up useful information and
+            techniques as I go. I am a jack-of-all-trades who can use a firearm
+            and whatever else I have at my disposal to make it from one day to
+            the next.
+          </li>
         </ol>
         <select onChange={e => updateTraining(e.target.value)}>
           <option
@@ -100,12 +113,16 @@ class QFive extends Component {
           </option>
           <option
             type="text"
-            value="Ecological background, learned in environmentalism and biology"
+            value="Medical background, learned in medicine and sentient biology"
           >
             7.
           </option>
-          <option type="text">8.</option>
-          <option type="text">9.</option>
+          <option
+            type="text"
+            value="Mercenary background, learned in various trades and survival skills"
+          >
+            8.
+          </option>
         </select>
         <br />
         <button onClick={() => updateQuestionNumber(6)}>Next Question</button>

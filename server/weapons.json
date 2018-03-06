@@ -67,17 +67,91 @@
         "reload": -1
       },
       "weapon_types": ["AP", "MP", "SMG", "LMG", "CS", "SS", "GL"],
-      "AP_names": ["Cadet", "Intrigue", "MA-0", "Pepperbox"],
-      "MP_names": ["Auxiliary", "MFP-66"],
-      "SMG_names": ["Oppressor", "PDW-7", "Recon", "Shredder", "Vespine"],
+      "AP_names": ["Cadet", "Holdout", "MA-0", "Pepperbox"],
+      "MP_names": ["Auxiliary", "Flesh Ripper", "Hatred", "MFP-66", "Riot"],
+      "SMG_names": ["Oppressor", "PDW-7", "Recon", "Shredder"],
+      "LMG_names": ["Demolisher", "Halberd", "HSW-69", "Sentry", "Vengeance"],
+      "CS_names": ["Assassin", "Buckshot", "Hammer", "PD-41"],
+      "SS_names": ["Amplifier", "Bane", "Extension", "Justiciar", "MCSR-574"],
+      "GL_names": ["Cannon", "Howitzer", "MEFG-VX", "Minelayer", "Raknahov"]
+    },
+    {
+      "name": "Marx Tech",
+      "modifiers": {
+        "other": "+melee dmg",
+        "preset_acessories": {
+          "AP": "+melee dmg",
+          "SMG": "+rof",
+          "AR": "+rel",
+          "CS": "+2 projectiles",
+          "SS": "+rng when scoped"
+        }
+      },
+      "weapon_types": ["AP", "MP", "SMG", "AR", "CS", "SS"],
+      "AP_names": ["Holdout", "Intrigue", "MA-0", "Pepperbox"],
+      "SMG_names": ["Oppressor", "PDW-7", "Recon", "Vespine"],
       "AR_names": ["Battalion", "Commander", "Reaver", "SSA-87", "Trespasser"],
-      "LMG_names": ["HSW-69", "Sentry", "Vengeance"],
-      "PS_names": ["B-12", "Hunter", "Vanguard"],
+      "CS_names": ["Assassin", "PD-41", "Ranger"],
+      "SS_names": ["Amplifier", "Bane", "Extension", "Justiciar", "MCSR-574"]
+    },
+    {
+      "name": "Natpnot",
+      "modifiers": {
+        "range": -1,
+        "firerate": 2
+      },
+      "weapon_types": ["AP", "MP", "LMG", "PS", "CS", "BS", "SS", "GL", "RL"],
+      "AP_names": ["Cadet", "Holdout", "MA-0", "Pepperbox"],
+      "MP_names": ["Flesh Ripper", "Hatred", "MFP-66", "Riot"],
+      "LMG_names": ["Halberd", "HSW-69", "Sentry", "Vengeance"],
       "CS_names": ["Buckshot", "Hammer", "PD-41", "Ranger"],
-      "BS_names": ["Headhunter", "LRK-48", "Opportunity"],
-      "SS_names": ["Justiciar", "MCSR-574"],
-      "GL_names": ["Howitzer", "MEFG-VX", "Raknahov"],
-      "RL_names": ["BZKD", "Fury", "Mortar", "Quaker"]
+      "SS_names": ["Extension", "Justiciar", "MCSR-574"],
+      "GL_names": ["Cannon", "MEFG-VX", "Minelayer", "Raknahov"]
+    },
+    {
+      "name": "Rawdawg",
+      "modifiers": {
+        "range": -1,
+        "magazine": 1,
+        "other": "+1 ammo consumption, +1 projectile"
+      },
+      "weapon_types": ["RV", "MP", "LMG", "PS", "CS", "RL"],
+      "RV_names": ["ARS-4", "Cobra", "Thief"],
+      "MP_names": ["Flesh Ripper", "Hatred", "MFP-66", "Riot"],
+      "LMG_names": ["Demolisher", "HSW-69", "Vengeance"],
+      "PS_names": ["B-12", "Hunter"],
+      "CS_names": ["Buckshot", "PD-41"],
+      "RL_names": ["BZKD", "Fury", "Liberty", "Mortar", "Quaker"]
+    },
+    {
+      "name": "Thorpe",
+      "modifiers": {
+        "damage": 2,
+        "range": 1,
+        "magazine": -1,
+        "other": "Fires bullets"
+      },
+      "weapon_types": ["RV", "AR", "PS", "BS", "GL"],
+      "RV_names": ["ARS-4", "Cobra", "Relic", "Strongarm", "Thief"],
+      "AR_names": ["Battalion", "Commander", "Reaver", "SSA-87", "Trespasser"],
+      "PS_names": ["B-12", "Backlash", "Crossover", "Hunter", "Vanguard"],
+      "BS_names": ["Epoch", "Headhunter", "LRK-48", "Opportunity", "Uplander"],
+      "GL_names": ["Cannon", "Howitzer", "MEFG-VX", "Minelayer"]
+    },
+    {
+      "name": "Zoragon",
+      "modifiers": {
+        "firerate": -1,
+        "reload": 1
+      },
+      "weapon_types": ["AP", "RV", "SMG", "AR", "PS", "BS", "RL"],
+      "AP_names": ["Cadet", "Holdout", "MA-0", "Pepperbox"],
+      "RV_names": ["ARS-4", "Strongarm", "Thief"],
+      "SMG_names": ["Oppressor", "PDW-7", "Shredder"],
+      "AR_names": ["Battalion", "Commander", "Reaver", "SSA-87", "Trespasser"],
+      "PS_names": ["B-12", "Backlash", "Hunter", "Vanguard"],
+      "BS_names": ["LRK-48", "Opportunity", "Uplander"],
+      "RL_names": ["BZKD", "Liberty", "Quaker"]
     }
   ]
 }

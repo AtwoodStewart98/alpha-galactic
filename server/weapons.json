@@ -1,0 +1,83 @@
+{
+  "manufacturers": [
+    {
+      "name": "Alphernal",
+      "modifiers": {
+        "range": 2,
+        "other": "+dmg on single shot"
+      },
+      "weapon_types": ["RV", "SMG", "AR", "BS", "SS", "RL"],
+      "RV_names": ["ARS-4", "Cobra", "Relic", "Strongarm"],
+      "SMG_names": ["PDW-7", "Recon", "Vespine"],
+      "AR_names": ["Battalion", "Commander", "SSA-87", "Trespasser"],
+      "BS_names": ["Epoch", "Headhunter", "LRK-48", "Opportunity"],
+      "SS_names": ["Justiciar", "MCSR-574"],
+      "RL_names": ["BZKD", "Fury", "Quaker"]
+    },
+    {
+      "name": "Burgnof",
+      "modifiers": {
+        "other": "+stealth"
+      },
+      "weapon_types": [
+        "AP",
+        "MP",
+        "SMG",
+        "AR",
+        "LMG",
+        "PS",
+        "CS",
+        "BS",
+        "SS",
+        "GL",
+        "RL"
+      ],
+      "AP_names": ["Cadet", "Intrigue", "MA-0", "Pepperbox"],
+      "MP_names": ["Auxiliary", "MFP-66"],
+      "SMG_names": ["Oppressor", "PDW-7", "Recon", "Shredder", "Vespine"],
+      "AR_names": ["Battalion", "Commander", "Reaver", "SSA-87", "Trespasser"],
+      "LMG_names": ["HSW-69", "Sentry", "Vengeance"],
+      "PS_names": ["B-12", "Hunter", "Vanguard"],
+      "CS_names": ["Buckshot", "Hammer", "PD-41", "Ranger"],
+      "BS_names": ["Headhunter", "LRK-48", "Opportunity"],
+      "SS_names": ["Justiciar", "MCSR-574"],
+      "GL_names": ["Howitzer", "MEFG-VX", "Raknahov"],
+      "RL_names": ["BZKD", "Fury", "Mortar", "Quaker"]
+    },
+    {
+      "name": "Crustanix",
+      "modifiers": {
+        "damage": -1,
+        "magazine": 2,
+        "other": "Creates blast shield"
+      },
+      "weapon_types": ["AP", "SMG", "AR", "PS", "SS", "GL", "RL"],
+      "AP_names": ["Cadet", "Holdout", "MA-0"],
+      "SMG_names": ["Oppressor", "PDW-7", "Vespine"],
+      "AR_names": ["Reaver", "SSA-87"],
+      "PS_names": ["B-12", "Crossover"],
+      "SS_names": ["Amplifier", "Bane", "MCSR-574"],
+      "GL_names": ["Cannon", "Howitzer", "MEFG-VX", "Minelayer"],
+      "RL_names": ["BZKD", "Mortar"]
+    },
+    {
+      "name": "Hyjakker",
+      "modifiers": {
+        "damage": 1,
+        "reload": -1
+      },
+      "weapon_types": ["AP", "MP", "SMG", "LMG", "CS", "SS", "GL"],
+      "AP_names": ["Cadet", "Intrigue", "MA-0", "Pepperbox"],
+      "MP_names": ["Auxiliary", "MFP-66"],
+      "SMG_names": ["Oppressor", "PDW-7", "Recon", "Shredder", "Vespine"],
+      "AR_names": ["Battalion", "Commander", "Reaver", "SSA-87", "Trespasser"],
+      "LMG_names": ["HSW-69", "Sentry", "Vengeance"],
+      "PS_names": ["B-12", "Hunter", "Vanguard"],
+      "CS_names": ["Buckshot", "Hammer", "PD-41", "Ranger"],
+      "BS_names": ["Headhunter", "LRK-48", "Opportunity"],
+      "SS_names": ["Justiciar", "MCSR-574"],
+      "GL_names": ["Howitzer", "MEFG-VX", "Raknahov"],
+      "RL_names": ["BZKD", "Fury", "Mortar", "Quaker"]
+    }
+  ]
+}

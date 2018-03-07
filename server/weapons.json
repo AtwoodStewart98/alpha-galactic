@@ -17,7 +17,7 @@
     {
       "name": "Burgnof",
       "modifiers": {
-        "other": "+stealth"
+        "stealth": 1
       },
       "weapon_types": [
         "AP",
@@ -78,7 +78,7 @@
     {
       "name": "Marx Tech",
       "modifiers": {
-        "other": "+melee dmg",
+        "melee": 1,
         "preset_acessories": {
           "AP": "+melee dmg",
           "SMG": "+rof",
@@ -173,12 +173,12 @@
           "lvl": 1
         },
         "Holdout": {
-          "other": "No penalties when akimbo",
+          "other": "No penalties when dual-wielding",
           "lvl": 2
         },
         "Intrigue": {
           "range": 1,
-          "other": "+stealth",
+          "stealth": 1,
           "lvl": 6
         },
         "MA-0": {
@@ -205,7 +205,7 @@
           "lvl": 1
         },
         "Cobra": {
-          "other": "+melee dmg",
+          "melee": 1,
           "lvl": 2
         },
         "Relic": {
@@ -214,7 +214,7 @@
         },
         "Strongarm": {
           "range": 1,
-          "other": "+critical",
+          "critical": 1,
           "lvl": 6
         },
         "Thief": {
@@ -250,7 +250,7 @@
         },
         "Hatred": {
           "firerate": -1,
-          "other": "+melee dmg",
+          "melee": 1,
           "lvl": 1
         },
         "MFP-66": {
@@ -292,7 +292,8 @@
           "lvl": 1
         },
         "Vespine": {
-          "other": "+critical, +capacitor effect",
+          "critical": 1,
+          "capacitor": 1,
           "lvl": 6
         }
       }
@@ -310,7 +311,8 @@
       "variants": {
         "Battalion": {
           "range": 1,
-          "other": "Burst-fire only, +critical",
+          "other": "Burst-fire only",
+          "critical": 1,
           "lvl": 2
         },
         "Commander": {
@@ -326,7 +328,7 @@
           "lvl": 1
         },
         "Trespasser": {
-          "other": "High -resist",
+          "resist": -2,
           "lvl": 6
         }
       }
@@ -349,7 +351,7 @@
         },
         "Halberd": {
           "damage": -1,
-          "other": "High +melee dmg",
+          "melee": 2,
           "lvl": 2
         },
         "HSW-69": {
@@ -422,7 +424,7 @@
       "variants": {
         "Assassin": {
           "range": 1,
-          "other": "+critical",
+          "critical": 1,
           "lvl": 6
         },
         "Buckshot": {
@@ -461,11 +463,13 @@
           "damage": 3,
           "range": -2,
           "firerate": 1,
-          "other": "Iron sights, high +KB",
+          "other": "Iron sights",
+          "KB": 2,
           "lvl": 10
         },
         "Headhunter": {
-          "other": "High +critical, +rng when scoped, -rng when not scoped",
+          "other": "+rng when scoped, -rng when not scoped",
+          "critical": 2,
           "lvl": 6
         },
         "LRK-48": {
@@ -494,7 +498,8 @@
       },
       "variants": {
         "Amplifier": {
-          "other": "Always capacitated, high +capacitor effect",
+          "other": "Always capacitated",
+          "capacitor": 2,
           "lvl": 10
         },
         "Bane": {
@@ -529,7 +534,7 @@
       "variants": {
         "Cannon": {
           "damage": 1,
-          "other": "+AoE",
+          "AoE": 1,
           "lvl": 6
         },
         "Howitzer": {
@@ -572,7 +577,7 @@
         },
         "Fury": {
           "range": 2,
-          "other": "+rocket velocity",
+          "rocketvel": 1,
           "lvl": 10
         },
         "Liberty": {
@@ -581,7 +586,8 @@
         },
         "Mortar": {
           "magazine": 1,
-          "other": "Consumes 2 ammo, high +AoE",
+          "other": "Consumes 2 ammo",
+          "AoE": 2,
           "lvl": 6
         },
         "Quaker": {
@@ -589,6 +595,243 @@
           "lvl": 6
         }
       }
+    }
+  ],
+  "missionrewards": [
+    {
+      "name": "The Executioner",
+      "type": "AP",
+      "manufacturer": "Hyjakker",
+      "damage": 3,
+      "range": 150,
+      "firerate": 4,
+      "reload": 2,
+      "magazine": 12,
+      "other": "-dmg at 50ft, high -dmg at 100ft, extreme -dmg at 150ft",
+      "critical": 1
+    },
+    {
+      "name": "General Brisk",
+      "type": "AP",
+      "manufacturer": "Zoragon",
+      "damage": 1,
+      "range": 150,
+      "firerate": 4,
+      "reload": 0,
+      "magazine": 12,
+      "other": "4-round-burst"
+    },
+    {
+      "name": "Haligan's Rage",
+      "type": "AP",
+      "manufacturer": "Marx Tech",
+      "damage": 1.5,
+      "range": 100,
+      "firerate": 5,
+      "reload": 1,
+      "magazine": 12,
+      "other": "1-turn lock-on, aimbot",
+      "melee": 2
+    },
+    {
+      "name": "Crime",
+      "type": "RV",
+      "manufacturer": "Thorpe",
+      "damage": 3.5,
+      "range": 200,
+      "firerate": 2,
+      "reload": 2,
+      "magazine": 5,
+      "other":
+        "Fires bullets, no penalties when dual-wielding, if Punishment is in off-hand, +velocity and +dmg"
+    },
+    {
+      "name": "Magnesium Magma Magnum Mayhem",
+      "type": "RV",
+      "manufacturer": "Rawdawg",
+      "damage": 1.5,
+      "range": 100,
+      "firerate": 2,
+      "reload": 2,
+      "magazine": 8,
+      "other": "Acid & fire, consumes 2 ammo, dmged enemies glow brightly",
+      "projectiles": 2
+    },
+    {
+      "name": "Eno's Escape",
+      "type": "MP",
+      "manufacturer": "Burgnof",
+      "damage": 0.5,
+      "range": 200,
+      "firerate": 12,
+      "reload": 2,
+      "magazine": 20,
+      "other": "No penalties when running, +dmg when running",
+      "stealth": 1
+    },
+    {
+      "name": "The Graveyard",
+      "type": "MP",
+      "manufacturer": "Hyjakker",
+      "damage": 1.5,
+      "range": 150,
+      "firerate": 12,
+      "reload": 3,
+      "magazine": 20
+    },
+    {
+      "name": "No-Clipper",
+      "type": "MP",
+      "manufacturer": "Natpnot",
+      "damage": 0.5,
+      "range": 150,
+      "firerate": 15,
+      "reload": 1,
+      "magazine": 20,
+      "other": "Fire, expend magazine to no-clip through walls"
+    },
+    {
+      "name": "Cobalt Mercenary",
+      "type": "SMG",
+      "manufacturer": "Burgnof",
+      "damage": 1,
+      "range": 400,
+      "firerate": 15,
+      "reload": 2,
+      "magazine": 40,
+      "stealth": 1
+    },
+    {
+      "name": "Frunkunschtene",
+      "type": "SMG",
+      "manufacturer": "Hyjakker",
+      "damage": 1,
+      "range": 350,
+      "firerate": 15,
+      "reload": 3,
+      "magazine": 50,
+      "other":
+        "Consumes 2 ammo, creates blast shield, cannot be accessorized, fires bullets",
+      "stealth": 1,
+      "projectiles": 2,
+      "melee": 1
+    },
+    {
+      "name": "Vortex Aperture",
+      "type": "SMG",
+      "manufacturer": "Alphernal",
+      "damage": 0.5,
+      "range": 450,
+      "firerate": 15,
+      "reload": 2,
+      "magazine": 40,
+      "other":
+        "+rng when firing, empties magazine when scoped, cannot be accessorized"
+    },
+    {
+      "name": "Custom Assault Rifle",
+      "type": "AR",
+      "manufacturer": "Marx Tech",
+      "damage": 1,
+      "range": 1500,
+      "firerate": 12,
+      "reload": 3,
+      "magazine": 24,
+      "other": "Additional accessory slot",
+      "melee": 1
+    },
+    {
+      "name": "Hawkins' Trumpet",
+      "type": "AR",
+      "manufacturer": "Thorpe",
+      "damage": 1.5,
+      "range": 1750,
+      "firerate": 12,
+      "reload": 2,
+      "magazine": 24,
+      "other":
+        "Appears to be a trumpet, bullet modes; Glitch: fires invisible projectiles, Jazz: fires zigzagging projectiles, Swing: fires ricocheting projectiles, fires bullets"
+    },
+    {
+      "name": "The Terrorist",
+      "type": "AR",
+      "manufacturer": "Burgnof",
+      "damage": 1.5,
+      "range": 1750,
+      "firerate": 12,
+      "reload": 3,
+      "magazine": 24,
+      "stealth": 1
+    },
+    {
+      "name": "Corporate Criminal",
+      "type": "LMG",
+      "manufacturer": "Hyjakker",
+      "damage": 2,
+      "range": 1500,
+      "firerate": 8,
+      "reload": 4,
+      "magazine": 80,
+      "other": "On kill, +rng"
+    },
+    {
+      "name": "The Gryphon",
+      "type": "LMG",
+      "manufacturer": "Natpnot",
+      "damage": 1.5,
+      "range": 2000,
+      "firerate": 15,
+      "reload": 3,
+      "magazine": 80
+    },
+    {
+      "name": "Hazard Zone",
+      "type": "LMG",
+      "manufacturer": "Rawdawg",
+      "damage": 1,
+      "range": 1750,
+      "firerate": 8,
+      "reload": 2,
+      "magazine": 100,
+      "other":
+        "Consumes 4 ammo, fires manual detonation projectiles, when reload, projectiles explode",
+      "projectiles": 2
+    },
+    {
+      "name": "HFBS",
+      "type": "PS",
+      "manufacturer": "Rawdawg",
+      "damage": 2,
+      "range": 75,
+      "firerate": 2,
+      "reload": 4,
+      "magazine": 9,
+      "other": "Consumes 3 ammo, fires rockets, never capacitated",
+      "projectiles": 6
+    },
+    {
+      "name": "Multani's Claw",
+      "type": "PS",
+      "manufacturer": "Crustanix",
+      "damage": 1,
+      "range": 150,
+      "firerate": 1,
+      "reload": 2,
+      "magazine": 12,
+      "other": "Creates blast shield, +firerate if force field is down",
+      "projectiles": 10
+    },
+    {
+      "name": "Rocketeer's Backup",
+      "type": "PS",
+      "manufacturer": "Burgnof",
+      "damage": 0.5,
+      "range": 150,
+      "firerate": 1,
+      "reload": 1,
+      "magazine": 4,
+      "other": "+critical when flying",
+      "stealth": 1
     }
   ]
 }

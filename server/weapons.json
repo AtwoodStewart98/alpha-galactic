@@ -113,7 +113,8 @@
       "modifiers": {
         "range": -1,
         "magazine": 1,
-        "other": "+1 ammo consumption, +1 projectile"
+        "other": "+1 ammo consumption",
+        "projectiles": 1
       },
       "weapon_types": ["RV", "MP", "LMG", "PS", "CS", "RL"],
       "RV_names": ["ARS-4", "Cobra", "Thief"],
@@ -152,6 +153,442 @@
       "PS_names": ["B-12", "Backlash", "Hunter", "Vanguard"],
       "BS_names": ["LRK-48", "Opportunity", "Uplander"],
       "RL_names": ["BZKD", "Liberty", "Quaker"]
+    }
+  ],
+  "weapon_classes": [
+    {
+      "id": "AP",
+      "name": "autopistol",
+      "stats": {
+        "damage": 1,
+        "range": 150,
+        "firerate": 4,
+        "reload": 1,
+        "magazine": 12
+      },
+      "variants": {
+        "Cadet": {
+          "damage": 1,
+          "magazine": -1,
+          "lvl": 1
+        },
+        "Holdout": {
+          "other": "No penalties when akimbo",
+          "lvl": 2
+        },
+        "Intrigue": {
+          "range": 1,
+          "other": "+stealth",
+          "lvl": 6
+        },
+        "MA-0": {
+          "lvl": 1
+        },
+        "Pepperbox": {
+          "firerate": 1,
+          "lvl": 2
+        }
+      }
+    },
+    {
+      "id": "RV",
+      "name": "revolver",
+      "stats": {
+        "damage": 2.5,
+        "range": 150,
+        "firerate": 2,
+        "reload": 2,
+        "magazine": 6
+      },
+      "variants": {
+        "ARS-4": {
+          "lvl": 1
+        },
+        "Cobra": {
+          "other": "+melee dmg",
+          "lvl": 2
+        },
+        "Relic": {
+          "damage": 1,
+          "lvl": 2
+        },
+        "Strongarm": {
+          "range": 1,
+          "other": "+critical",
+          "lvl": 6
+        },
+        "Thief": {
+          "reload": 1,
+          "magazine": -1,
+          "lvl": 1
+        }
+      }
+    },
+    {
+      "id": "MP",
+      "name": "machine pistol",
+      "stats": {
+        "damage": 0.5,
+        "range": 150,
+        "firerate": 12,
+        "reload": 2,
+        "magazine": 20
+      },
+      "variants": {
+        "Auxiliary": {
+          "range": 1,
+          "lvl": 2
+        },
+        "Flesh Ripper": {
+          "damage": -1,
+          "range": -2,
+          "firerate": -1,
+          "magazine": 1,
+          "other": "Consumes 2 ammo",
+          "projectiles": 2,
+          "lvl": 2
+        },
+        "Hatred": {
+          "firerate": -1,
+          "other": "+melee dmg",
+          "lvl": 1
+        },
+        "MFP-66": {
+          "lvl": 1
+        },
+        "Riot": {
+          "firerate": 1,
+          "other": "Fires ricocheting projectiles",
+          "lvl": 6
+        }
+      }
+    },
+    {
+      "id": "SMG",
+      "name": "submachine gun",
+      "stats": {
+        "damage": 0.5,
+        "range": 350,
+        "firerate": 15,
+        "reload": 2,
+        "magazine": 40
+      },
+      "variants": {
+        "Oppressor": {
+          "firerate": 1,
+          "lvl": 2
+        },
+        "PDW-7": {
+          "lvl": 1
+        },
+        "Recon": {
+          "range": 1,
+          "lvl": 2
+        },
+        "Shredder": {
+          "range": -1,
+          "reload": -1,
+          "magazine": 2,
+          "lvl": 1
+        },
+        "Vespine": {
+          "other": "+critical, +capacitor effect",
+          "lvl": 6
+        }
+      }
+    },
+    {
+      "id": "AR",
+      "name": "assault rifle",
+      "stats": {
+        "damage": 1,
+        "range": 1500,
+        "firerate": 12,
+        "reload": 3,
+        "magazine": 24
+      },
+      "variants": {
+        "Battalion": {
+          "range": 1,
+          "other": "Burst-fire only, +critical",
+          "lvl": 2
+        },
+        "Commander": {
+          "damage": 1,
+          "lvl": 2
+        },
+        "Reaver": {
+          "firerate": 1,
+          "reload": 1,
+          "lvl": 6
+        },
+        "SSA-87": {
+          "lvl": 1
+        },
+        "Trespasser": {
+          "other": "High -resist",
+          "lvl": 6
+        }
+      }
+    },
+    {
+      "id": "LMG",
+      "name": "light machine gun",
+      "stats": {
+        "damage": 1.5,
+        "range": 2000,
+        "firerate": 8,
+        "reload": 3,
+        "magazine": 80
+      },
+      "variants": {
+        "Demolisher": {
+          "damage": 1,
+          "other": "Fires rockets",
+          "lvl": 6
+        },
+        "Halberd": {
+          "damage": -1,
+          "other": "High +melee dmg",
+          "lvl": 2
+        },
+        "HSW-69": {
+          "lvl": 1
+        },
+        "Sentry": {
+          "range": 1,
+          "magazine": 1,
+          "lvl": 6
+        },
+        "Vengeance": {
+          "range": -2,
+          "firerate": -1,
+          "reload": -1,
+          "other": "Consumes 3 ammo",
+          "projectiles": 3,
+          "lvl": 2
+        }
+      }
+    },
+    {
+      "id": "PS",
+      "name": "pump-action shotgun",
+      "stats": {
+        "damage": 0.5,
+        "range": 150,
+        "firerate": 1,
+        "reload": 2,
+        "magazine": 6,
+        "projectiles": 10
+      },
+      "variants": {
+        "B-12": {
+          "lvl": 1
+        },
+        "Backlash": {
+          "damage": 5,
+          "other": "Consumes 2 ammo",
+          "projectiles": 2,
+          "lvl": 2
+        },
+        "Crossover": {
+          "firerate": 1,
+          "other": "Semiautomatic",
+          "lvl": 6
+        },
+        "Hunter": {
+          "damage": 1,
+          "range": 1,
+          "projectiles": 6,
+          "lvl": 6
+        },
+        "Vanguard": {
+          "magazine": 1,
+          "lvl": 2
+        }
+      }
+    },
+    {
+      "id": "CS",
+      "name": "combat shotgun",
+      "stats": {
+        "damage": 0.5,
+        "range": 150,
+        "firerate": 1,
+        "reload": 3,
+        "magazine": 6,
+        "projectiles": 8
+      },
+      "variants": {
+        "Assassin": {
+          "range": 1,
+          "other": "+critical",
+          "lvl": 6
+        },
+        "Buckshot": {
+          "magazine": 1,
+          "projectiles": 9,
+          "lvl": 6
+        },
+        "Hammer": {
+          "firerate": 1,
+          "other": "2-round burst",
+          "lvl": 2
+        },
+        "PD-41": {
+          "lvl": 1
+        },
+        "Ranger": {
+          "firerate": 1,
+          "reload": 1,
+          "magazine": -1,
+          "lvl": 2
+        }
+      }
+    },
+    {
+      "id": "BS",
+      "name": "bolt-action sniper",
+      "stats": {
+        "damage": 5,
+        "range": 4000,
+        "firerate": 1,
+        "reload": 3,
+        "magazine": 5
+      },
+      "variants": {
+        "Epoch": {
+          "damage": 3,
+          "range": -2,
+          "firerate": 1,
+          "other": "Iron sights, high +KB",
+          "lvl": 10
+        },
+        "Headhunter": {
+          "other": "High +critical, +rng when scoped, -rng when not scoped",
+          "lvl": 6
+        },
+        "LRK-48": {
+          "lvl": 1
+        },
+        "Opportunity": {
+          "damage": 1,
+          "other": "Fires piercing projectiles",
+          "lvl": 6
+        },
+        "Uplander": {
+          "reload": 1,
+          "lvl": 2
+        }
+      }
+    },
+    {
+      "id": "SS",
+      "name": "semiautomatic sniper",
+      "stats": {
+        "damage": 2.5,
+        "range": 2500,
+        "firerate": 2,
+        "reload": 3,
+        "magazine": 8
+      },
+      "variants": {
+        "Amplifier": {
+          "other": "Always capacitated, high +capacitor effect",
+          "lvl": 10
+        },
+        "Bane": {
+          "firerate": 1,
+          "lvl": 2
+        },
+        "Extension": {
+          "magazine": 1,
+          "other": "Fires ricocheting projectiles",
+          "lvl": 6
+        },
+        "Justiciar": {
+          "range": 1,
+          "damage": 1,
+          "lvl": 6
+        },
+        "MCSR-574": {
+          "lvl": 1
+        }
+      }
+    },
+    {
+      "id": "GL",
+      "name": "grenade launcher",
+      "stats": {
+        "damage": 3,
+        "range": 1500,
+        "firerate": 2,
+        "reload": 4,
+        "magazine": 5
+      },
+      "variants": {
+        "Cannon": {
+          "damage": 1,
+          "other": "+AoE",
+          "lvl": 6
+        },
+        "Howitzer": {
+          "range": 1,
+          "firerate": 2,
+          "reload": 1,
+          "magazine": -1,
+          "other": "4-round burst",
+          "lvl": 10
+        },
+        "MFEG-VX": {
+          "lvl": 1
+        },
+        "Minelayer": {
+          "firerate": 1,
+          "other": "Fires sticky landmines",
+          "lvl": 6
+        },
+        "Raknahov": {
+          "firerate": -1,
+          "magazine": 1,
+          "other": "Fires bouncing grenades",
+          "lvl": 2
+        }
+      }
+    },
+    {
+      "id": "RL",
+      "name": "rocket launcher",
+      "stats": {
+        "damage": 6.5,
+        "range": 2500,
+        "firerate": 1,
+        "reload": 4,
+        "magazine": 1
+      },
+      "variants": {
+        "BZKD": {
+          "lvl": 1
+        },
+        "Fury": {
+          "range": 2,
+          "other": "+rocket velocity",
+          "lvl": 10
+        },
+        "Liberty": {
+          "reload": 1,
+          "lvl": 2
+        },
+        "Mortar": {
+          "magazine": 1,
+          "other": "Consumes 2 ammo, high +AoE",
+          "lvl": 6
+        },
+        "Quaker": {
+          "magazine": 2,
+          "lvl": 6
+        }
+      }
     }
   ]
 }

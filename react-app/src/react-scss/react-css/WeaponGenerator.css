@@ -1,0 +1,20 @@
+.weaponGeneratorFlex {
+  display: flex;
+  justify-content: center;
+  border: 3px solid #8ac6ef;
+  background-color: #8a8a8a;
+  margin: auto;
+  width: 80%; }
+  .weaponGeneratorFlex div {
+    border-left: 3px solid #8ac6ef;
+    border-right: 3px solid #8ac6ef;
+    text-align: center;
+    font-weight: bold;
+    width: 10%;
+    height: 60px; }
+
+#weaponName {
+  width: 20%; }
+
+#weaponOther {
+  width: 30%; }

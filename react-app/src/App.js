@@ -16,7 +16,8 @@ class App extends Component {
       trueAlignment: "Neutral",
       race: "Porturuxean",
       training:
-        "Military background, learned in heavy arms and battlefield tactics"
+        "Military background, learned in heavy arms and battlefield tactics",
+      spawnWeapon: {}
     };
 
     this.handleQuestionNumber = this.handleQuestionNumber.bind(this);
@@ -25,6 +26,7 @@ class App extends Component {
     this.handleAlignmentThree = this.handleAlignmentThree.bind(this);
     this.handleRace = this.handleRace.bind(this);
     this.handleTraining = this.handleTraining.bind(this);
+    this.handleWeapon = this.handleWeapon.bind(this);
   }
 
   handleQuestionNumber(value) {
@@ -44,6 +46,19 @@ class App extends Component {
   }
   handleTraining(event) {
     this.setState({ training: event.target.value });
+  }
+  handleWeapon() {
+    this.setState({
+      spawnWeapon: {
+        name: "Burgnof MA-0",
+        damage: "<3",
+        range: 150,
+        firerate: 4,
+        reload: 1,
+        magazine: 12,
+        other: "+stealth, AP"
+      }
+    });
   }
 
   render() {

@@ -1,0 +1,28 @@
+$my-blue: #8ac6ef;
+$my-background: #8a8a8a;
+$grid-border: 3px solid $my-blue;
+
+.weaponGeneratorFlex {
+  display: flex;
+  justify-content: center;
+  border: $grid-border;
+  background-color: $my-background;
+  margin: auto;
+  width: 80%;
+  div {
+    border-left: $grid-border;
+    border-right: $grid-border;
+    text-align: center;
+    font-weight: bold;
+    width: 10%;
+    height: 60px;
+  }
+}
+
+#weaponName {
+  width: 20%;
+}
+
+#weaponOther {
+  width: 30%;
+}

@@ -5,6 +5,8 @@ import "./react-scss/react-css/App.css";
 import HeaderFrame from "./components/HeaderFrame/HeaderFrame.js";
 import router from "./router.js";
 
+import axios from "axios";
+
 class App extends Component {
   constructor() {
     super();
@@ -27,6 +29,7 @@ class App extends Component {
     this.handleRace = this.handleRace.bind(this);
     this.handleTraining = this.handleTraining.bind(this);
     this.handleWeapon = this.handleWeapon.bind(this);
+    this.getGeneratedWeapon = this.getGeneratedWeapon.bind(this);
   }
 
   handleQuestionNumber(value) {
@@ -47,17 +50,15 @@ class App extends Component {
   handleTraining(event) {
     this.setState({ training: event.target.value });
   }
-  handleWeapon() {
-    this.setState({
-      spawnWeapon: {
-        name: "Burgnof MA-0",
-        damage: "<3",
-        range: 150,
-        firerate: 4,
-        reload: 1,
-        magazine: 12,
-        other: "+stealth, AP"
-      }
+  handleWeapon(value) {
+    this.setState({ spawnWeapon: value });
+  }
+  getGeneratedWeapon(event) {
+    event.preventDefault();
+    return axios.get("/generateWeapon").then(response => {
+      this.setState({ spawnWeapon: response.data }).catch(error =>
+        console.log(`Error: ${error}`)
+      );
     });
   }
 

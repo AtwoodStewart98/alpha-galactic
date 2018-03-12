@@ -18,6 +18,7 @@ const UPDATE_TRUE_ALIGNMENT = "UPDATE_TRUE_ALIGNMENT";
 const UPDATE_RACE = "UPDATE_RACE";
 const UPDATE_TRAINING = "UPDATE_TRAINING";
 const UPDATE_WEAPON = "UPDATE_WEAPON";
+const UPDATE_REWARD_WEAPON = "UPDATE_REWARD_WEAPON";
 
 function reducer(state = initialState, action) {
   console.log("REDUCER HIT: Action -> ", action);
@@ -37,6 +38,8 @@ function reducer(state = initialState, action) {
     case UPDATE_TRAINING:
       return Object.assign({}, state, { training: action.payload });
     case UPDATE_WEAPON:
+      return Object.assign({}, state, { spawnWeapon: action.payload });
+    case UPDATE_REWARD_WEAPON:
       return Object.assign({}, state, { spawnWeapon: action.payload });
     default:
       return state;
@@ -111,10 +114,31 @@ export function updateTraining(training) {
 }
 
 export function updateWeapon(spawnWeapon) {
-  let randomVal = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
-  console.log(randomVal);
+  let randomType = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
+  console.log(randomType);
+  let randomVar =
+    randomType.variants[Math.floor(Math.random() * randomType.variants.length)];
+  console.log(randomVar);
+  randomVar.damage = randomType.stats.damage;
+  randomVar.range = randomType.stats.range;
+  randomVar.firerate = randomType.stats.firerate;
+  randomVar.reload = randomType.stats.reload;
+  randomVar.magazine = randomType.stats.magazine;
+  randomVar.prefix =
+    randomVar.manufacs[Math.floor(Math.random() * randomVar.manufacs.length)];
+  randomVar.type = randomType.id;
+  randomVar.lvl =
+    Math.floor(Math.random() * (11 - randomVar.lvl)) + randomVar.lvl;
   return {
     type: UPDATE_WEAPON,
+    payload: randomVar
+  };
+}
+
+export function updateRewardWeapon(spawnWeapon) {
+  let randomVal = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
+  return {
+    type: UPDATE_REWARD_WEAPON,
     payload: randomVal
   };
 }

@@ -106,8 +106,9 @@
         "reload": 1,
         "magazine": 12
       },
-      "variants": {
-        "Cadet": {
+      "variants": [
+        {
+          "name": "Cadet",
           "damage": 1,
           "magazine": -1,
           "manufacs": [
@@ -119,7 +120,8 @@
           ],
           "lvl": 1
         },
-        "Holdout": {
+        {
+          "name": "Holdout",
           "other": "No penalties when dual-wielding",
           "manufacs": [
             "Crustanix",
@@ -130,13 +132,15 @@
           ],
           "lvl": 2
         },
-        "Intrigue": {
+        {
+          "name": "Intrigue",
           "range": 1,
           "stealth": 1,
           "manufacs": ["Burgnof", "Marx Tech"],
           "lvl": 6
         },
-        "MA-0": {
+        {
+          "name": "MA-0",
           "manufacs": [
             "Burgnof",
             "Crustanix",
@@ -147,7 +151,8 @@
           ],
           "lvl": 1
         },
-        "Pepperbox": {
+        {
+          "name": "Pepperbox",
           "firerate": 1,
           "manufacs": [
             "Burgnof",
@@ -158,7 +163,7 @@
           ],
           "lvl": 2
         }
-      }
+      ]
     },
     {
       "id": "RV",
@@ -170,34 +175,39 @@
         "reload": 2,
         "magazine": 6
       },
-      "variants": {
-        "ARS-4": {
+      "variants": [
+        {
+          "name": "ARS-4",
           "manufacs": ["Alphernal", "Rawdawg", "Thorpe", "Zoragon"],
           "lvl": 1
         },
-        "Cobra": {
+        {
+          "name": "Cobra",
           "melee": 1,
           "manufacs": ["Alphernal", "Rawdawg", "Thorpe"],
           "lvl": 2
         },
-        "Relic": {
+        {
+          "name": "Relic",
           "damage": 1,
           "manufacs": ["Alphernal", "Thorpe"],
           "lvl": 2
         },
-        "Strongarm": {
+        {
+          "name": "Strongarm",
           "range": 1,
           "critical": 1,
           "manufacs": ["Alphernal", "Thorpe", "Zoragon"],
           "lvl": 6
         },
-        "Thief": {
+        {
+          "name": "Thief",
           "reload": 1,
           "magazine": -1,
           "manufacs": ["Rawdawg", "Thorpe", "Zoragon"],
           "lvl": 1
         }
-      }
+      ]
     },
     {
       "id": "MP",
@@ -209,13 +219,15 @@
         "reload": 2,
         "magazine": 20
       },
-      "variants": {
-        "Auxiliary": {
+      "variants": [
+        {
+          "name": "Auxiliary",
           "range": 1,
           "manufacs": ["Burgnof", "Hyjakker"],
           "lvl": 2
         },
-        "Flesh Ripper": {
+        {
+          "name": "Flesh Ripper",
           "damage": -1,
           "range": -2,
           "firerate": -1,
@@ -225,23 +237,26 @@
           "manufacs": ["Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 2
         },
-        "Hatred": {
+        {
+          "name": "Hatred",
           "firerate": -1,
           "melee": 1,
           "manufacs": ["Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 1
         },
-        "MFP-66": {
+        {
+          "name": "MFP-66",
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 1
         },
-        "Riot": {
+        {
+          "name": "Riot",
           "firerate": 1,
           "other": "Fires ricocheting projectiles",
           "manufacs": ["Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 6
         }
-      }
+      ]
     },
     {
       "id": "SMG",
@@ -253,8 +268,9 @@
         "reload": 2,
         "magazine": 40
       },
-      "variants": {
-        "Oppressor": {
+      "variants": [
+        {
+          "name": "Oppressor",
           "firerate": 1,
           "manufacs": [
             "Burgnof",
@@ -265,7 +281,8 @@
           ],
           "lvl": 2
         },
-        "PDW-7": {
+        {
+          "name": "PDW-7",
           "manufacs": [
             "Alphernal",
             "Burgnof",
@@ -276,25 +293,28 @@
           ],
           "lvl": 1
         },
-        "Recon": {
+        {
+          "name": "Recon",
           "range": 1,
           "manufacs": ["Alphernal", "Burgnof", "Hyjakker", "Marx Tech"],
           "lvl": 2
         },
-        "Shredder": {
+        {
+          "name": "Shredder",
           "range": -1,
           "reload": -1,
           "magazine": 2,
           "manufacs": ["Burgnof", "Hyjakker", "Zoragon"],
           "lvl": 1
         },
-        "Vespine": {
+        {
+          "name": "Vespine",
           "critical": 1,
           "capacitor": 1,
           "manufacs": ["Alphernal", "Burgnof", "Crustanix", "Marx Tech"],
           "lvl": 6
         }
-      }
+      ]
     },
     {
       "id": "AR",
@@ -306,8 +326,9 @@
         "reload": 3,
         "magazine": 24
       },
-      "variants": {
-        "Battalion": {
+      "variants": [
+        {
+          "name": "Battalion",
           "range": 1,
           "other": "Burst-fire only",
           "critical": 1,
@@ -320,7 +341,8 @@
           ],
           "lvl": 2
         },
-        "Commander": {
+        {
+          "name": "Commander",
           "damage": 1,
           "manufacs": [
             "Alphernal",
@@ -331,7 +353,8 @@
           ],
           "lvl": 2
         },
-        "Reaver": {
+        {
+          "name": "Reaver",
           "firerate": 1,
           "reload": 1,
           "manufacs": [
@@ -343,7 +366,8 @@
           ],
           "lvl": 6
         },
-        "SSA-87": {
+        {
+          "name": "SSA-87",
           "manufacs": [
             "Alphernal",
             "Burgnof",
@@ -354,7 +378,8 @@
           ],
           "lvl": 1
         },
-        "Trespasser": {
+        {
+          "name": "Trespasser",
           "resist": -2,
           "manufacs": [
             "Alphernal",
@@ -365,7 +390,7 @@
           ],
           "lvl": 6
         }
-      }
+      ]
     },
     {
       "id": "LMG",
@@ -377,30 +402,35 @@
         "reload": 3,
         "magazine": 80
       },
-      "variants": {
-        "Demolisher": {
+      "variants": [
+        {
+          "name": "Demolisher",
           "damage": 1,
           "other": "Fires rockets",
           "manufacs": ["Hyjakker", "Rawdawg"],
           "lvl": 6
         },
-        "Halberd": {
+        {
+          "name": "Halberd",
           "damage": -1,
           "melee": 2,
           "manufacs": ["Hyjakker", "Natpnot"],
           "lvl": 2
         },
-        "HSW-69": {
+        {
+          "name": "HSW-69",
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 1
         },
-        "Sentry": {
+        {
+          "name": "Sentry",
           "range": 1,
           "magazine": 1,
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot"],
           "lvl": 6
         },
-        "Vengeance": {
+        {
+          "name": "Vengeance",
           "range": -2,
           "firerate": -1,
           "reload": -1,
@@ -409,7 +439,7 @@
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 2
         }
-      }
+      ]
     },
     {
       "id": "PS",
@@ -422,37 +452,42 @@
         "magazine": 6,
         "projectiles": 10
       },
-      "variants": {
-        "B-12": {
+      "variants": [
+        {
+          "name": "B-12",
           "manufacs": ["Burgnof", "Crustanix", "Rawdawg", "Thorpe", "Zoragon"],
           "lvl": 1
         },
-        "Backlash": {
+        {
+          "name": "Backlash",
           "damage": 5,
           "other": "Consumes 2 ammo",
           "projectiles": 2,
           "manufacs": ["Thorpe", "Zoragon"],
           "lvl": 2
         },
-        "Crossover": {
+        {
+          "name": "Crossover",
           "firerate": 1,
           "other": "Semiautomatic",
           "manufacs": ["Crustanix", "Thorpe"],
           "lvl": 6
         },
-        "Hunter": {
+        {
+          "name": "Hunter",
           "damage": 1,
           "range": 1,
           "projectiles": 6,
           "manufacs": ["Burgnof", "Rawdawg", "Thorpe", "Zoragon"],
           "lvl": 6
         },
-        "Vanguard": {
+        {
+          "name": "Vanguard",
           "magazine": 1,
           "manufacs": ["Burgnof", "Thorpe", "Zoragon"],
           "lvl": 2
         }
-      }
+      ]
     },
     {
       "id": "CS",
@@ -465,26 +500,30 @@
         "magazine": 6,
         "projectiles": 8
       },
-      "variants": {
-        "Assassin": {
+      "variants": [
+        {
+          "name": "Assassin",
           "range": 1,
           "critical": 1,
           "manufacs": ["Hyjakker", "Marx Tech"],
           "lvl": 6
         },
-        "Buckshot": {
+        {
+          "name": "Buckshot",
           "magazine": 1,
           "projectiles": 9,
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 6
         },
-        "Hammer": {
+        {
+          "name": "Hammer",
           "firerate": 1,
           "other": "2-round burst",
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot"],
           "lvl": 2
         },
-        "PD-41": {
+        {
+          "name": "PD-41",
           "manufacs": [
             "Burgnof",
             "Hyjakker",
@@ -494,14 +533,15 @@
           ],
           "lvl": 1
         },
-        "Ranger": {
+        {
+          "name": "Ranger",
           "firerate": 1,
           "reload": 1,
           "magazine": -1,
           "manufacs": ["Burgnof", "Marx Tech", "Natpnot"],
           "lvl": 2
         }
-      }
+      ]
     },
     {
       "id": "BS",
@@ -513,8 +553,9 @@
         "reload": 3,
         "magazine": 5
       },
-      "variants": {
-        "Epoch": {
+      "variants": [
+        {
+          "name": "Epoch",
           "damage": 3,
           "range": -2,
           "firerate": 1,
@@ -523,28 +564,32 @@
           "manufacs": ["Alphernal", "Thorpe"],
           "lvl": 10
         },
-        "Headhunter": {
+        {
+          "name": "Headhunter",
           "other": "+rng when scoped, -rng when not scoped",
           "critical": 2,
           "manufacs": ["Alphernal", "Burgnof", "Thorpe"],
           "lvl": 6
         },
-        "LRK-48": {
+        {
+          "name": "LRK-48",
           "manufacs": ["Alphernal", "Burgnof", "Thorpe", "Zoragon"],
           "lvl": 1
         },
-        "Opportunity": {
+        {
+          "name": "Opportunity",
           "damage": 1,
           "other": "Fires piercing projectiles",
           "manufacs": ["Alphernal", "Burgnof", "Thorpe", "Zoragon"],
           "lvl": 6
         },
-        "Uplander": {
+        {
+          "name": "Uplander",
           "reload": 1,
           "manufacs": ["Thorpe", "Zoragon"],
           "lvl": 2
         }
-      }
+      ]
     },
     {
       "id": "SS",
@@ -556,25 +601,29 @@
         "reload": 3,
         "magazine": 8
       },
-      "variants": {
-        "Amplifier": {
+      "variants": [
+        {
+          "name": "Amplifier",
           "other": "Always capacitated",
           "capacitor": 2,
           "manufacs": ["Crustanix", "Hyjakker", "Marx Tech"],
           "lvl": 10
         },
-        "Bane": {
+        {
+          "name": "Bane",
           "firerate": 1,
           "manufacs": ["Crustanix", "Hyjakker", "Marx Tech"],
           "lvl": 2
         },
-        "Extension": {
+        {
+          "name": "Extension",
           "magazine": 1,
           "other": "Fires ricocheting projectiles",
           "manufacs": ["Hyjakker", "Marx Tech", "Natpnot"],
           "lvl": 6
         },
-        "Justiciar": {
+        {
+          "name": "Justiciar",
           "range": 1,
           "damage": 1,
           "manufacs": [
@@ -586,7 +635,8 @@
           ],
           "lvl": 6
         },
-        "MCSR-574": {
+        {
+          "name": "MCSR-574",
           "manufacs": [
             "Alphernal",
             "Burgnof",
@@ -597,7 +647,7 @@
           ],
           "lvl": 1
         }
-      }
+      ]
     },
     {
       "id": "GL",
@@ -609,14 +659,16 @@
         "reload": 4,
         "magazine": 5
       },
-      "variants": {
-        "Cannon": {
+      "variants": [
+        {
+          "name": "Cannon",
           "damage": 1,
           "AoE": 1,
           "manufacs": ["Crustanix", "Hyjakker", "Natpnot", "Thorpe"],
           "lvl": 6
         },
-        "Howitzer": {
+        {
+          "name": "Howitzer",
           "range": 1,
           "firerate": 2,
           "reload": 1,
@@ -625,24 +677,27 @@
           "manufacs": ["Burgnof", "Crustanix", "Hyjakker", "Thorpe"],
           "lvl": 10
         },
-        "MFEG-VX": {
+        {
+          "name": "MFEG-VX",
           "manufacs": ["Burgnof", "Crustanix", "Hyjakker", "Natpnot", "Thorpe"],
           "lvl": 1
         },
-        "Minelayer": {
+        {
+          "name": "Minelayer",
           "firerate": 1,
           "other": "Fires sticky landmines",
           "manufacs": ["Crustanix", "Hyjakker", "Natpnot", "Thorpe"],
           "lvl": 6
         },
-        "Raknahov": {
+        {
+          "name": "Raknahov",
           "firerate": -1,
           "magazine": 1,
           "other": "Fires bouncing grenades",
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot"],
           "lvl": 2
         }
-      }
+      ]
     },
     {
       "id": "RL",
@@ -654,8 +709,9 @@
         "reload": 4,
         "magazine": 1
       },
-      "variants": {
-        "BZKD": {
+      "variants": [
+        {
+          "name": "BZKD",
           "manufacs": [
             "Alphernal",
             "Burgnof",
@@ -665,30 +721,34 @@
           ],
           "lvl": 1
         },
-        "Fury": {
+        {
+          "name": "Fury",
           "range": 2,
           "velocity": 1,
           "manufacs": ["Alphernal", "Burgnof", "Rawdawg"],
           "lvl": 10
         },
-        "Liberty": {
+        {
+          "name": "Liberty",
           "reload": 1,
           "manufacs": ["Rawdawg", "Zoragon"],
           "lvl": 2
         },
-        "Mortar": {
+        {
+          "name": "Mortar",
           "magazine": 1,
           "other": "Consumes 2 ammo",
           "AoE": 2,
           "manufacs": ["Burgnof", "Crustanix", "Rawdawg"],
           "lvl": 6
         },
-        "Quaker": {
+        {
+          "name": "Quaker",
           "magazine": 2,
           "manufacs": ["Alphernal", "Burgnof", "Rawdawg", "Zoragon"],
           "lvl": 6
         }
-      }
+      ]
     }
   ],
   "missionrewards": [

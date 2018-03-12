@@ -19,36 +19,6 @@ class App extends Component {
         "Military background, learned in heavy arms and battlefield tactics",
       spawnWeapon: {}
     };
-
-    this.handleQuestionNumber = this.handleQuestionNumber.bind(this);
-    this.handleAlignment = this.handleAlignment.bind(this);
-    this.handleAlignmentTwo = this.handleAlignmentTwo.bind(this);
-    this.handleAlignmentThree = this.handleAlignmentThree.bind(this);
-    this.handleRace = this.handleRace.bind(this);
-    this.handleTraining = this.handleTraining.bind(this);
-    this.handleWeapon = this.handleWeapon.bind(this);
-  }
-
-  handleQuestionNumber(value) {
-    this.setState({ questionNumber: value });
-  }
-  handleAlignment(event) {
-    this.setState({ alignment: event.target.value });
-  }
-  handleAlignmentTwo(event) {
-    this.setState({ alignment2: event.target.value });
-  }
-  handleAlignmentThree(event) {
-    this.setState({ alignment3: event.target.value });
-  }
-  handleRace(event) {
-    this.setState({ race: event.target.value });
-  }
-  handleTraining(event) {
-    this.setState({ training: event.target.value });
-  }
-  handleWeapon(value) {
-    this.setState({ spawnWeapon: value });
   }
 
   render() {

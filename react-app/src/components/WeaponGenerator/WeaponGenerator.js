@@ -3,12 +3,12 @@ import { connect } from "react-redux";
 
 import "../../react-scss/react-css/WeaponGenerator.css";
 
-import { updateWeapon } from "../../ducks/reducer.js";
+import { updateWeapon, updateRewardWeapon } from "../../ducks/reducer.js";
 import weapons from "../../weapons.json";
 
 class WeaponGenerator extends Component {
   render() {
-    const { updateWeapon, spawnWeapon } = this.props;
+    const { updateWeapon, updateRewardWeapon, spawnWeapon } = this.props;
     let AoE = null;
     if (spawnWeapon.AoE === 1) {
       AoE = "+AoE";
@@ -87,7 +87,10 @@ class WeaponGenerator extends Component {
           </div>
         </div>
         <div className="weaponGeneratorFlexBottom">
-          <div id="weaponName">{spawnWeapon.name}</div>
+          <div id="weaponName">
+            <i>{spawnWeapon.prefix ? spawnWeapon.prefix + " " : null}</i>
+            {spawnWeapon.name}
+          </div>
           <div>{spawnWeapon.damage}</div>
           <div>{spawnWeapon.range}</div>
           <div>{spawnWeapon.firerate}</div>
@@ -108,13 +111,13 @@ class WeaponGenerator extends Component {
                 ? spawnWeapon.manufacturer + ", "
                 : null}
             </i>
-            {spawnWeapon.type}
+            {spawnWeapon.type} {spawnWeapon.lvl}
           </div>
         </div>
         <button onClick={() => updateWeapon(weapons.weapon_classes)}>
           Generate a Random Weapon
         </button>
-        <button onClick={() => updateWeapon(weapons.missionrewards)}>
+        <button onClick={() => updateRewardWeapon(weapons.missionrewards)}>
           Generate a Reward Weapon
         </button>
       </div>
@@ -130,4 +133,6 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { updateWeapon })(WeaponGenerator);
+export default connect(mapStateToProps, { updateWeapon, updateRewardWeapon })(
+  WeaponGenerator
+);

@@ -25,6 +25,15 @@ app.use(
 // app.use(passport.initialize());
 // app.use(passport.session());
 
+app.get("/generateWeapon", (req, res, next) => {
+  const weapons = app.get("weapons");
+  let spawnedWeapon = {};
+  weapons.then(response => {
+    console.log(response);
+    JSON.parse(response);
+  });
+});
+
 app.listen(port, () => {
   console.log(`It's Over ${port}!`);
 });

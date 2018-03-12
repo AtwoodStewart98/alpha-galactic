@@ -4,24 +4,66 @@ import { connect } from "react-redux";
 import "../../react-scss/react-css/WeaponGenerator.css";
 
 import { updateWeapon } from "../../ducks/reducer.js";
+import weapons from "../../weapons.json";
 
 class WeaponGenerator extends Component {
   render() {
-    const { updateWeapon } = this.props;
-    const testWeapon = {
-      name: "Burgnof MA-0",
-      damage: "<3",
-      range: 150,
-      firerate: 4,
-      reload: 1,
-      magazine: 12,
-      other: "+stealth, AP"
-    };
+    const { updateWeapon, spawnWeapon } = this.props;
+    let AoE = null;
+    if (spawnWeapon.AoE === 1) {
+      AoE = "+AoE";
+    } else if (spawnWeapon.AoE === 2) {
+      AoE = "high +AoE";
+    } else if (spawnWeapon.AoE >= 3) {
+      AoE = "extreme +AoE";
+    } else {
+      AoE = null;
+    }
+    let capacitor = null;
+    if (spawnWeapon.capacitor === 1) {
+      capacitor = "+capacitor effect";
+    } else if (spawnWeapon.capacitor === 2) {
+      capacitor = "high +capacitor effect";
+    } else if (spawnWeapon.capacitor >= 3) {
+      capacitor = "extreme +capacitor effect";
+    } else {
+      capacitor = null;
+    }
+    let critical = null;
+    if (spawnWeapon.critical === 1) {
+      critical = "+critical";
+    } else if (spawnWeapon.critical === 2) {
+      critical = "high +critical";
+    } else if (spawnWeapon.critical >= 3) {
+      critical = "extreme +critical";
+    } else {
+      critical = null;
+    }
+    let melee = null;
+    if (spawnWeapon.melee === 1) {
+      melee = "+melee";
+    } else if (spawnWeapon.melee === 2) {
+      melee = "high +melee";
+    } else if (spawnWeapon.melee >= 3) {
+      melee = "extreme +melee";
+    } else {
+      melee = null;
+    }
+    let stealth = null;
+    if (spawnWeapon.stealth === 1) {
+      stealth = "+stealth";
+    } else if (spawnWeapon.stealth === 2) {
+      stealth = "high +stealth";
+    } else if (spawnWeapon.stealth >= 3) {
+      stealth = "extreme +stealth";
+    } else {
+      stealth = null;
+    }
 
     return (
       <div>
         <h1>Random Weapon Generator</h1>
-        <div className="weaponGeneratorFlex">
+        <div className="weaponGeneratorFlexTop">
           <div id="weaponName">
             <h3>Name:</h3>
           </div>
@@ -44,17 +86,36 @@ class WeaponGenerator extends Component {
             <h3>Other:</h3>
           </div>
         </div>
-        <div className="weaponGeneratorFlex">
-          <div id="weaponName">{this.props.spawnWeapon.name}</div>
-          <div>{this.props.spawnWeapon.damage}</div>
-          <div>{this.props.spawnWeapon.range}</div>
-          <div>{this.props.spawnWeapon.firerate}</div>
-          <div>{this.props.spawnWeapon.reload}</div>
-          <div>{this.props.spawnWeapon.magazine}</div>
-          <div id="weaponOther">{this.props.spawnWeapon.other}</div>
+        <div className="weaponGeneratorFlexBottom">
+          <div id="weaponName">{spawnWeapon.name}</div>
+          <div>{spawnWeapon.damage}</div>
+          <div>{spawnWeapon.range}</div>
+          <div>{spawnWeapon.firerate}</div>
+          <div>{spawnWeapon.reload}</div>
+          <div>{spawnWeapon.magazine}</div>
+          <div id="weaponOther">
+            {spawnWeapon.other ? spawnWeapon.other + ", " : null}
+            {spawnWeapon.AoE ? AoE + ", " : null}
+            {spawnWeapon.capacitor ? capacitor + ", " : null}
+            {spawnWeapon.critical ? critical + ", " : null}
+            {spawnWeapon.melee ? melee + ", " : null}
+            {spawnWeapon.stealth ? stealth + ", " : null}
+            {spawnWeapon.projectiles
+              ? "fires " + spawnWeapon.projectiles + " projectiles, "
+              : null}
+            <i>
+              {spawnWeapon.manufacturer
+                ? spawnWeapon.manufacturer + ", "
+                : null}
+            </i>
+            {spawnWeapon.type}
+          </div>
         </div>
-        <button onClick={() => updateWeapon(testWeapon)}>
-          Generate a Weapon
+        <button onClick={() => updateWeapon(weapons.weapon_classes)}>
+          Generate a Random Weapon
+        </button>
+        <button onClick={() => updateWeapon(weapons.missionrewards)}>
+          Generate a Reward Weapon
         </button>
       </div>
     );

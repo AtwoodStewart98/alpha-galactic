@@ -1,0 +1,12 @@
+$my-blue: #8ac6ef;
+$my-background: #8a8a8a;
+$list-padding: 3px;
+$grid-border: 3px solid $my-blue;
+%grid-builder {
+  display: flex;
+  justify-content: center;
+  border: $grid-border;
+  background-color: $my-background;
+  margin: auto;
+  width: 80%;
+}

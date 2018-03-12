@@ -5,8 +5,6 @@ import "./react-scss/react-css/App.css";
 import HeaderFrame from "./components/HeaderFrame/HeaderFrame.js";
 import router from "./router.js";
 
-import axios from "axios";
-
 class App extends Component {
   constructor() {
     super();
@@ -29,7 +27,6 @@ class App extends Component {
     this.handleRace = this.handleRace.bind(this);
     this.handleTraining = this.handleTraining.bind(this);
     this.handleWeapon = this.handleWeapon.bind(this);
-    this.getGeneratedWeapon = this.getGeneratedWeapon.bind(this);
   }
 
   handleQuestionNumber(value) {
@@ -52,14 +49,6 @@ class App extends Component {
   }
   handleWeapon(value) {
     this.setState({ spawnWeapon: value });
-  }
-  getGeneratedWeapon(event) {
-    event.preventDefault();
-    return axios.get("/generateWeapon").then(response => {
-      this.setState({ spawnWeapon: response.data }).catch(error =>
-        console.log(`Error: ${error}`)
-      );
-    });
   }
 
   render() {

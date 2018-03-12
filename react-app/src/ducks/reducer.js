@@ -111,9 +111,11 @@ export function updateTraining(training) {
 }
 
 export function updateWeapon(spawnWeapon) {
+  let randomVal = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
+  console.log(randomVal);
   return {
     type: UPDATE_WEAPON,
-    payload: spawnWeapon
+    payload: randomVal
   };
 }
 

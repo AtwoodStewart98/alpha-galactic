@@ -9,6 +9,7 @@ import weapons from "../../weapons.json";
 class WeaponGenerator extends Component {
   render() {
     const { updateWeapon, updateRewardWeapon, spawnWeapon } = this.props;
+
     let AoE = null;
     if (spawnWeapon.AoE === 1) {
       AoE = "+AoE";

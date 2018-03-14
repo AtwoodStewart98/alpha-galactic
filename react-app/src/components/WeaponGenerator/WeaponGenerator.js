@@ -40,6 +40,16 @@ class WeaponGenerator extends Component {
     } else {
       critical = null;
     }
+    let kB = null;
+    if (spawnWeapon.kB === 1) {
+      kB = "+KB";
+    } else if (spawnWeapon.kB === 2) {
+      kB = "high +KB";
+    } else if (spawnWeapon.kB >= 3) {
+      kB = "extreme +KB";
+    } else {
+      kB = null;
+    }
     let melee = null;
     if (spawnWeapon.melee === 1) {
       melee = "+melee";
@@ -50,6 +60,16 @@ class WeaponGenerator extends Component {
     } else {
       melee = null;
     }
+    let resist = null;
+    if (spawnWeapon.resist === 1) {
+      resist = "-resist";
+    } else if (spawnWeapon.resist === 2) {
+      resist = "high -resist";
+    } else if (spawnWeapon.resist >= 3) {
+      resist = "extreme -resist";
+    } else {
+      resist = null;
+    }
     let stealth = null;
     if (spawnWeapon.stealth === 1) {
       stealth = "+stealth";
@@ -59,6 +79,16 @@ class WeaponGenerator extends Component {
       stealth = "extreme +stealth";
     } else {
       stealth = null;
+    }
+    let velocity = null;
+    if (spawnWeapon.velocity === 1) {
+      velocity = "+velocity";
+    } else if (spawnWeapon.velocity === 2) {
+      velocity = "high +velocity";
+    } else if (spawnWeapon.velocity >= 3) {
+      velocity = "extreme +velocity";
+    } else {
+      velocity = null;
     }
 
     return (
@@ -102,8 +132,11 @@ class WeaponGenerator extends Component {
             {spawnWeapon.AoE ? AoE + ", " : null}
             {spawnWeapon.capacitor ? capacitor + ", " : null}
             {spawnWeapon.critical ? critical + ", " : null}
+            {spawnWeapon.kB ? kB + ", " : null}
             {spawnWeapon.melee ? melee + ", " : null}
+            {spawnWeapon.resist ? resist + ", " : null}
             {spawnWeapon.stealth ? stealth + ", " : null}
+            {spawnWeapon.velocity ? velocity + ", " : null}
             {spawnWeapon.projectiles
               ? "fires " + spawnWeapon.projectiles + " projectiles, "
               : null}
@@ -115,7 +148,11 @@ class WeaponGenerator extends Component {
             {spawnWeapon.type} {spawnWeapon.lvl}
           </div>
         </div>
-        <button onClick={() => updateWeapon(weapons.weapon_classes)}>
+        <button
+          onClick={() =>
+            updateWeapon(weapons.weapon_classes, weapons.manufacturers)
+          }
+        >
           Generate a Random Weapon
         </button>
         <button onClick={() => updateRewardWeapon(weapons.missionrewards)}>

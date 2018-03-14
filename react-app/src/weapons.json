@@ -380,7 +380,7 @@
         },
         {
           "name": "Trespasser",
-          "resist": -2,
+          "resist": 2,
           "manufacs": [
             "Alphernal",
             "Burgnof",
@@ -560,7 +560,7 @@
           "range": -2,
           "firerate": 1,
           "other": "Iron sights",
-          "KB": 2,
+          "kB": 2,
           "manufacs": ["Alphernal", "Thorpe"],
           "lvl": 10
         },
@@ -703,7 +703,7 @@
       "id": "RL",
       "name": "rocket launcher",
       "stats": {
-        "damage": 6.5,
+        "damage": 6,
         "range": 2500,
         "firerate": 1,
         "reload": 4,

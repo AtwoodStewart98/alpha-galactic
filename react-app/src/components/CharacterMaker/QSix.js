@@ -1,28 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber } from "../../ducks/reducer.js";
+import { updateQuestionNumber, updateCharName } from "../../ducks/reducer.js";
 
 class QSix extends Component {
   render() {
-    const { updateQuestionNumber } = this.props;
+    const { updateQuestionNumber, updateCharName } = this.props;
 
     return (
       <div
-        style={{ display: this.props.questionNumber === 6 ? "block" : "none" }}
+        style={{
+          display: this.props.questionNumber === 6 ? "block" : "none"
+        }}
       >
-        <h1>Sixth Question</h1>
-        <select>
-          <option type="text" value="type1">
-            Type One
-          </option>
-          <option type="text" value="type2">
-            Type Two
-          </option>
-          <option type="text" value="type3">
-            Type Three
-          </option>
-        </select>
+        <p>Name your character.</p>
+        <input
+          placeholder="character name"
+          type="text"
+          onChange={e => updateCharName(e.target.value)}
+        />
         <br />
         <button onClick={() => updateQuestionNumber(7)}>Next Question</button>
       </div>
@@ -31,11 +27,15 @@ class QSix extends Component {
 }
 
 function mapStateToProps(state) {
-  const { questionNumber } = state;
+  const { questionNumber, charName } = state;
 
   return {
-    questionNumber
+    questionNumber,
+    charName
   };
 }
 
-export default connect(mapStateToProps, { updateQuestionNumber })(QSix);
+export default connect(mapStateToProps, {
+  updateQuestionNumber,
+  updateCharName
+})(QSix);

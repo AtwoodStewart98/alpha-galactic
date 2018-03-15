@@ -12,6 +12,7 @@ class QResults extends Component {
         style={{ display: this.props.questionNumber === 10 ? "block" : "none" }}
       >
         <h1>Results:</h1>
+        <p>Name: {this.props.charName}</p>
         <p>Alignment: {this.props.trueAlignment}</p>
         <p>Race: {this.props.race}</p>
         <p>Experience: {this.props.training}</p>
@@ -30,7 +31,8 @@ function mapStateToProps(state) {
     alignment3,
     trueAlignment,
     race,
-    training
+    training,
+    charName
   } = state;
 
   return {
@@ -40,7 +42,8 @@ function mapStateToProps(state) {
     alignment3,
     trueAlignment,
     race,
-    training
+    training,
+    charName
   };
 }
 

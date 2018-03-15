@@ -17,8 +17,15 @@ class App extends Component {
       race: "Porturuxean",
       training:
         "Military background, learned in heavy arms and battlefield tactics",
+      charName: "",
       spawnWeapon: {}
     };
+
+    this.handleCharName = this.handleCharName.bind(this);
+  }
+
+  handleCharName(event) {
+    this.setState({ charName: event.target.value });
   }
 
   render() {
@@ -31,10 +38,6 @@ class App extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    state
-  };
-}
+const mapStateToProps = state => state;
 
 export default connect(mapStateToProps)(App);

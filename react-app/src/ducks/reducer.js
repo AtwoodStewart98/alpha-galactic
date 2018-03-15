@@ -7,6 +7,7 @@ const initialState = {
   race: "Porturuxean",
   training:
     "Military background, learned in heavy arms and battlefield tactics",
+  charName: "",
   spawnWeapon: {}
 };
 
@@ -17,6 +18,7 @@ const UPDATE_ALIGNMENT_THREE = "UPDATE_ALIGNMENT_THREE";
 const UPDATE_TRUE_ALIGNMENT = "UPDATE_TRUE_ALIGNMENT";
 const UPDATE_RACE = "UPDATE_RACE";
 const UPDATE_TRAINING = "UPDATE_TRAINING";
+const UPDATE_CHAR_NAME = "UPDATE_CHAR_NAME";
 const UPDATE_WEAPON = "UPDATE_WEAPON";
 const UPDATE_REWARD_WEAPON = "UPDATE_REWARD_WEAPON";
 
@@ -37,6 +39,8 @@ function reducer(state = initialState, action) {
       return Object.assign({}, state, { race: action.payload });
     case UPDATE_TRAINING:
       return Object.assign({}, state, { training: action.payload });
+    case UPDATE_CHAR_NAME:
+      return Object.assign({}, state, { charName: action.payload });
     case UPDATE_WEAPON:
       return Object.assign({}, state, { spawnWeapon: action.payload });
     case UPDATE_REWARD_WEAPON:
@@ -110,6 +114,13 @@ export function updateTraining(training) {
   return {
     type: UPDATE_TRAINING,
     payload: training
+  };
+}
+
+export function updateCharName(charName) {
+  return {
+    type: UPDATE_CHAR_NAME,
+    payload: charName
   };
 }
 

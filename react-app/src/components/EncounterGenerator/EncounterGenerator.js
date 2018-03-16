@@ -5,7 +5,30 @@ class EncounterGenerator extends Component {
   render() {
     return (
       <div>
-        <p>Encounter Generator here</p>
+        <div className="encounterGeneratorFlexTop">
+          <div className="enemyName">
+            <h3>Name:</h3>
+          </div>
+          <div className="enemyFaction">
+            <h3>Faction:</h3>
+          </div>
+          <div>
+            <h3>Level(s):</h3>
+          </div>
+          <div className="enemyArmaments">
+            <h3>Armaments:</h3>
+          </div>
+          <div>
+            <h3>Rank:</h3>
+          </div>
+        </div>
+        <div className="encounterGeneratorFlexBottom">
+          <div className="enemyName" />
+          <div className="enemyFaction" />
+          <div />
+          <div className="enemyArmaments" />
+          <div />
+        </div>
       </div>
     );
   }

@@ -3,24 +3,14 @@
 .weaponGeneratorFlexTop {
   @extend %grid-builder;
   div {
-    border-left: $grid-border;
-    border-right: $grid-border;
-    text-align: center;
-    font-weight: bold;
-    width: 10%;
-    min-height: 60px;
+    @extend %grid-div-builder;
   }
 }
 
 .weaponGeneratorFlexBottom {
   @extend %grid-builder;
   div {
-    border-left: $grid-border;
-    border-right: $grid-border;
-    text-align: center;
-    font-weight: bold;
-    width: 10%;
-    min-height: 60px;
+    @extend %grid-div-builder;
   }
 }
 

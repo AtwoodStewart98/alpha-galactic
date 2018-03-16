@@ -6,15 +6,7 @@
   margin: auto;
   width: 80%; }
 
-.weaponGeneratorFlexTop div {
-  border-left: 3px solid #8ac6ef;
-  border-right: 3px solid #8ac6ef;
-  text-align: center;
-  font-weight: bold;
-  width: 10%;
-  min-height: 60px; }
-
-.weaponGeneratorFlexBottom div {
+.weaponGeneratorFlexTop div, .weaponGeneratorFlexBottom div {
   border-left: 3px solid #8ac6ef;
   border-right: 3px solid #8ac6ef;
   text-align: center;

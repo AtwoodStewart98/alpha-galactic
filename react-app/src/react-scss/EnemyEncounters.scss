@@ -13,3 +13,29 @@
     padding: 25px 0px;
   }
 }
+
+.encounterGeneratorFlexTop {
+  @extend %grid-builder;
+  div {
+    @extend %grid-div-builder;
+  }
+}
+
+.encounterGeneratorFlexBottom {
+  @extend %grid-builder;
+  div {
+    @extend %grid-div-builder;
+  }
+}
+
+.enemyName {
+  width: 25% !important;
+}
+
+.enemyFaction {
+  width: 15% !important;
+}
+
+.enemyArmaments {
+  width: 40% !important;
+}

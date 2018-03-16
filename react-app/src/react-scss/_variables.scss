@@ -11,3 +11,11 @@ $grid-border: 3px solid $my-blue;
   margin: auto;
   width: 80%;
 }
+%grid-div-builder {
+  border-left: $grid-border;
+  border-right: $grid-border;
+  text-align: center;
+  font-weight: bold;
+  width: 10%;
+  min-height: 60px;
+}

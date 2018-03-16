@@ -1,3 +1,19 @@
+.encounterGeneratorFlexTop, .encounterGeneratorFlexBottom {
+  display: flex;
+  justify-content: center;
+  border: 3px solid #8ac6ef;
+  background-color: #8a8a8a;
+  margin: auto;
+  width: 80%; }
+
+.encounterGeneratorFlexTop div, .encounterGeneratorFlexBottom div {
+  border-left: 3px solid #8ac6ef;
+  border-right: 3px solid #8ac6ef;
+  text-align: center;
+  font-weight: bold;
+  width: 10%;
+  min-height: 60px; }
+
 .nav-fixer {
   display: flex;
   justify-content: space-evenly;
@@ -9,3 +25,12 @@
     text-align: center;
     width: 220px;
     padding: 25px 0px; }
+
+.enemyName {
+  width: 25% !important; }
+
+.enemyFaction {
+  width: 15% !important; }
+
+.enemyArmaments {
+  width: 40% !important; }

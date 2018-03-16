@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { updateLore } from "../../ducks/reducer.js";
 import HolkovrhysLore from "./EnemyLoreFiles/HolkovrhysLore.js";
 import HyjakkerLore from "./EnemyLoreFiles/HyjakkerLore.js";
+import MercenariesLore from "./EnemyLoreFiles/MercenariesLore.js";
 import GDOSLore from "./EnemyLoreFiles/GDOSLore.js";
 
 class EnemyLore extends Component {
@@ -25,12 +26,16 @@ class EnemyLore extends Component {
           <option type="text" value="Holkovrhys">
             Holkovrhys
           </option>
+          <option type="text" value="Mercenaries">
+            Mercenaries
+          </option>
           <option type="text" value="GDOS">
             G.D.O.S.
           </option>
         </select>
         {lore === "Hyjakker" ? <HyjakkerLore /> : null}
         {lore === "Holkovrhys" ? <HolkovrhysLore /> : null}
+        {lore === "Mercenaries" ? <MercenariesLore /> : null}
         {lore === "GDOS" ? <GDOSLore /> : null}
       </div>
     );

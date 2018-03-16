@@ -8,7 +8,9 @@ const initialState = {
   training:
     "Military background, learned in heavy arms and battlefield tactics",
   charName: "",
-  spawnWeapon: {}
+  spawnWeapon: {},
+  encounter: "",
+  lore: ""
 };
 
 const UPDATE_QUESTION = "UPDATE_QUESTION";
@@ -19,6 +21,8 @@ const UPDATE_TRUE_ALIGNMENT = "UPDATE_TRUE_ALIGNMENT";
 const UPDATE_RACE = "UPDATE_RACE";
 const UPDATE_TRAINING = "UPDATE_TRAINING";
 const UPDATE_CHAR_NAME = "UPDATE_CHAR_NAME";
+const UPDATE_ENCOUNTER_VIEW = "UPDATE_ENCOUNTER_VIEW";
+const UPDATE_LORE = "UPDATE_LORE";
 const UPDATE_WEAPON = "UPDATE_WEAPON";
 const UPDATE_REWARD_WEAPON = "UPDATE_REWARD_WEAPON";
 
@@ -41,6 +45,10 @@ function reducer(state = initialState, action) {
       return Object.assign({}, state, { training: action.payload });
     case UPDATE_CHAR_NAME:
       return Object.assign({}, state, { charName: action.payload });
+    case UPDATE_ENCOUNTER_VIEW:
+      return Object.assign({}, state, { encounter: action.payload });
+    case UPDATE_LORE:
+      return Object.assign({}, state, { lore: action.payload });
     case UPDATE_WEAPON:
       return Object.assign({}, state, { spawnWeapon: action.payload });
     case UPDATE_REWARD_WEAPON:
@@ -121,6 +129,20 @@ export function updateCharName(charName) {
   return {
     type: UPDATE_CHAR_NAME,
     payload: charName
+  };
+}
+
+export function encounterView(encounter) {
+  return {
+    type: UPDATE_ENCOUNTER_VIEW,
+    payload: encounter
+  };
+}
+
+export function updateLore(lore) {
+  return {
+    type: UPDATE_LORE,
+    payload: lore
   };
 }
 

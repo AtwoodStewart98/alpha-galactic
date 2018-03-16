@@ -1,0 +1,15 @@
+@import "variables";
+
+.nav-fixer {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  li {
+    color: $my-blue;
+    background: $my-background;
+    border: $grid-border;
+    text-align: center;
+    width: 220px;
+    padding: 25px 0px;
+  }
+}

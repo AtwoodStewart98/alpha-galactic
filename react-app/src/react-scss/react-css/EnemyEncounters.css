@@ -1,0 +1,11 @@
+.nav-fixer {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none; }
+  .nav-fixer li {
+    color: #8ac6ef;
+    background: #8a8a8a;
+    border: 3px solid #8ac6ef;
+    text-align: center;
+    width: 220px;
+    padding: 25px 0px; }

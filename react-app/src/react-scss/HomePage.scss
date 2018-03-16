@@ -1,0 +1,17 @@
+@import "variables";
+
+.descriptor {
+  padding: 20px 80px;
+}
+
+.home-flex {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+  div {
+    width: 42%;
+    padding: 100px 0px;
+    border: $grid-border;
+    text-align: center;
+  }
+}

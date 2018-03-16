@@ -18,14 +18,10 @@ class App extends Component {
       training:
         "Military background, learned in heavy arms and battlefield tactics",
       charName: "",
-      spawnWeapon: {}
+      spawnWeapon: {},
+      encounter: "",
+      lore: ""
     };
-
-    this.handleCharName = this.handleCharName.bind(this);
-  }
-
-  handleCharName(event) {
-    this.setState({ charName: event.target.value });
   }
 
   render() {

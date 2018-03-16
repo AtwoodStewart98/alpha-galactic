@@ -1,22 +1,13 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React from "react";
 
-import Auth from "./Auth.js";
+const Login = () => {
+  return (
+    <div>
+      <a href="/auth">
+        <button>Login</button>
+      </a>
+    </div>
+  );
+};
 
-class Login extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Login</h1>
-      </div>
-    );
-  }
-}
-
-function mapStateToProps(state) {
-  return {
-    state
-  };
-}
-
-export default connect(mapStateToProps)(Login);
+export default Login;

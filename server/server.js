@@ -1,6 +1,6 @@
 const express = require("express");
 const session = require("express-session");
-const bodyParser = require("body-parser");
+const { json } = require("body-parser");
 const cors = require("cors");
 const massive = require("massive");
 const passport = require("passport");
@@ -11,41 +11,45 @@ const { secret, dbUser, database, domain, clientID, clientSecret } = config;
 
 const port = 4200;
 
-const connectionString = `postgres://${dbUser}@localhost/${database}`;
-
 const app = express();
 
-app.use("/", express.static(`${__dirname}/react-app/src`));
+const connectionString = `postgres://${dbUser}@localhost/${database}`;
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(json());
 
 app.use(
   session({
     secret,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 100000
+    }
   })
 );
 
 app.use(passport.initialize());
 app.use(passport.session());
+
 passport.use(
   new Auth0Strategy(
     {
       domain,
       clientID,
       clientSecret,
-      callbackURL: "/auth/callback"
+      callbackURL: "/auth",
+      scope: "openid profile"
     },
     (accessToken, refreshToken, extraParams, profile, done) => {
+      console.log(profile);
       const db = app.get("db");
-      db.getUserByAuthId([profile._json.sub]).then((user, err) => {
+      db.getUserByAuthId([profile.id]).then((user, err) => {
         console.log(`INITIAL: ${user}`);
         if (!user[0]) {
           console.log(`CREATING USER`);
           db
-            .createUserByAuth([profile.displayName, profile._json.sub])
+            .createUserByAuth([profile.id, profile.displayName])
             .then((user, err) => {
               console.log(`USER CREATED: ${JSON.stringify(user[0])}`);
               return done(err, user[0]);
@@ -69,13 +73,13 @@ passport.deserializeUser((obj, done) => {
   done(null, obj);
 });
 
-app.get("/auth", passport.authenticate("Auth0"));
-
 app.get(
-  "/auth/callback",
-  passport.authenticate("auth0", { successRedirect: "/" }),
+  "/auth",
+  passport.authenticate("auth0", {
+    failureRedirect: "http://localhost:3000/#/login"
+  }),
   (req, res) => {
-    res.status(200).json(req.user);
+    res.redirect(`http://localhost:3000/#/user/${req.user.name}`);
   }
 );
 

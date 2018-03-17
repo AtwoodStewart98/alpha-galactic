@@ -1,4 +1,10 @@
+import axios from "axios";
+
 const initialState = {
+  user: {},
+  isLoading: false,
+  didErr: false,
+  errMessage: null,
   questionNumber: 0,
   alignment: "Lawful Good",
   alignment2: "Good",
@@ -25,6 +31,7 @@ const UPDATE_ENCOUNTER_VIEW = "UPDATE_ENCOUNTER_VIEW";
 const UPDATE_LORE = "UPDATE_LORE";
 const UPDATE_WEAPON = "UPDATE_WEAPON";
 const UPDATE_REWARD_WEAPON = "UPDATE_REWARD_WEAPON";
+const GET_USER = "GET_USER";
 
 function reducer(state = initialState, action) {
   console.log("REDUCER HIT: Action -> ", action);
@@ -53,6 +60,18 @@ function reducer(state = initialState, action) {
       return Object.assign({}, state, { spawnWeapon: action.payload });
     case UPDATE_REWARD_WEAPON:
       return Object.assign({}, state, { spawnWeapon: action.payload });
+    case `${GET_USER}_PENDING`:
+      return Object.assign({}, state, { isLoading: true });
+    case `${GET_USER}_FULFILLED`:
+      return Object.assign({}, state, {
+        isLoading: false,
+        user: action.payload
+      });
+    case `${GET_USER}_REJECTED`:
+      return Object.assign({}, state, {
+        isLoading: false,
+        didErr: true
+      });
     default:
       return state;
   }
@@ -278,6 +297,19 @@ export function updateRewardWeapon(spawnWeapon) {
   return {
     type: UPDATE_REWARD_WEAPON,
     payload: randomVal
+  };
+}
+
+export function getUser() {
+  return {
+    type: GET_USER,
+    payload: axios
+      .request({ url: "/api/me" })
+      .then(response => response.data)
+      .catch(err => {
+        console.log(`AXIOS ERR: ${err.message}`);
+        return err.message;
+      })
   };
 }
 

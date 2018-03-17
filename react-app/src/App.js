@@ -9,6 +9,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      user: {},
+      isLoading: false,
+      didErr: false,
+      errMessage: null,
       questionNumber: 0,
       alignment: "Lawful Good",
       alignment2: "Good",

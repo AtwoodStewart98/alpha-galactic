@@ -1,2 +1,2 @@
-INSERT INTO users (username, authid)
-VALUES ($1, $2) RETURNING username, authid;
+INSERT INTO users (authid, username)
+VALUES ($1, $2) RETURNING *;

@@ -9,6 +9,9 @@ import { encounterView } from "../../ducks/reducer.js";
 import "../../react-scss/react-css/EnemyEncounters.css";
 
 class EnemyEncounters extends Component {
+  componentDidMount() {
+    this.props.encounterView("generator");
+  }
   render() {
     const { encounterView, encounter } = this.props;
 

@@ -15,6 +15,12 @@ const app = express();
 
 const connectionString = `postgres://${dbUser}@localhost/${database}`;
 
+massive(connectionString)
+  .then(db => {
+    app.set("db", db);
+  })
+  .catch(console.log());
+
 app.use(cors());
 app.use(json());
 
@@ -44,21 +50,24 @@ passport.use(
     (accessToken, refreshToken, extraParams, profile, done) => {
       console.log(profile);
       const db = app.get("db");
-      db.getUserByAuthId([profile.id]).then((user, err) => {
-        console.log(`INITIAL: ${user}`);
-        if (!user[0]) {
-          console.log(`CREATING USER`);
-          db
-            .createUserByAuth([profile.id, profile.displayName])
-            .then((user, err) => {
-              console.log(`USER CREATED: ${JSON.stringify(user[0])}`);
-              return done(err, user[0]);
-            });
-        } else {
-          console.log(`FOUND USER: ${user[0]}`);
-          return done(err, user[0]);
-        }
-      });
+      db
+        .getUserByAuthId([profile.id])
+        .then((user, err) => {
+          console.log(`INITIAL: ${user}`);
+          if (!user[0]) {
+            console.log(`CREATING USER`);
+            db
+              .createUserByAuth([profile.id, profile.displayName])
+              .then((user, err) => {
+                console.log(`USER CREATED: ${JSON.stringify(user[0])}`);
+                return done(err, user[0]);
+              });
+          } else {
+            console.log(`FOUND USER: ${user[0]}`);
+            return done(err, user[0]);
+          }
+        })
+        .catch(err => `CREATE ERROR: ${err}`);
     }
   )
 );
@@ -79,18 +88,19 @@ app.get(
     failureRedirect: "http://localhost:3000/#/login"
   }),
   (req, res) => {
-    res.redirect(`http://localhost:3000/#/user/${req.user.name}`);
+    res.redirect(`http://localhost:3000`);
   }
 );
 
-app.get("/auth/me", (req, res) => {
-  if (!req.user) return res.status(401).json({ err: "User Not Authenticated" });
-  res.status(200).json(req.user);
+app.get("/api/me", (req, res) => {
+  if (req.user) res.status(200).json(req.user);
+  else res.status(500).json({ message: "Please login" });
 });
 
 app.get("/auth/logout", (req, res) => {
-  req.logout();
-  req.redirect("/");
+  req.session.destroy(() => {
+    res.redirect("http://localhost:3000/#/login");
+  });
 });
 
 app.listen(port, () => {

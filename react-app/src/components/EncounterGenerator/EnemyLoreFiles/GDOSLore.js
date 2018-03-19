@@ -146,7 +146,7 @@ class GDOSLore extends Component {
           into bunkers, and the purity of the land is being torn apart in harsh
           gunfire. The Alliance isn&#39;t certain as to why the Holkovrhys are
           being so persistent here, but one thing is for sure; the Holkovrhys
-          Empire isn&#39;t going to leaving anytime soon.
+          Empire isn&#39;t going to be leaving anytime soon.
         </p>
         <p>
           <strong>Notable Relationships</strong>

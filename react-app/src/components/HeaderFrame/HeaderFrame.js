@@ -11,38 +11,33 @@ class HeaderFrame extends Component {
     const { updateQuestionNumber } = this.props;
 
     return (
-      <div className="header-box">
-        <h1 className="app-title">Alpha Galactic Campaign Manager</h1>
-        <div>
-          <ul className="nav-flexer">
-            <Link to="/">
-              <li>Home</li>
-            </Link>
-            <Link to="/characterMaker" onClick={() => updateQuestionNumber(0)}>
-              <li>Character Creator</li>
-            </Link>
-            <Link to="/weaponGenerator">
-              <li>Weapon Generator</li>
-            </Link>
-            <Link to="/encounterGenerator">
-              <li>Enemy Encounters</li>
-            </Link>
-            <Link to="/login">
-              <li>Login / Sign Up</li>
-            </Link>
-          </ul>
-        </div>
+      <div className="nav-flexer">
+        <h1 className="app-title">ALPHA GALACTIC</h1>
+        <ul>
+          <Link to="/">
+            <li>HOME</li>
+          </Link>
+          <Link to="/characterMaker" onClick={() => updateQuestionNumber(0)}>
+            <li>CREATE CHARACTER</li>
+          </Link>
+          <Link to="/weaponGenerator">
+            <li>WEAPONS</li>
+          </Link>
+          <Link to="/encounterGenerator">
+            <li>ENEMIES</li>
+          </Link>
+          <Link to="/login">
+            <li>LOGIN</li>
+          </Link>
+        </ul>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   const { questionNumber } = state;
-
-  return {
-    questionNumber
-  };
-}
+  return { questionNumber };
+};
 
 export default connect(mapStateToProps, { updateQuestionNumber })(HeaderFrame);

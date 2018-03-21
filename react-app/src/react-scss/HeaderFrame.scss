@@ -1,25 +1,27 @@
 @import "variables";
 
-.header-box {
-  h1 {
-    margin: 0;
-    padding: 20px 0px;
-  }
-}
-
 .app-title {
+  font-family: "Orbitron", sans-serif;
   text-align: center;
-  color: $my-blue;
-  background-color: $my-background;
+  color: #fff;
+  margin: 0;
+  padding: 20px 40px;
 }
 
 .nav-flexer {
   display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  color: #000;
+  justify-content: space-between;
+  background-color: $my-background;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    color: $my-text;
+  }
   a {
-    color: $my-blue;
+    color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
   }
 }

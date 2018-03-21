@@ -1,17 +1,22 @@
-.header-box h1 {
-  margin: 0;
-  padding: 20px 0px; }
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
 .app-title {
+  font-family: "Orbitron", sans-serif;
   text-align: center;
-  color: #8ac6ef;
-  background-color: #8a8a8a; }
+  color: #fff;
+  margin: 0;
+  padding: 20px 40px; }
 
 .nav-flexer {
   display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  color: #000; }
+  justify-content: space-between;
+  background-color: #3a3a3a; }
+  .nav-flexer ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    color: #d7d7d7; }
   .nav-flexer a {
-    color: #8ac6ef;
-    text-decoration: none; }
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px; }

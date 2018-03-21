@@ -32,7 +32,7 @@
 
 .cityscape {
   display: block;
-  width: 1500px;
+  width: 1280px;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -46,14 +46,12 @@
   width: 60%; }
 
 .linx {
-  background: #3a3a3a; }
+  background: #3a3a3a;
+  color: #d7d7d7;
+  text-align: center;
+  padding-bottom: 20px; }
   .linx h2 {
-    text-align: center;
-    color: #d7d7d7;
     padding-top: 20px; }
-  .linx p {
-    text-align: center;
-    color: #d7d7d7; }
 
 .linx-flex {
   display: flex;
@@ -61,21 +59,50 @@
   margin-bottom: 30px; }
   .linx-flex div {
     width: 25%;
-    border: 3px solid #8ac6ef;
     background: #bdbdbd;
+    border: 3px solid #8ac6ef;
     text-align: center; }
   .linx-flex img {
     max-height: 100%;
     max-width: 100%; }
 
-.space-station,
-.illithid-alien,
+.sci-fi-armory,
+.arthrotera-alien,
 .mercenaries {
   position: relative;
-  height: 480px; }
-  .space-station p,
-  .illithid-alien p,
+  height: 480px;
+  width: 320px !important; }
+  .sci-fi-armory p,
+  .arthrotera-alien p,
   .mercenaries p {
+    background: rgba(58, 58, 58, 0.5);
+    color: #d7d7d7;
+    width: 320px;
+    height: 80px;
     position: absolute;
-    left: 25%;
-    bottom: 10px; }
+    bottom: -18px;
+    font-size: 18px;
+    line-height: 80px; }
+
+.lore-blurb {
+  background-image: url("../../assets/spaceshiptakeoff.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1300px auto;
+  color: #fff;
+  height: 500px;
+  width: auto;
+  padding: 60px 30px; }
+  .lore-blurb h2 {
+    margin: 0 auto; }
+  .lore-blurb p {
+    line-height: 1.5;
+    width: 50%; }
+
+.home-footer {
+  background: #3a3a3a;
+  color: #d7d7d7;
+  padding: 20px 0;
+  text-align: center; }
+  .home-footer p {
+    margin: 0 auto; }

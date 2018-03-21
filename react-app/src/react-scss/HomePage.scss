@@ -44,7 +44,7 @@
 
 .cityscape {
   display: block;
-  width: 1500px;
+  width: 1280px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -63,14 +63,11 @@
 
 .linx {
   background: $my-background;
+  color: $my-text;
+  text-align: center;
+  padding-bottom: 20px;
   h2 {
-    text-align: center;
-    color: $my-text;
     padding-top: 20px;
-  }
-  p {
-    text-align: center;
-    color: $my-text;
   }
 }
 
@@ -80,8 +77,8 @@
   margin-bottom: 30px;
   div {
     width: 25%;
-    border: $grid-border;
     background: $light-background;
+    border: $grid-border;
     text-align: center;
   }
   img {
@@ -90,14 +87,48 @@
   }
 }
 
-.space-station,
-.illithid-alien,
+.sci-fi-armory,
+.arthrotera-alien,
 .mercenaries {
   position: relative;
   height: 480px;
+  width: 320px !important;
   p {
+    background: rgba(58, 58, 58, 0.5);
+    color: $my-text;
+    width: 320px;
+    height: 80px;
     position: absolute;
-    left: 25%;
-    bottom: 10px;
+    bottom: -18px;
+    font-size: 18px;
+    line-height: 80px;
+  }
+}
+
+.lore-blurb {
+  background-image: url("../../assets/spaceshiptakeoff.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1300px auto;
+  color: #fff;
+  height: 500px;
+  width: auto;
+  padding: 60px 30px;
+  h2 {
+    margin: 0 auto;
+  }
+  p {
+    line-height: 1.5;
+    width: 50%;
+  }
+}
+
+.home-footer {
+  background: $my-background;
+  color: $my-text;
+  padding: 20px 0;
+  text-align: center;
+  p {
+    margin: 0 auto;
   }
 }

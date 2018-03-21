@@ -27,7 +27,7 @@ class HomePage extends Component {
                   <h1>Welcome, {this.props.user.username}!</h1>
                 </div>
               ) : (
-                "Login Thing Here"
+                <Link to="/login">Login Thing Here</Link>
               )}
             </p>
           </div>

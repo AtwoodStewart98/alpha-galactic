@@ -35,15 +35,69 @@
   }
 }
 
+.section-two {
+  h2 {
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+
+.cityscape {
+  display: block;
+  width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cityscape-flex {
+  display: flex;
+  justify-content: space-evenly;
+  div {
+    padding: 40px;
+  }
+}
+
+.cityscape-descriptor {
+  width: 60%;
+}
+
+.linx {
+  background: $my-background;
+  h2 {
+    text-align: center;
+    color: $my-text;
+    padding-top: 20px;
+  }
+  p {
+    text-align: center;
+    color: $my-text;
+  }
+}
+
 .linx-flex {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 30px;
   div {
-    width: 42%;
-    padding: 100px 0px;
+    width: 25%;
     border: $grid-border;
     background: $light-background;
     text-align: center;
+  }
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+.space-station,
+.illithid-alien,
+.mercenaries {
+  position: relative;
+  height: 480px;
+  p {
+    position: absolute;
+    left: 25%;
+    bottom: 10px;
   }
 }

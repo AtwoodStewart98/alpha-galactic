@@ -26,13 +26,56 @@
     padding-left: 8px;
     line-height: 1.5; }
 
+.section-two h2 {
+  padding-top: 20px;
+  text-align: center; }
+
+.cityscape {
+  display: block;
+  width: 1500px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.cityscape-flex {
+  display: flex;
+  justify-content: space-evenly; }
+  .cityscape-flex div {
+    padding: 40px; }
+
+.cityscape-descriptor {
+  width: 60%; }
+
+.linx {
+  background: #3a3a3a; }
+  .linx h2 {
+    text-align: center;
+    color: #d7d7d7;
+    padding-top: 20px; }
+  .linx p {
+    text-align: center;
+    color: #d7d7d7; }
+
 .linx-flex {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 30px; }
   .linx-flex div {
-    width: 42%;
-    padding: 100px 0px;
+    width: 25%;
     border: 3px solid #8ac6ef;
     background: #bdbdbd;
     text-align: center; }
+  .linx-flex img {
+    max-height: 100%;
+    max-width: 100%; }
+
+.space-station,
+.illithid-alien,
+.mercenaries {
+  position: relative;
+  height: 480px; }
+  .space-station p,
+  .illithid-alien p,
+  .mercenaries p {
+    position: absolute;
+    left: 25%;
+    bottom: 10px; }

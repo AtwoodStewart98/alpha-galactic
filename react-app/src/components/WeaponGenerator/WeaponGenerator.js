@@ -87,6 +87,10 @@ class WeaponGenerator extends Component {
       velocity = "high +velocity";
     } else if (spawnWeapon.velocity >= 3) {
       velocity = "extreme +velocity";
+    } else if (spawnWeapon.velocity === -1) {
+      velocity = "-velocity";
+    } else if (spawnWeapon.velocity === -2) {
+      velocity = "high -velocity";
     } else {
       velocity = null;
     }

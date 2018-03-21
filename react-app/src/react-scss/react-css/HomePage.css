@@ -17,8 +17,18 @@
   height: 520px; }
 
 .home-login {
-  background: #3a3a3a;
-  color: #d7d7d7; }
+  background: rgba(58, 58, 58, 0.5);
+  color: #d7d7d7;
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  margin: 80px 40px;
+  text-align: center; }
+  .home-login a {
+    color: #d7d7d7; }
+  .home-login img {
+    width: 100px;
+    height: auto; }
 
 .descriptor {
   background: rgba(58, 58, 58, 0.5);

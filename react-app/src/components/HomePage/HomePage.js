@@ -25,6 +25,10 @@ class HomePage extends Component {
               {this.props.user.username ? (
                 <div>
                   <h1>Welcome, {this.props.user.username}!</h1>
+                  <img
+                    src="https://media.tenor.com/images/026e2ff33b229671d579dd512dcac521/tenor.gif"
+                    alt="login"
+                  />
                 </div>
               ) : (
                 <Link to="/login">Login Thing Here</Link>

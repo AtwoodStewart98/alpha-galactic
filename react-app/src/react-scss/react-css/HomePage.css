@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
 .home-flex {
-  background-image: url("../../assets/homesplash.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 1500px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; }
+
+.cityscape-flex, .linx-flex {
+  display: flex;
+  justify-content: space-evenly; }
+
+.home-flex, .lore-blurb {
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.home-flex {
+  background-image: url("../../assets/homesplash.png");
+  background-size: 1500px auto;
   height: 520px; }
 
 .home-login {
@@ -36,11 +44,8 @@
   margin: 0 auto;
   overflow: hidden; }
 
-.cityscape-flex {
-  display: flex;
-  justify-content: space-evenly; }
-  .cityscape-flex div {
-    padding: 40px; }
+.cityscape-flex div {
+  padding: 40px; }
 
 .cityscape-descriptor {
   width: 60%; }
@@ -54,8 +59,6 @@
     padding-top: 20px; }
 
 .linx-flex {
-  display: flex;
-  justify-content: space-evenly;
   margin-bottom: 30px; }
   .linx-flex div {
     width: 25%;
@@ -86,8 +89,6 @@
 
 .lore-blurb {
   background-image: url("../../assets/spaceshiptakeoff.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 1300px auto;
   color: #fff;
   height: 500px;

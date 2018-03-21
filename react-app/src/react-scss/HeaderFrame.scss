@@ -9,12 +9,10 @@
 }
 
 .nav-flexer {
-  display: flex;
-  justify-content: space-between;
+  @extend %flex-between;
   background-color: $my-background;
   ul {
-    display: flex;
-    justify-content: space-evenly;
+    @extend %flex-evenly;
     list-style: none;
     font-family: "Montserrat", sans-serif;
     color: $my-text;

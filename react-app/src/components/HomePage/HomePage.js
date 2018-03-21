@@ -18,15 +18,18 @@ class HomePage extends Component {
   render() {
     console.log(this.props);
     return (
-      <div className="home-box">
-        {this.props.user.username ? (
-          <div>
-            <h1>Welcome, {this.props.user.username}!</h1>
-          </div>
-        ) : null}
+      <div>
         <div className="home-flex">
           <div>
-            <p className="home-login">Login Thing Here</p>
+            <p className="home-login">
+              {this.props.user.username ? (
+                <div>
+                  <h1>Welcome, {this.props.user.username}!</h1>
+                </div>
+              ) : (
+                "Login Thing Here"
+              )}
+            </p>
           </div>
           <div className="descriptor">
             <h2>

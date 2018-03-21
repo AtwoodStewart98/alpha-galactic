@@ -1,8 +1,7 @@
 @import "variables";
 
 .nav-fixer {
-  display: flex;
-  justify-content: space-evenly;
+  @extend %flex-evenly;
   list-style: none;
   li {
     color: $my-blue;

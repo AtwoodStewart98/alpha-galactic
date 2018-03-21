@@ -1,15 +1,10 @@
 @import "variables";
 
-.home-box {
-}
-
 .home-flex {
   background-image: url("../../assets/homesplash.png");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: 1500px auto;
-  display: flex;
-  justify-content: space-between;
+  @extend %background-setter;
+  @extend %flex-between;
   height: 520px;
 }
 
@@ -50,8 +45,7 @@
 }
 
 .cityscape-flex {
-  display: flex;
-  justify-content: space-evenly;
+  @extend %flex-evenly;
   div {
     padding: 40px;
   }
@@ -72,8 +66,7 @@
 }
 
 .linx-flex {
-  display: flex;
-  justify-content: space-evenly;
+  @extend %flex-evenly;
   margin-bottom: 30px;
   div {
     width: 25%;
@@ -107,9 +100,8 @@
 
 .lore-blurb {
   background-image: url("../../assets/spaceshiptakeoff.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 1300px auto;
+  @extend %background-setter;
   color: #fff;
   height: 500px;
   width: auto;

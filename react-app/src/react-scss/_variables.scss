@@ -5,6 +5,18 @@ $my-text: #d7d7d7;
 $light-background: #bdbdbd;
 $list-padding: 3px;
 $grid-border: 3px solid $my-blue;
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+%flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+%background-setter {
+  background-repeat: no-repeat;
+  background-position: center;
+}
 %grid-builder {
   display: flex;
   justify-content: center;

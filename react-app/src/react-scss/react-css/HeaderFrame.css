@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
+.nav-flexer {
+  display: flex;
+  justify-content: space-between; }
+
+.nav-flexer ul {
+  display: flex;
+  justify-content: space-evenly; }
+
 .app-title {
   font-family: "Orbitron", sans-serif;
   text-align: center;
@@ -7,12 +15,8 @@
   padding: 25px 40px; }
 
 .nav-flexer {
-  display: flex;
-  justify-content: space-between;
   background-color: #3a3a3a; }
   .nav-flexer ul {
-    display: flex;
-    justify-content: space-evenly;
     list-style: none;
     font-family: "Montserrat", sans-serif;
     color: #d7d7d7; }

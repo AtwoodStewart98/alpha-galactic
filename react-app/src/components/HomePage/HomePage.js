@@ -37,7 +37,7 @@ class HomePage extends Component {
             </h2>
             <p>
               Alpha Galactic is a diceless, mobile campaign manager and
-              character saver. Build a character, create random encounters,
+              character repository. Build a character, create random encounters,
               access extensive lore in the universe, and randomly generate
               weapon drops.
             </p>

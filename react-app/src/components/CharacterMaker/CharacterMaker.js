@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import QOne from "./QOne.js";
@@ -30,7 +31,15 @@ class CharacterMaker extends Component {
             }}
           >
             <p>
-              Get started with a set of questions to flesh out your character!
+              Get started with a set of questions to flesh out your character!{" "}
+              {this.props.user.username ? null : (
+                <span>
+                  Note: you will not be able to save your character without
+                  logging into an account. Consider{" "}
+                  <Link to="/login">logging in or creating an account</Link> to
+                  do so.
+                </span>
+              )}
             </p>
             <button onClick={() => updateQuestionNumber(1)}>
               First Question
@@ -52,13 +61,10 @@ class CharacterMaker extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  const { questionNumber } = state;
-
-  return {
-    questionNumber
-  };
-}
+const mapStateToProps = state => {
+  const { questionNumber, user } = state;
+  return { questionNumber, user };
+};
 
 export default connect(mapStateToProps, { updateQuestionNumber })(
   CharacterMaker

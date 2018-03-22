@@ -9,10 +9,9 @@ const initialState = {
   alignment: "",
   alignment2: "",
   alignment3: "",
-  trueAlignment: "Neutral",
-  race: "Porturuxean",
-  training:
-    "Military background, learned in heavy arms and battlefield tactics",
+  trueAlignment: "",
+  race: "",
+  training: "",
   charName: "",
   spawnWeapon: {},
   encounter: "",

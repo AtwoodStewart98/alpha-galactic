@@ -8,10 +8,18 @@
 .char-questions {
   padding: 30px 3%;
   line-height: 1.5; }
-  .char-questions ol li {
-    padding: 3px; }
   .char-questions a {
     font-weight: bold; }
+
+.question-block label {
+  margin-left: 60px;
+  display: block; }
+
+.radio-selector {
+  float: left;
+  width: 24px;
+  height: 24px;
+  position: relative; }
 
 .next-button {
   padding: 20px;
@@ -27,6 +35,19 @@
     color: #8ac6ef;
     border: 3px solid #8ac6ef;
     cursor: pointer; }
+
+.disabled-button {
+  padding: 20px;
+  text-align: center; }
+  .disabled-button button {
+    background-color: #3a3a3a;
+    color: #d7d7d7;
+    opacity: 0.6;
+    border: 2px solid #d7d7d7;
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+    cursor: not-allowed; }
 
 .q-four ul {
   list-style: none; }

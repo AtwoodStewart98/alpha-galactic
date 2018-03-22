@@ -14,9 +14,9 @@ class App extends Component {
       didErr: false,
       errMessage: null,
       questionNumber: 0,
-      alignment: "Lawful Good",
-      alignment2: "Good",
-      alignment3: "Neutral",
+      alignment: "",
+      alignment2: "",
+      alignment3: "",
       trueAlignment: "Neutral",
       race: "Porturuxean",
       training:

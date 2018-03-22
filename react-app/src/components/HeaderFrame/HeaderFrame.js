@@ -12,7 +12,9 @@ class HeaderFrame extends Component {
 
     return (
       <div className="nav-flexer">
-        <h1 className="app-title">ALPHA GALACTIC</h1>
+        <Link to="/">
+          <h1 className="app-title">ALPHA GALACTIC</h1>
+        </Link>
         <ul>
           <Link to="/">
             <li>HOME</li>

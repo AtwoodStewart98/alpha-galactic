@@ -157,13 +157,13 @@
 }
 
 .lore-blurb {
-  background-image: url("../../assets/spaceshiptakeoff.jpg");
-  background-size: 1300px auto;
+  background-image: url("../../assets/foresttakeoff.png");
+  background-size: 1500px auto;
   @extend %background-setter;
   color: #fff;
   height: 500px;
   width: auto;
-  padding: 60px 30px;
+  padding: 30px;
   h2 {
     margin: 0 auto;
   }

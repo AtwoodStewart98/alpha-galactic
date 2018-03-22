@@ -7,6 +7,9 @@
   display: flex;
   justify-content: space-evenly; }
 
+a {
+  text-decoration: none; }
+
 .app-title {
   font-family: "Orbitron", sans-serif;
   text-align: center;
@@ -19,9 +22,8 @@
   .nav-flexer ul {
     list-style: none;
     color: #d7d7d7; }
-  .nav-flexer a {
+  .nav-flexer ul a {
     color: #fff;
-    text-decoration: none;
     padding: 10px 20px;
     line-height: 160%; }
   .nav-flexer a:hover {

@@ -1,5 +1,9 @@
 @import "variables";
 
+a {
+  text-decoration: none;
+}
+
 .app-title {
   font-family: "Orbitron", sans-serif;
   text-align: center;
@@ -16,9 +20,8 @@
     list-style: none;
     color: $my-text;
   }
-  a {
+  ul a {
     color: #fff;
-    text-decoration: none;
     padding: 10px 20px;
     line-height: 160%;
   }

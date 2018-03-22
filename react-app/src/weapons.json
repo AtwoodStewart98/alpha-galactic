@@ -3,7 +3,11 @@
     {
       "name": "Alphernal",
       "modifiers": {
+        "damage": 0,
         "range": 2,
+        "firerate": 0,
+        "reload": 0,
+        "magazine": 0,
         "other": "+dmg on single shot"
       },
       "weapon_types": ["RV", "SMG", "AR", "BS", "SS", "RL"]
@@ -11,6 +15,11 @@
     {
       "name": "Burgnof",
       "modifiers": {
+        "damage": 0,
+        "range": 0,
+        "firerate": 0,
+        "reload": 0,
+        "magazine": 0,
         "stealth": 1
       },
       "weapon_types": [
@@ -31,6 +40,9 @@
       "name": "Crustanix",
       "modifiers": {
         "damage": -1,
+        "range": 0,
+        "firerate": 0,
+        "reload": 0,
         "magazine": 2,
         "other": "Creates blast shield"
       },
@@ -40,13 +52,21 @@
       "name": "Hyjakker",
       "modifiers": {
         "damage": 1,
-        "reload": -1
+        "range": 0,
+        "firerate": 0,
+        "reload": -1,
+        "magazine": 0
       },
       "weapon_types": ["AP", "MP", "SMG", "LMG", "CS", "SS", "GL"]
     },
     {
       "name": "Marx Tech",
       "modifiers": {
+        "damage": 0,
+        "range": 0,
+        "firerate": 0,
+        "reload": 0,
+        "magazine": 0,
         "melee": 1,
         "preset_acessories": {
           "AP": "+melee dmg",
@@ -61,15 +81,21 @@
     {
       "name": "Natpnot",
       "modifiers": {
+        "damage": 0,
         "range": -1,
-        "firerate": 2
+        "firerate": 2,
+        "reload": 0,
+        "magazine": 0
       },
       "weapon_types": ["AP", "MP", "LMG", "PS", "CS", "BS", "SS", "GL", "RL"]
     },
     {
       "name": "Rawdawg",
       "modifiers": {
+        "damage": 0,
         "range": -1,
+        "firerate": 0,
+        "reload": 0,
         "magazine": 1,
         "other": "+1 ammo consumption",
         "projectiles": 1
@@ -81,6 +107,8 @@
       "modifiers": {
         "damage": 2,
         "range": 1,
+        "firerate": 0,
+        "reload": 0,
         "magazine": -1,
         "other": "Fires bullets"
       },
@@ -89,8 +117,11 @@
     {
       "name": "Zoragon",
       "modifiers": {
+        "damage": 0,
+        "range": 0,
         "firerate": -1,
-        "reload": 1
+        "reload": 1,
+        "magazine": 0
       },
       "weapon_types": ["AP", "RV", "SMG", "AR", "PS", "BS", "RL"]
     }

@@ -143,12 +143,12 @@
   max-width: 100% !important; }
 
 .lore-blurb {
-  background-image: url("../../assets/spaceshiptakeoff.jpg");
-  background-size: 1300px auto;
+  background-image: url("../../assets/foresttakeoff.png");
+  background-size: 1500px auto;
   color: #fff;
   height: 500px;
   width: auto;
-  padding: 60px 30px; }
+  padding: 30px; }
   .lore-blurb h2 {
     margin: 0 auto; }
   .lore-blurb p {

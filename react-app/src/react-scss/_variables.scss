@@ -40,3 +40,8 @@ $grid-border: 3px solid $my-blue;
   -moz-box-shadow: 0px 0px 0px 3px $color;
   box-shadow: 0px 0px 0px 3px $color;
 }
+@mixin transition($time) {
+  -webkit-transition-duration: $time;
+  -moz-transition-duration: $time;
+  transition-duration: $time;
+}

@@ -25,9 +25,7 @@
     border-radius: 3px;
     font-size: 18px;
     padding: 10px 30px;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
+    @include transition(0.4s);
   }
   button:hover {
     color: $my-blue;
@@ -116,9 +114,7 @@
   position: relative;
   height: 480px;
   width: 320px !important;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
+  @include transition(0.4s);
   p {
     background: $transparent-background;
     color: $my-text;

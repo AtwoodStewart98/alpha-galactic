@@ -32,9 +32,9 @@
     border-radius: 3px;
     font-size: 18px;
     padding: 10px 30px;
-    transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s; }
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s; }
   .home-login button:hover {
     color: #8ac6ef;
     background-color: #696969;
@@ -103,9 +103,9 @@
   position: relative;
   height: 480px;
   width: 320px !important;
-  transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s; }
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s; }
   .sci-fi-armory p,
   .arthrotera-alien p,
   .mercenaries p {

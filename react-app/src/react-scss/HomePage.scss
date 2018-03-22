@@ -9,7 +9,7 @@
 }
 
 .home-login {
-  background: $transparent-background;
+  background: $my-background;
   color: $my-text;
   width: 300px;
   height: 320px;
@@ -116,7 +116,7 @@
   width: 320px !important;
   @include transition(0.4s);
   p {
-    background: $transparent-background;
+    background: $transparent-overlay;
     color: $my-text;
     width: 320px;
     height: 80px;

@@ -4,3 +4,17 @@ body {
   background-color: #ededed;
   font-family: "Montserrat", sans-serif;
 }
+
+a:link {
+  color: #3a3a3a;
+}
+a:hover {
+  text-decoration: underline;
+  color: #8ac6ef;
+}
+a:visited {
+  color: #3a3a3a;
+}
+a:visited:hover {
+  color: #8ac6ef;
+}

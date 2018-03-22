@@ -2,6 +2,8 @@
 
 a {
   text-decoration: none;
+  font-weight: normal;
+  color: #fff;
 }
 
 .app-title {
@@ -22,14 +24,17 @@ a {
   ul {
     @extend %flex-evenly;
     list-style: none;
-    color: $my-text;
   }
   ul a {
-    color: #fff;
     padding: 10px 20px;
     line-height: 160%;
   }
   a:hover {
     color: $my-blue;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #fff;
+    font-weight: normal;
   }
 }

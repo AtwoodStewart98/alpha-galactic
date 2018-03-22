@@ -8,7 +8,9 @@
   justify-content: space-evenly; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: normal;
+  color: #fff; }
 
 .app-title {
   font-family: "Orbitron", sans-serif;
@@ -23,11 +25,13 @@ a {
 .nav-flexer {
   background-color: #3a3a3a; }
   .nav-flexer ul {
-    list-style: none;
-    color: #d7d7d7; }
+    list-style: none; }
   .nav-flexer ul a {
-    color: #fff;
     padding: 10px 20px;
     line-height: 160%; }
   .nav-flexer a:hover {
-    color: #8ac6ef; }
+    color: #8ac6ef;
+    text-decoration: none; }
+  .nav-flexer a:visited {
+    color: #fff;
+    font-weight: normal; }

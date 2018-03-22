@@ -10,6 +10,8 @@
   line-height: 1.5; }
   .char-questions ol li {
     padding: 3px; }
+  .char-questions a {
+    font-weight: bold; }
 
 .next-button {
   padding: 20px;

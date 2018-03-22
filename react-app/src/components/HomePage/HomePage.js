@@ -6,8 +6,8 @@ import { withRouter } from "react-router-dom";
 import { getUser } from "../../ducks/reducer.js";
 import cityscape from "../../assets/cityscape.png";
 import arthrotera from "../../assets/arthrotera.jpg";
-import mercenaries from "../../assets/mercenaries.png";
-import scifiarmory from "../../assets/scifiarmory.jpg";
+import enemyfaction from "../../assets/enemy-faction.png";
+import spacestation from "../../assets/spacestation.png";
 
 import "../../react-scss/react-css/HomePage.css";
 import fontawesome from "@fortawesome/fontawesome";
@@ -127,16 +127,16 @@ class HomePage extends Component {
                 <p>CREATE CHARACTER</p>
               </Link>
             </div>
-            <div className="mercenaries">
-              <Link to="/encounterGenerator">
-                <img src={mercenaries} alt="mercenaries" />
-                <p>KNOW YOUR ENEMIES</p>
-              </Link>
-            </div>
             <div className="sci-fi-armory">
               <Link to="/weaponGenerator">
-                <img src={scifiarmory} alt="sci fi armory" />
-                <p>ARM YOUR CHARACTER</p>
+                <img src={spacestation} alt="sci fi armory" />
+                <p>DELVE INTO LORE</p>
+              </Link>
+            </div>
+            <div className="mercenaries">
+              <Link to="/encounterGenerator">
+                <img src={enemyfaction} alt="mercenaries" />
+                <p>KNOW YOUR ENEMIES</p>
               </Link>
             </div>
           </div>

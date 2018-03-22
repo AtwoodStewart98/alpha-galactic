@@ -7,9 +7,13 @@ a {
 .app-title {
   font-family: "Orbitron", sans-serif;
   text-align: center;
-  color: $my-blue;
+  color: #fff;
   margin: 0;
   padding: 25px 0px 25px 40px;
+}
+
+.app-title:hover {
+  color: $my-blue;
 }
 
 .nav-flexer {

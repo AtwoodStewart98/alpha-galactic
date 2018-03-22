@@ -13,9 +13,12 @@ a {
 .app-title {
   font-family: "Orbitron", sans-serif;
   text-align: center;
-  color: #8ac6ef;
+  color: #fff;
   margin: 0;
   padding: 25px 0px 25px 40px; }
+
+.app-title:hover {
+  color: #8ac6ef; }
 
 .nav-flexer {
   background-color: #3a3a3a; }

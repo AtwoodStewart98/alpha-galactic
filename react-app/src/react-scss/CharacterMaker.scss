@@ -1,12 +1,35 @@
 @import "variables";
 
-.character-container {
-  padding: 0 10%;
-  h1 {
-    text-align: center;
-  }
+.character-splash {
+  display: block;
+  width: 1265px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.char-questions {
+  padding: 30px 3%;
+  line-height: 1.5;
   ol li {
     padding: $list-padding;
+  }
+}
+
+.next-button {
+  padding: 20px;
+  text-align: center;
+  button {
+    background-color: $my-background;
+    color: $my-text;
+    border: 2px solid $my-text;
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+  }
+  button:hover {
+    color: $my-blue;
+    border: $grid-border;
+    cursor: pointer;
   }
 }
 

@@ -1,10 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
-.character-container {
-  padding: 0 10%; }
-  .character-container h1 {
-    text-align: center; }
-  .character-container ol li {
+.character-splash {
+  display: block;
+  width: 1265px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.char-questions {
+  padding: 30px 3%;
+  line-height: 1.5; }
+  .char-questions ol li {
     padding: 3px; }
+
+.next-button {
+  padding: 20px;
+  text-align: center; }
+  .next-button button {
+    background-color: #3a3a3a;
+    color: #d7d7d7;
+    border: 2px solid #d7d7d7;
+    font-size: 15px;
+    width: 150px;
+    height: 50px; }
+  .next-button button:hover {
+    color: #8ac6ef;
+    border: 3px solid #8ac6ef;
+    cursor: pointer; }
 
 .q-four ul {
   list-style: none; }

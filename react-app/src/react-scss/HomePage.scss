@@ -12,16 +12,28 @@
   background: $transparent-background;
   color: $my-text;
   width: 300px;
-  height: 300px;
+  height: 320px;
   padding: 5px;
   margin: 80px 40px;
   text-align: center;
-  a {
-    color: $my-text;
+  p {
+    padding: 0px 12px;
+  }
+  button {
+    background-color: #a8a8a8;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 10px 30px;
+    transition-duration: 0.4s;
+  }
+  button:hover {
+    color: $my-blue;
+    background-color: #696969;
+    @include hover-border($my-blue);
   }
   img {
-    width: 100px;
-    height: auto;
+    padding: 10px;
   }
 }
 
@@ -30,7 +42,7 @@
   color: $my-text;
   width: 400px;
   height: 250px;
-  padding: 5px;
+  padding: 10px 0px 10px 10px;
   margin: 100px 20px;
   h2 {
     padding-left: 8px;
@@ -122,13 +134,25 @@
 
 .selling-points {
   @extend %flex-evenly;
-  div {
-    max-width: 20%;
+  color: $my-background;
+  h2 {
+    text-align: center;
+    font-size: 20px;
   }
   p {
     font-size: $my-font;
     line-height: 1.5;
   }
+}
+
+.sell-point-div {
+  max-width: 20%;
+  padding: 40px 20px 20px;
+}
+
+.fontawesome-center {
+  text-align: center;
+  max-width: 100% !important;
 }
 
 .lore-blurb {

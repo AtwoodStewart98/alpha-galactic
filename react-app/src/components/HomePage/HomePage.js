@@ -10,6 +10,17 @@ import mercenaries from "../../assets/mercenaries.png";
 import scifiarmory from "../../assets/scifiarmory.jpg";
 
 import "../../react-scss/react-css/HomePage.css";
+import fontawesome from "@fortawesome/fontawesome";
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import brands from "@fortawesome/fontawesome-free-brands";
+import {
+  faCloud,
+  faTimesCircle,
+  faIdBadge,
+  faBook
+} from "@fortawesome/fontawesome-free-solid";
+
+fontawesome.library.add(brands, faCloud, faTimesCircle, faIdBadge, faBook);
 
 class HomePage extends Component {
   componentDidMount() {
@@ -25,13 +36,36 @@ class HomePage extends Component {
               {this.props.user.username ? (
                 <div>
                   <h1>Welcome, {this.props.user.username}!</h1>
-                  <img
-                    src="https://media.tenor.com/images/026e2ff33b229671d579dd512dcac521/tenor.gif"
-                    alt="login"
-                  />
                 </div>
               ) : (
-                <Link to="/login">Login Thing Here</Link>
+                <div>
+                  <h2>REGISTER | LOGIN</h2>
+                  <p>
+                    This application uses Auth0 tokens to login and manage user
+                    information.
+                  </p>
+                  <a href="http://localhost:4200/auth">
+                    <button>LOGIN TO ACCOUNT</button>
+                  </a>
+                  <p>Login With:</p>
+                  <div>
+                    <img
+                      width="50px"
+                      src="https://travelinlibrarian.info/wp-content/uploads/2014/07/Google+-Logo.png"
+                      alt="google plus"
+                    />
+                    <img
+                      width="50px"
+                      src="http://www.dfmalherbe.co.za/wp-content/uploads/2016/01/facebook-logo-png-transparent-background.png"
+                      alt="facebook"
+                    />
+                    <img
+                      width="50px"
+                      src="http://pngimg.com/uploads/twitter/twitter_PNG30.png"
+                      alt="twitter"
+                    />
+                  </div>
+                </div>
               )}
             </div>
           </div>
@@ -108,7 +142,10 @@ class HomePage extends Component {
           </div>
         </div>
         <div className="selling-points">
-          <div>
+          <div className="sell-point-div">
+            <div className="fontawesome-center">
+              <FontAwesomeIcon icon="times-circle" size="5x" />
+            </div>
             <h2>NO DICE REQUIRED</h2>
             <p>
               Alpha Galactic was designed to be an &#39;on-the-go&#39;
@@ -118,21 +155,43 @@ class HomePage extends Component {
               factor in this game.
             </p>
           </div>
-          <div>
+          <div className="sell-point-div">
+            <div className="fontawesome-center">
+              <FontAwesomeIcon icon="cloud" size="5x" />
+            </div>
             <h2>PLAY REMOTELY</h2>
             <p>
-              As a player, all your characters, inventories, and lore are
+              As a player, all your characters and their inventories are
               available through this application. As a game master, all your
               campaigns, background lore, and randomized weapon & enemy
-              generation is available through this application. No more need to
+              generation are available through this application. No more need to
               carry around multiple heavy manuals and papers for gameplay.
             </p>
           </div>
-          <div>
+          <div className="sell-point-div">
+            <div className="fontawesome-center">
+              <FontAwesomeIcon icon="id-badge" size="5x" />
+            </div>
             <h2>SAVE 5 CHARACTERS</h2>
+            <p>
+              Signing up for an account allows a player to save up to five
+              different characters with separate inventories to their profile.
+              Swap between characters freely and unrestricted by accessing your
+              profile and selecting by name.
+            </p>
           </div>
-          <div>
+          <div className="sell-point-div">
+            <div className="fontawesome-center">
+              <FontAwesomeIcon icon="book" size="5x" />
+            </div>
             <h2>DEVELOP LORE</h2>
+            <p>
+              As a game master, you will have the opportunity to create your own
+              missions and story arcs inspired by the provided lore and
+              factions. There will also be the feature to share one of your
+              contributions to the lore to a database where other game masters
+              can incorporate your ideas in their own playgroups!
+            </p>
           </div>
         </div>
         <div className="lore-blurb">

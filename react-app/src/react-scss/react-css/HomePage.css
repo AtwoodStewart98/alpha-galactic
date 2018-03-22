@@ -20,22 +20,34 @@
   background: rgba(58, 58, 58, 0.5);
   color: #d7d7d7;
   width: 300px;
-  height: 300px;
+  height: 320px;
   padding: 5px;
   margin: 80px 40px;
   text-align: center; }
-  .home-login a {
-    color: #d7d7d7; }
+  .home-login p {
+    padding: 0px 12px; }
+  .home-login button {
+    background-color: #a8a8a8;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 10px 30px;
+    transition-duration: 0.4s; }
+  .home-login button:hover {
+    color: #8ac6ef;
+    background-color: #696969;
+    -webkit-box-shadow: 0px 0px 0px 3px #8ac6ef;
+    -moz-box-shadow: 0px 0px 0px 3px #8ac6ef;
+    box-shadow: 0px 0px 0px 3px #8ac6ef; }
   .home-login img {
-    width: 100px;
-    height: auto; }
+    padding: 10px; }
 
 .descriptor {
   background: rgba(58, 58, 58, 0.5);
   color: #d7d7d7;
   width: 400px;
   height: 250px;
-  padding: 5px;
+  padding: 10px 0px 10px 10px;
   margin: 100px 20px; }
   .descriptor h2 {
     padding-left: 8px;
@@ -108,12 +120,22 @@
   -moz-box-shadow: 0px 0px 0px 3px #8ac6ef;
   box-shadow: 0px 0px 0px 3px #8ac6ef; }
 
-.selling-points div {
-  max-width: 20%; }
+.selling-points {
+  color: #3a3a3a; }
+  .selling-points h2 {
+    text-align: center;
+    font-size: 20px; }
+  .selling-points p {
+    font-size: 14px;
+    line-height: 1.5; }
 
-.selling-points p {
-  font-size: 14px;
-  line-height: 1.5; }
+.sell-point-div {
+  max-width: 20%;
+  padding: 40px 20px 20px; }
+
+.fontawesome-center {
+  text-align: center;
+  max-width: 100% !important; }
 
 .lore-blurb {
   background-image: url("../../assets/spaceshiptakeoff.jpg");

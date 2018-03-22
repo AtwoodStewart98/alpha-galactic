@@ -5,7 +5,7 @@
   text-align: center;
   color: $my-blue;
   margin: 0;
-  padding: 25px 40px;
+  padding: 25px 0px 25px 40px;
 }
 
 .nav-flexer {
@@ -21,5 +21,9 @@
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
+    line-height: 160%;
+  }
+  a:hover {
+    color: $my-blue;
   }
 }

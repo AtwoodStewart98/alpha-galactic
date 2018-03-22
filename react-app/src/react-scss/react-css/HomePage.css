@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between; }
 
-.cityscape-flex, .linx-flex {
+.cityscape-flex, .linx-flex, .selling-points {
   display: flex;
   justify-content: space-evenly; }
 
@@ -45,7 +45,7 @@
     line-height: 1.5; }
 
 .section-two h2 {
-  padding-top: 20px;
+  padding: 10px 0;
   text-align: center; }
 
 .cityscape {
@@ -57,8 +57,13 @@
 .cityscape-flex div {
   padding: 40px; }
 
+.cityscape-flex p {
+  font-size: 14px; }
+
 .cityscape-descriptor {
-  width: 60%; }
+  width: 60%;
+  line-height: 1.5;
+  font-size: 14px; }
 
 .linx {
   background: #3a3a3a;
@@ -73,7 +78,6 @@
   .linx-flex div {
     width: 25%;
     background: #bdbdbd;
-    border: 3px solid #8ac6ef;
     text-align: center; }
   .linx-flex img {
     max-height: 100%;
@@ -97,6 +101,20 @@
     font-size: 18px;
     line-height: 80px; }
 
+.sci-fi-armory:hover,
+.arthrotera-alien:hover,
+.mercenaries:hover {
+  -webkit-box-shadow: 0px 0px 0px 3px #8ac6ef;
+  -moz-box-shadow: 0px 0px 0px 3px #8ac6ef;
+  box-shadow: 0px 0px 0px 3px #8ac6ef; }
+
+.selling-points div {
+  max-width: 20%; }
+
+.selling-points p {
+  font-size: 14px;
+  line-height: 1.5; }
+
 .lore-blurb {
   background-image: url("../../assets/spaceshiptakeoff.jpg");
   background-size: 1300px auto;
@@ -107,7 +125,8 @@
   .lore-blurb h2 {
     margin: 0 auto; }
   .lore-blurb p {
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.75;
     width: 615px; }
 
 .home-footer {

@@ -21,7 +21,7 @@ class HomePage extends Component {
       <div>
         <div className="home-flex">
           <div>
-            <p className="home-login">
+            <div className="home-login">
               {this.props.user.username ? (
                 <div>
                   <h1>Welcome, {this.props.user.username}!</h1>
@@ -33,7 +33,7 @@ class HomePage extends Component {
               ) : (
                 <Link to="/login">Login Thing Here</Link>
               )}
-            </p>
+            </div>
           </div>
           <div className="descriptor">
             <h2>
@@ -105,6 +105,34 @@ class HomePage extends Component {
                 <p>ARM YOUR CHARACTER</p>
               </Link>
             </div>
+          </div>
+        </div>
+        <div className="selling-points">
+          <div>
+            <h2>NO DICE REQUIRED</h2>
+            <p>
+              Alpha Galactic was designed to be an &#39;on-the-go&#39;
+              role-playing game, which is to say equipment should be minimal or
+              nonexistent to participate. Instead of dice, outcomes are decided
+              by win, lose, or tie; yes, rock-paper-scissors is the determining
+              factor in this game.
+            </p>
+          </div>
+          <div>
+            <h2>PLAY REMOTELY</h2>
+            <p>
+              As a player, all your characters, inventories, and lore are
+              available through this application. As a game master, all your
+              campaigns, background lore, and randomized weapon & enemy
+              generation is available through this application. No more need to
+              carry around multiple heavy manuals and papers for gameplay.
+            </p>
+          </div>
+          <div>
+            <h2>SAVE 5 CHARACTERS</h2>
+          </div>
+          <div>
+            <h2>DEVELOP LORE</h2>
           </div>
         </div>
         <div className="lore-blurb">

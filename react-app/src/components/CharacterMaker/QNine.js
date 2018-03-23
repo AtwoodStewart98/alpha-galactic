@@ -1,28 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber } from "../../ducks/reducer.js";
+import { updateQuestionNumber, updateCharName } from "../../ducks/reducer.js";
 
 class QNine extends Component {
   render() {
-    const { updateQuestionNumber } = this.props;
+    const { updateQuestionNumber, updateCharName } = this.props;
 
     return (
       <div
-        style={{ display: this.props.questionNumber === 9 ? "block" : "none" }}
+        style={{
+          display: this.props.questionNumber === 9 ? "block" : "none"
+        }}
       >
-        <h1>Final Question</h1>
-        <select>
-          <option type="text" value="type1">
-            Type One
-          </option>
-          <option type="text" value="type2">
-            Type Two
-          </option>
-          <option type="text" value="type3">
-            Type Three
-          </option>
-        </select>
+        <p>Name your character.</p>
+        <input
+          placeholder="character name"
+          type="text"
+          onChange={e => updateCharName(e.target.value)}
+        />
         <br />
         <button onClick={() => updateQuestionNumber(10)}>Next Question</button>
       </div>
@@ -30,12 +26,12 @@ class QNine extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  const { questionNumber } = state;
+const mapStateToProps = state => {
+  const { questionNumber, charName } = state;
+  return { questionNumber, charName };
+};
 
-  return {
-    questionNumber
-  };
-}
-
-export default connect(mapStateToProps, { updateQuestionNumber })(QNine);
+export default connect(mapStateToProps, {
+  updateQuestionNumber,
+  updateCharName
+})(QNine);

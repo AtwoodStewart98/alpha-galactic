@@ -163,16 +163,17 @@ class GDOSLore extends Component {
           will make certain that those pirates are brought down.
         </p>
         <p>
-          Porturuxeans - Since this nation is known for developing some of the
-          most advanced defensive weapons technology in the Alliance, it has
-          been approached several times by the Zoragon Experimental Weapons
-          Project under the GDOS. While some information has been shared between
-          the two parties, there has been increasing demand from Zoragon as of
-          late for even more technological secrets due to steadily increasing
-          danger rates. And while the Democracy is happy to comply for the sake
-          of the common goal, there has been intelligence surfacing hinting that
-          confidential work done by the Porturuxeans has been turned over to the
-          GDOS for further examination, much to their displeasure.
+          <a onClick={() => updateLore("Porturuxeans")}>Porturuxeans</a> - Since
+          this nation is known for developing some of the most advanced
+          defensive weapons technology in the Alliance, it has been approached
+          several times by the Zoragon Experimental Weapons Project under the
+          GDOS. While some information has been shared between the two parties,
+          there has been increasing demand from Zoragon as of late for even more
+          technological secrets due to steadily increasing danger rates. And
+          while the Democracy is happy to comply for the sake of the common
+          goal, there has been intelligence surfacing hinting that confidential
+          work done by the Porturuxeans has been turned over to the GDOS for
+          further examination, much to their displeasure.
         </p>
         <p>
           Thugs - The GDOS are constantly tasked to round up these disturbances

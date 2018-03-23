@@ -210,15 +210,16 @@ class HyjakkerLore extends Component {
           unproven.
         </p>
         <p>
-          Porturuxean - The President of the Porturuxean Democracy holds more
-          grudges against the Hyjakkers than any other member of the Galactic
-          Alliance. Because the Porturuxeans control the most mining planets of
-          any nation, pirates are drawn to target these places more than
-          anywhere else. If it weren&#39;t also the fact that the Porturuxeans
-          have access to some of the best defensive weapons technology, the
-          Democracy might have fallen due to economic instability long ago.
-          Still, Hyjakkers are an opportunistic lot, and any mining world caught
-          off-guard will fall to an onslaught of tactically ruthless raiders.
+          <a onClick={() => updateLore("Porturuxeans")}>Porturuxeans</a> - The
+          President of the Porturuxean Democracy holds more grudges against the
+          Hyjakkers than any other member of the Galactic Alliance. Because the
+          Porturuxeans control the most mining planets of any nation, pirates
+          are drawn to target these places more than anywhere else. If it
+          weren&#39;t also the fact that the Porturuxeans have access to some of
+          the best defensive weapons technology, the Democracy might have fallen
+          due to economic instability long ago. Still, Hyjakkers are an
+          opportunistic lot, and any mining world caught off-guard will fall to
+          an onslaught of tactically ruthless raiders.
         </p>
       </div>
     );

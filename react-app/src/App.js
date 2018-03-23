@@ -20,6 +20,7 @@ class App extends Component {
       trueAlignment: "",
       race: "",
       training: "",
+      faction: "",
       charName: "",
       spawnWeapon: {},
       encounter: "",

@@ -12,6 +12,7 @@ const initialState = {
   trueAlignment: "",
   race: "",
   training: "",
+  faction: "",
   charName: "",
   spawnWeapon: {},
   encounter: "",
@@ -19,12 +20,14 @@ const initialState = {
 };
 
 const UPDATE_QUESTION = "UPDATE_QUESTION";
+const RESET_QUESTIONS = "RESET_QUESTIONS";
 const UPDATE_ALIGNMENT = "UPDATE_ALIGNMENT";
 const UPDATE_ALIGNMENT_TWO = "UPDATE_ALIGNMENT_TWO";
 const UPDATE_ALIGNMENT_THREE = "UPDATE_ALIGNMENT_THREE";
 const UPDATE_TRUE_ALIGNMENT = "UPDATE_TRUE_ALIGNMENT";
 const UPDATE_RACE = "UPDATE_RACE";
 const UPDATE_TRAINING = "UPDATE_TRAINING";
+const UPDATE_FACTION = "UPDATE_FACTION";
 const UPDATE_CHAR_NAME = "UPDATE_CHAR_NAME";
 const UPDATE_ENCOUNTER_VIEW = "UPDATE_ENCOUNTER_VIEW";
 const UPDATE_LORE = "UPDATE_LORE";
@@ -37,6 +40,16 @@ function reducer(state = initialState, action) {
   switch (action.type) {
     case UPDATE_QUESTION:
       return Object.assign({}, state, { questionNumber: action.payload });
+    case RESET_QUESTIONS:
+      return Object.assign({}, state, {
+        alignment: "",
+        alignment2: "",
+        alignment3: "",
+        trueAlignment: "",
+        race: "",
+        training: "",
+        charName: ""
+      });
     case UPDATE_ALIGNMENT:
       return Object.assign({}, state, { alignment: action.payload });
     case UPDATE_ALIGNMENT_TWO:
@@ -49,6 +62,8 @@ function reducer(state = initialState, action) {
       return Object.assign({}, state, { race: action.payload });
     case UPDATE_TRAINING:
       return Object.assign({}, state, { training: action.payload });
+    case UPDATE_FACTION:
+      return Object.assign({}, state, { faction: action.payload });
     case UPDATE_CHAR_NAME:
       return Object.assign({}, state, { charName: action.payload });
     case UPDATE_ENCOUNTER_VIEW:
@@ -80,6 +95,12 @@ export function updateQuestionNumber(questionNumber) {
   return {
     type: UPDATE_QUESTION,
     payload: questionNumber
+  };
+}
+
+export function resetQuestions() {
+  return {
+    type: RESET_QUESTIONS
   };
 }
 
@@ -140,6 +161,13 @@ export function updateTraining(training) {
   return {
     type: UPDATE_TRAINING,
     payload: training
+  };
+}
+
+export function updateFaction(faction) {
+  return {
+    type: UPDATE_FACTION,
+    payload: faction
   };
 }
 

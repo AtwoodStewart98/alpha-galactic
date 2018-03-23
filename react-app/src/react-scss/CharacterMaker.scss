@@ -2,7 +2,8 @@
 
 .character-splash {
   display: block;
-  width: 1265px;
+  height: auto;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -33,6 +34,9 @@
   }
   label {
     margin-left: 250px;
+  }
+  .radio-selector {
+    margin-top: 50px;
   }
 }
 

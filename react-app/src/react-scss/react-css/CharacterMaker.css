@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
 .character-splash {
   display: block;
-  width: 1265px;
+  height: auto;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -25,6 +26,9 @@
 
 .race-questions label {
   margin-left: 250px; }
+
+.race-questions .radio-selector {
+  margin-top: 50px; }
 
 .radio-selector {
   float: left;

@@ -15,10 +15,13 @@ import QResults from "./QResults.js";
 
 import "../../react-scss/react-css/CharacterMaker.css";
 
-import { updateQuestionNumber } from "../../ducks/reducer.js";
+import { updateQuestionNumber, resetQuestions } from "../../ducks/reducer.js";
 import characterDesignSplash from "../../assets/characterDesignSplash.png";
 
 class CharacterMaker extends Component {
+  componentDidMount() {
+    this.props.resetQuestions();
+  }
   render() {
     const { updateQuestionNumber } = this.props;
 
@@ -105,6 +108,7 @@ const mapStateToProps = state => {
   return { questionNumber, user };
 };
 
-export default connect(mapStateToProps, { updateQuestionNumber })(
-  CharacterMaker
-);
+export default connect(mapStateToProps, {
+  updateQuestionNumber,
+  resetQuestions
+})(CharacterMaker);

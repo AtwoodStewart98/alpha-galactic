@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import { getUser } from "../../ducks/reducer.js";
+import { getUser, updateQuestionNumber } from "../../ducks/reducer.js";
 import cityscape from "../../assets/cityscape.png";
 import arthrotera from "../../assets/arthrotera.jpg";
 import enemyfaction from "../../assets/enemy-faction.png";
@@ -27,7 +27,8 @@ class HomePage extends Component {
     this.props.getUser();
   }
   render() {
-    console.log(this.props);
+    const { updateQuestionNumber } = this.props;
+
     return (
       <div>
         <div className="home-flex">
@@ -122,7 +123,10 @@ class HomePage extends Component {
           </p>
           <div className="linx-flex">
             <div className="arthrotera-alien">
-              <Link to="/characterMaker">
+              <Link
+                onClick={() => updateQuestionNumber(0)}
+                to="/characterMaker"
+              >
                 <img src={arthrotera} alt="alien" />
                 <p>CREATE CHARACTER</p>
               </Link>
@@ -240,4 +244,6 @@ class HomePage extends Component {
 
 const mapStateToProps = state => state;
 
-export default withRouter(connect(mapStateToProps, { getUser })(HomePage));
+export default withRouter(
+  connect(mapStateToProps, { getUser, updateQuestionNumber })(HomePage)
+);

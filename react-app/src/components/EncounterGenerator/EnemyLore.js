@@ -4,7 +4,10 @@ import { connect } from "react-redux";
 import { updateLore } from "../../ducks/reducer.js";
 import HolkovrhysLore from "./EnemyLoreFiles/HolkovrhysLore.js";
 import HyjakkerLore from "./EnemyLoreFiles/HyjakkerLore.js";
+import VigilantesLore from "./EnemyLoreFiles/VigilantesLore.js";
 import MercenariesLore from "./EnemyLoreFiles/MercenariesLore.js";
+import ThraxLore from "./EnemyLoreFiles/ThraxLore.js";
+import DraconisLore from "./EnemyLoreFiles/DraconisLore.js";
 import GDOSLore from "./EnemyLoreFiles/GDOSLore.js";
 import PorturuxeanLore from "./EnemyLoreFiles/PorturuxeanLore.js";
 
@@ -30,8 +33,17 @@ class EnemyLore extends Component {
           <option type="text" value="Holkovrhys">
             Holkovrhys
           </option>
+          <option type="text" value="Vigilantes">
+            Vigilantes
+          </option>
           <option type="text" value="Mercenaries">
             Mercenaries
+          </option>
+          <option type="text" value="Thrax">
+            Thrax
+          </option>
+          <option type="text" value="Draconis">
+            Draconis
           </option>
           <option type="text" value="GDOS">
             G.D.O.S.
@@ -40,9 +52,12 @@ class EnemyLore extends Component {
             Porturuxeans
           </option>
         </select>
-        {lore === "Hyjakker" ? <HyjakkerLore /> : null}
         {lore === "Holkovrhys" ? <HolkovrhysLore /> : null}
+        {lore === "Hyjakker" ? <HyjakkerLore /> : null}
+        {lore === "Vigilantes" ? <VigilantesLore /> : null}
         {lore === "Mercenaries" ? <MercenariesLore /> : null}
+        {lore === "Thrax" ? <ThraxLore /> : null}
+        {lore === "Draconis" ? <DraconisLore /> : null}
         {lore === "GDOS" ? <GDOSLore /> : null}
         {lore === "Porturuxeans" ? <PorturuxeanLore /> : null}
       </div>

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber } from "../../ducks/reducer.js";
+import { updateQuestionNumber, resetQuestions } from "../../ducks/reducer.js";
 
 class QResults extends Component {
   render() {
-    const { updateQuestionNumber } = this.props;
+    const { updateQuestionNumber, resetQuestions } = this.props;
 
     return (
       <div
@@ -16,14 +16,22 @@ class QResults extends Component {
         <p>Alignment: {this.props.trueAlignment}</p>
         <p>Race: {this.props.race}</p>
         <p>Experience: {this.props.training}</p>
+        <p>Faction: {this.props.faction}</p>
         <br />
-        <button onClick={() => updateQuestionNumber(0)}>Restart</button>
+        <button
+          onClick={() => {
+            updateQuestionNumber(0);
+            resetQuestions();
+          }}
+        >
+          Restart
+        </button>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   const {
     questionNumber,
     alignment,
@@ -32,9 +40,9 @@ function mapStateToProps(state) {
     trueAlignment,
     race,
     training,
+    faction,
     charName
   } = state;
-
   return {
     questionNumber,
     alignment,
@@ -43,8 +51,12 @@ function mapStateToProps(state) {
     trueAlignment,
     race,
     training,
+    faction,
     charName
   };
-}
+};
 
-export default connect(mapStateToProps, { updateQuestionNumber })(QResults);
+export default connect(mapStateToProps, {
+  updateQuestionNumber,
+  resetQuestions
+})(QResults);

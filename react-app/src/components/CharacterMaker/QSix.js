@@ -107,6 +107,17 @@ class QSix extends Component {
             <label>
               <strong>Draconis Timocracy</strong>
               <br />
+              The Draconis are newcomers to the Galactic Alliance, and although
+              their cultural values and overall ethos is sometimes difficult to
+              grasp, their society has thrived quite well. Political power is
+              determined by a strict code of honor, and only those who exemplify
+              it in their line of work are eligible to take office. Deceit and
+              dishonesty are the worst offenses to a Draconis; such traits are
+              punished severely. One law of their ethos that has gradually been
+              adopted by other nations is the concept that a fighter never
+              enters combat without a melee weapon; in an era dominated by
+              advanced firearms, it is a necessity to challenge your foe
+              face-to-face, and to remind oneself of the reality of taking life.
             </label>
           </p>
           <p>
@@ -140,7 +151,16 @@ class QSix extends Component {
             <label>
               <strong>Thraxian Invaders</strong>
               <br />
-              Selection One
+              If it weren&#39;t for the fact that this race is mostly reclusive
+              and keep to their own territory near the center of the galaxy, the
+              Galactic Alliance would be much more concerned about them.
+              Notoriously xenophobic and technophilic, Thraxian invaders will
+              destroy any trespassing ship in their territory, provoked or not,
+              and will raid colonies they feel are too close to their borders
+              with indiscriminate force. However, their neurotic need to
+              physically augment themselves can overpower their reclusive
+              nature, and sometimes loners will venture out to interact with
+              colonies in search of technologies they find valuable.
             </label>
           </p>
           <p
@@ -225,7 +245,14 @@ class QSix extends Component {
             <label>
               <strong>Vigilantes</strong>
               <br />
-              Selection One
+              Despite what the connotations surrounding their name would imply,
+              the Vigilantes are anything but selfless do-gooders. A
+              well-equipped piracy gang, they consist of highly autonomous and
+              organized paramilitary cells that strike transport carriers and
+              make off with whatever valuables they can get their hands on.
+              Their numbers are commanded by Archon Virgil, an embittered
+              Porturuxean ex-decorated general who abandoned his post after his
+              service forced him to abandon his homeworld to be destroyed.
             </label>
           </p>
           <p>
@@ -238,7 +265,16 @@ class QSix extends Component {
             <label>
               <strong>Ekta Viren</strong>
               <br />
-              Selection One
+              One of the last major surviving religions in Sector Alpha, the
+              teachings of the Ekta Viren do not necessarily instruct members in
+              behaviors or philosophies, but rather encourage common sense
+              guidelines backed in theological meaning. Their presence stems
+              from the fact that their prophecies that have originated across
+              various planets all seem to match one another, despite having
+              different points of origination. They do not have a presence in
+              politics, but are content to aid communities and share prophecies
+              that have yet to be disproven by official record as they take
+              place.
             </label>
           </p>
           <p>

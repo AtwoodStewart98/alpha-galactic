@@ -9,10 +9,6 @@ const Auth0Strategy = require("passport-auth0");
 const config = require("./config.js");
 const { secret, dbUser, database, domain, clientID, clientSecret } = config;
 
-const port = 4200;
-
-const app = express();
-
 const connectionString = `postgres://${dbUser}@localhost/${database}`;
 
 massive(connectionString)
@@ -20,6 +16,12 @@ massive(connectionString)
     app.set("db", db);
   })
   .catch(console.log());
+
+const port = 4200;
+
+const app = express();
+
+app.use(express.static(`${__dirname}/../build`));
 
 app.use(cors());
 app.use(json());
@@ -101,6 +103,10 @@ app.get("/auth/logout", (req, res) => {
   req.session.destroy(() => {
     res.redirect("http://localhost:3000/#/login");
   });
+});
+
+app.get("*", (req, res, next) => {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
 });
 
 app.listen(port, () => {

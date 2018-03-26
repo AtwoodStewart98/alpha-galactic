@@ -5,6 +5,7 @@ const cors = require("cors");
 const massive = require("massive");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
+const path = require("path");
 
 const config = require("./config.js");
 const { secret, dbUser, database, domain, clientID, clientSecret } = config;

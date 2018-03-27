@@ -21,30 +21,32 @@ class QResults extends Component {
       <div
         style={{ display: this.props.questionNumber === 10 ? "block" : "none" }}
       >
-        <div>
+        <div className="results-flex">
           {this.props.race === "Porturuxean" ? (
-            <img src={Porturuxean} alt="race" width="170px" />
+            <img src={Porturuxean} alt="race" width="250px" />
           ) : this.props.race === "Arthrotera" ? (
-            <img src={Arthrotera} alt="race" width="170px" />
+            <img src={Arthrotera} alt="race" width="250px" />
           ) : this.props.race === "Draconis" ? (
-            <img src={Draconis} alt="race" width="170px" />
+            <img src={Draconis} alt="race" width="250px" />
           ) : this.props.race === "Gob" ? (
-            <img src={Gob} alt="race" width="170px" />
+            <img src={Gob} alt="race" width="250px" />
           ) : this.props.race === "Thrax" ? (
-            <img src={Thrax} alt="race" width="170px" />
+            <img src={Thrax} alt="race" width="250px" />
           ) : this.props.race === "Tomlin" ? (
-            <img src={Tomlin} alt="race" width="170px" />
+            <img src={Tomlin} alt="race" width="250px" />
           ) : this.props.race === "Xiphave" ? (
-            <img src={Xiphave} alt="race" width="170px" />
+            <img src={Xiphave} alt="race" width="250px" />
           ) : this.props.race === "Holkovrhys" ? (
-            <img src={Holkovrhys} alt="race" width="170px" />
+            <img src={Holkovrhys} alt="race" width="250px" />
           ) : this.props.race === "Arktonian" ? (
-            <img src={Arktonian} alt="race" width="170px" />
+            <img src={Arktonian} alt="race" width="250px" />
           ) : null}
-          <p>Name: {this.props.charName}</p>
-          <p>Alignment: {this.props.trueAlignment}</p>
-          <p>Experience: {this.props.training}</p>
-          <p>Faction: {this.props.faction}</p>
+          <div>
+            <p>Name: {this.props.charName}</p>
+            <p>Alignment: {this.props.trueAlignment}</p>
+            <p>Experience: {this.props.training}</p>
+            <p>Faction: {this.props.faction}</p>
+          </div>
         </div>
         <br />
         <button

@@ -79,3 +79,11 @@
     cursor: not-allowed;
   }
 }
+
+.results-flex {
+  @extend %flex-evenly;
+  img {
+    padding: 45px 5px;
+    border: 2px solid $my-background;
+  }
+}

@@ -5,7 +5,7 @@ import {
   updateQuestionNumber,
   updateAlignmentThree,
   updateTrueAlignment
-} from "../../ducks/reducer.js";
+} from "../../../ducks/reducer.js";
 
 class QThree extends Component {
   render() {

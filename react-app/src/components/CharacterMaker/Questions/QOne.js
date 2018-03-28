@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber, updateAlignment } from "../../ducks/reducer.js";
+import {
+  updateQuestionNumber,
+  updateAlignment
+} from "../../../ducks/reducer.js";
 
 class QOne extends Component {
   render() {

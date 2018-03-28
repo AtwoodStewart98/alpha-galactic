@@ -2,16 +2,17 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import QOne from "./QOne.js";
-import QTwo from "./QTwo.js";
-import QThree from "./QThree.js";
-import QFour from "./QFour.js";
-import QFive from "./QFive.js";
-import QSix from "./QSix.js";
-import QSeven from "./QSeven.js";
-import QEight from "./QEight.js";
-import QNine from "./QNine.js";
-import QResults from "./QResults.js";
+import QOne from "./Questions/QOne.js";
+import QTwo from "./Questions/QTwo.js";
+import QThree from "./Questions/QThree.js";
+import QFour from "./Questions/QFour.js";
+import QFive from "./Questions/QFive.js";
+import QSix from "./Questions/QSix.js";
+import QSeven from "./Questions/QSeven.js";
+import QEight from "./Questions/QEight.js";
+import QNine from "./Questions/QNine.js";
+import QResults from "./Questions/QResults.js";
+import InitialWeapons from "./Questions/InitialWeapons.js";
 
 import "../../react-scss/react-css/CharacterMaker.css";
 
@@ -92,6 +93,7 @@ class CharacterMaker extends Component {
           <QNine />
           <QResults />
         </section>
+        <InitialWeapons />
         <div className="home-footer">
           <p>
             This website and its content, excepting images, is copyright of

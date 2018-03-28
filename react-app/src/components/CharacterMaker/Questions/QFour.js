@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber, updateRace } from "../../ducks/reducer.js";
-import Xiphave from "../../assets/xiphaverace.png";
-import Arktonian from "../../assets/arktonianrace.png";
-import Thrax from "../../assets/thraxrace.png";
-import Holkovrhys from "../../assets/holkovrhysrace.png";
-import Porturuxean from "../../assets/porturuxeanrace.png";
-import Draconis from "../../assets/draconisrace.png";
-import Gob from "../../assets/gobrace.png";
-import Tomlin from "../../assets/tomlinrace.png";
-import Arthrotera from "../../assets/arthroterarace.png";
+import { updateQuestionNumber, updateRace } from "../../../ducks/reducer.js";
+import Xiphave from "../../../assets/xiphaverace.png";
+import Arktonian from "../../../assets/arktonianrace.png";
+import Thrax from "../../../assets/thraxrace.png";
+import Holkovrhys from "../../../assets/holkovrhysrace.png";
+import Porturuxean from "../../../assets/porturuxeanrace.png";
+import Draconis from "../../../assets/draconisrace.png";
+import Gob from "../../../assets/gobrace.png";
+import Tomlin from "../../../assets/tomlinrace.png";
+import Arthrotera from "../../../assets/arthroterarace.png";
 
 class QFour extends Component {
   render() {

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import {
   updateQuestionNumber,
   updateAlignmentTwo
-} from "../../ducks/reducer.js";
+} from "../../../ducks/reducer.js";
 
 class QTwo extends Component {
   render() {

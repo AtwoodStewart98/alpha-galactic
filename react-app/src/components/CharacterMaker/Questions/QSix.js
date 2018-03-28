@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber, updateFaction } from "../../ducks/reducer.js";
+import { updateQuestionNumber, updateFaction } from "../../../ducks/reducer.js";
 
 class QSix extends Component {
   render() {

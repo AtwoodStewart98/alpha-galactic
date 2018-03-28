@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber, updateTraining } from "../../ducks/reducer.js";
+import {
+  updateQuestionNumber,
+  updateTraining
+} from "../../../ducks/reducer.js";
 
 class QFive extends Component {
   render() {

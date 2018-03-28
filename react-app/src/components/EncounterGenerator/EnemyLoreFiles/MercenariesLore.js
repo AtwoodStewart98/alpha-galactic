@@ -73,12 +73,13 @@ class MercenariesLore extends Component {
           <strong>Notable Relationships</strong>
         </p>
         <p>
-          Vigilantes - Although mercenaries have no definitive alignment and
-          come from all kinds of backgrounds, they collectively despise this far
-          more unscrupulous and orderly faction. Their smug attitudes and access
-          to more advanced weaponry rather infuriate those who simply want to
-          make it by. Although not exactly enemies, any encounter between these
-          two parties usually ends in crossfire.
+          <a onClick={() => updateLore("Vigilantes")}>Vigilantes</a> - Although
+          mercenaries have no definitive alignment and come from all kinds of
+          backgrounds, they collectively despise this far more unscrupulous and
+          orderly faction. Their smug attitudes and access to more advanced
+          weaponry rather infuriate those who simply want to make it by.
+          Although not exactly enemies, any encounter between these two parties
+          usually ends in crossfire.
         </p>
       </div>
     );

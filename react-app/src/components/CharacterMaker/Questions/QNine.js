@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber, updateCharName } from "../../ducks/reducer.js";
+import {
+  updateQuestionNumber,
+  updateCharName
+} from "../../../ducks/reducer.js";
 
 class QNine extends Component {
   render() {
@@ -20,7 +23,20 @@ class QNine extends Component {
           onChange={e => updateCharName(e.target.value)}
         />
         <br />
-        <button onClick={() => updateQuestionNumber(10)}>Next Question</button>
+        <div
+          className={
+            this.props.charName.length < 3 ? "disabled-button" : "next-button"
+          }
+        >
+          <button
+            disabled={this.props.charName < 3}
+            onClick={() => {
+              updateQuestionNumber(10);
+            }}
+          >
+            Next Question
+          </button>
+        </div>
       </div>
     );
   }

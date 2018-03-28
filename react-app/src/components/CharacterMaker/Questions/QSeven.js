@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber } from "../../ducks/reducer.js";
+import { updateQuestionNumber } from "../../../ducks/reducer.js";
 
-class QEight extends Component {
+class QSeven extends Component {
   render() {
     const { updateQuestionNumber } = this.props;
 
     return (
       <div
-        style={{ display: this.props.questionNumber === 8 ? "block" : "none" }}
+        style={{ display: this.props.questionNumber === 7 ? "block" : "none" }}
       >
-        <h1>Eighth Question</h1>
+        <h1>Seventh Question</h1>
         <select>
           <option type="text" value="type1">
             Type One
@@ -24,18 +24,15 @@ class QEight extends Component {
           </option>
         </select>
         <br />
-        <button onClick={() => updateQuestionNumber(9)}>Next Question</button>
+        <button onClick={() => updateQuestionNumber(8)}>Next Question</button>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   const { questionNumber } = state;
+  return { questionNumber };
+};
 
-  return {
-    questionNumber
-  };
-}
-
-export default connect(mapStateToProps, { updateQuestionNumber })(QEight);
+export default connect(mapStateToProps, { updateQuestionNumber })(QSeven);

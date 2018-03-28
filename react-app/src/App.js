@@ -21,6 +21,7 @@ class App extends Component {
       race: "",
       training: "",
       faction: "",
+      charDesc: "",
       charName: "",
       spawnWeapon: {},
       encounter: "",

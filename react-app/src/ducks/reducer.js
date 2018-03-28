@@ -13,6 +13,7 @@ const initialState = {
   race: "",
   training: "",
   faction: "",
+  charDesc: "",
   charName: "",
   spawnWeapon: {},
   encounter: "",
@@ -28,6 +29,7 @@ const UPDATE_TRUE_ALIGNMENT = "UPDATE_TRUE_ALIGNMENT";
 const UPDATE_RACE = "UPDATE_RACE";
 const UPDATE_TRAINING = "UPDATE_TRAINING";
 const UPDATE_FACTION = "UPDATE_FACTION";
+const UPDATE_CHAR_DESC = "UPDATE_CHAR_DESC";
 const UPDATE_CHAR_NAME = "UPDATE_CHAR_NAME";
 const UPDATE_ENCOUNTER_VIEW = "UPDATE_ENCOUNTER_VIEW";
 const UPDATE_LORE = "UPDATE_LORE";
@@ -48,6 +50,7 @@ function reducer(state = initialState, action) {
         trueAlignment: "",
         race: "",
         training: "",
+        charDesc: "",
         charName: ""
       });
     case UPDATE_ALIGNMENT:
@@ -64,6 +67,8 @@ function reducer(state = initialState, action) {
       return Object.assign({}, state, { training: action.payload });
     case UPDATE_FACTION:
       return Object.assign({}, state, { faction: action.payload });
+    case UPDATE_CHAR_DESC:
+      return Object.assign({}, state, { charDesc: action.payload });
     case UPDATE_CHAR_NAME:
       return Object.assign({}, state, { charName: action.payload });
     case UPDATE_ENCOUNTER_VIEW:
@@ -168,6 +173,13 @@ export function updateFaction(faction) {
   return {
     type: UPDATE_FACTION,
     payload: faction
+  };
+}
+
+export function updateCharDesc(charDesc) {
+  return {
+    type: UPDATE_CHAR_DESC,
+    payload: charDesc
   };
 }
 

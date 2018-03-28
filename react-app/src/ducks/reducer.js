@@ -204,7 +204,7 @@ export function updateLore(lore) {
   };
 }
 
-export function updateWeapon(spawnWeapon, manufacsArr) {
+export function updateWeapon(spawnWeapon, manufacsArr, initial) {
   let randomType = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
   console.log(randomType);
 
@@ -299,6 +299,9 @@ export function updateWeapon(spawnWeapon, manufacsArr) {
       dmgArr.indexOf(randomType.stats.damage) + modifiers.damage,
       dmgArr.indexOf(randomType.stats.damage) + modifiers.damage + 1
     )[0];
+    if ((finalObj.damage < 0.5) | (finalObj.damage === undefined)) {
+      finalObj.damage = 0.5;
+    }
   } else {
     finalObj.damage = dmgArr.slice(
       dmgArr.indexOf(randomType.stats.damage) +
@@ -370,13 +373,19 @@ export function updateWeapon(spawnWeapon, manufacsArr) {
     finalObj.projectiles = randomVar.projectiles;
   }
 
-  finalObj.lvl =
-    Math.floor(Math.random() * (11 - randomVar.lvl)) + randomVar.lvl;
+  if (!initial) {
+    finalObj.lvl =
+      Math.floor(Math.random() * (11 - randomVar.lvl)) + randomVar.lvl;
+  } else {
+    finalObj.lvl = 1;
+  }
+
   if (modifiers.other && randomType.other) {
     finalObj.other = randomType.other + " " + modifiers.other;
   } else if (modifiers.other) {
     finalObj.other = modifiers.other;
   }
+
   finalObj.type = randomType.id;
 
   return {

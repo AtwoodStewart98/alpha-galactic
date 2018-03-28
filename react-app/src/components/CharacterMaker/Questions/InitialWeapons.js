@@ -154,7 +154,7 @@ class InitialWeapons extends Component {
         </div>
         <button
           onClick={() =>
-            updateWeapon(weapons.weapon_classes, weapons.manufacturers)
+            updateWeapon(weapons.weapon_classes, weapons.manufacturers, true)
           }
         >
           Generate a Random Weapon

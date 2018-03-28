@@ -35,7 +35,12 @@ class CharacterMaker extends Component {
             alt="character splash"
           />
         </div>
-        <section className="char-questions">
+        <section
+          className="char-questions"
+          style={{
+            display: this.props.questionNumber !== 11 ? "block" : "none"
+          }}
+        >
           <h1>CREATE YOUR CHARACTER</h1>
           <div
             style={{

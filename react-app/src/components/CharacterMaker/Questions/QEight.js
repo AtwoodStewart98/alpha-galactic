@@ -23,7 +23,7 @@ class QEight extends Component {
           className="desc-input"
           name="text"
           placeholder="Write a background..."
-          maxlength="500"
+          maxLength="500"
           wrap="soft"
           onChange={e => updateCharDesc(e.target.value)}
         />

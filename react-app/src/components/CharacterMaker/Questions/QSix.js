@@ -293,13 +293,9 @@ class QSix extends Component {
           </p>
         </form>
         <br />
-        <div
-          className={
-            this.props.faction === "" ? "disabled-button" : "next-button"
-          }
-        >
+        <div className={faction === "" ? "disabled-button" : "next-button"}>
           <button
-            disabled={!this.props.faction}
+            disabled={!faction}
             onClick={() => {
               updateQuestionNumber(7);
             }}

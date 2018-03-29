@@ -208,8 +208,21 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
   let randomType = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
   console.log(randomType);
 
-  let randomVar =
-    randomType.variants[Math.floor(Math.random() * randomType.variants.length)];
+  let randomVar = [];
+  if (!initial) {
+    randomVar =
+      randomType.variants[
+        Math.floor(Math.random() * randomType.variants.length)
+      ];
+  } else {
+    let tempArr = [];
+    for (let i = 0; i < randomType.variants.length; i++) {
+      if (randomType.variants[i].lvl === 1) {
+        tempArr.push(randomType.variants[i]);
+      }
+    }
+    randomVar = tempArr[Math.floor(Math.random() * tempArr.length)];
+  }
   console.log(randomVar);
 
   let finalObj = {};
@@ -236,6 +249,31 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
 
   console.log(manufacObj);
   let modifiers = manufacObj.info[0].modifiers;
+
+  let dmgArr = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11];
+
+  if (!randomVar.damage) {
+    finalObj.damage = dmgArr.slice(
+      dmgArr.indexOf(randomType.stats.damage) + modifiers.damage,
+      dmgArr.indexOf(randomType.stats.damage) + modifiers.damage + 1
+    )[0];
+    if ((finalObj.damage < 0.5) | (finalObj.damage === undefined)) {
+      finalObj.damage = 0.5;
+    }
+  } else {
+    finalObj.damage = dmgArr.slice(
+      dmgArr.indexOf(randomType.stats.damage) +
+        modifiers.damage +
+        randomVar.damage,
+      dmgArr.indexOf(randomType.stats.damage) +
+        modifiers.damage +
+        randomVar.damage +
+        1
+    )[0];
+    if ((finalObj.damage < 0.5) | (finalObj.damage === undefined)) {
+      finalObj.damage = 0.5;
+    }
+  }
 
   let rangeArr = [
     25,
@@ -292,31 +330,6 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
     )[0];
   }
 
-  let dmgArr = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11];
-
-  if (!randomVar.damage) {
-    finalObj.damage = dmgArr.slice(
-      dmgArr.indexOf(randomType.stats.damage) + modifiers.damage,
-      dmgArr.indexOf(randomType.stats.damage) + modifiers.damage + 1
-    )[0];
-    if ((finalObj.damage < 0.5) | (finalObj.damage === undefined)) {
-      finalObj.damage = 0.5;
-    }
-  } else {
-    finalObj.damage = dmgArr.slice(
-      dmgArr.indexOf(randomType.stats.damage) +
-        modifiers.damage +
-        randomVar.damage,
-      dmgArr.indexOf(randomType.stats.damage) +
-        modifiers.damage +
-        randomVar.damage +
-        1
-    )[0];
-    if ((finalObj.damage < 0.5) | (finalObj.damage === undefined)) {
-      finalObj.damage = 0.5;
-    }
-  }
-
   let rofArr = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 15, 18, 20, 22, 25, 28];
 
   if (!randomVar.firerate) {
@@ -366,6 +379,14 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
   } else
     finalObj.magazine =
       magArr[randomType.id][2 + modifiers.magazine + randomVar.magazine];
+
+  if (modifiers.consumption && randomVar.consumption) {
+    finalObj.consumption = 1 + modifiers.consumption + randomVar.consumption;
+  } else if (randomVar.consumption) {
+    finalObj.consumption = 1 + randomVar.consumption;
+  } else if (modifiers.consumption) {
+    finalObj.consumption = 1 + modifiers.consumption;
+  }
 
   if (!randomVar.projectiles) {
     finalObj.projectiles = randomType.stats.projectiles;

@@ -141,6 +141,9 @@ class WeaponGenerator extends Component {
             {spawnWeapon.resist ? resist + ", " : null}
             {spawnWeapon.stealth ? stealth + ", " : null}
             {spawnWeapon.velocity ? velocity + ", " : null}
+            {spawnWeapon.consumption
+              ? "consumes " + spawnWeapon.consumption + " ammo, "
+              : null}
             {spawnWeapon.projectiles
               ? "fires " + spawnWeapon.projectiles + " projectiles, "
               : null}

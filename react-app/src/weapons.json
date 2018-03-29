@@ -97,7 +97,7 @@
         "firerate": 0,
         "reload": 0,
         "magazine": 1,
-        "other": "+1 ammo consumption",
+        "consumption": 1,
         "projectiles": 1
       },
       "weapon_types": ["RV", "MP", "LMG", "PS", "CS", "RL"]
@@ -263,7 +263,7 @@
           "range": -2,
           "firerate": -1,
           "magazine": 1,
-          "other": "Consumes 2 ammo",
+          "consumption": 1,
           "projectiles": 2,
           "manufacs": ["Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 2
@@ -465,7 +465,7 @@
           "range": -2,
           "firerate": -1,
           "reload": -1,
-          "other": "Consumes 3 ammo",
+          "consumption": 2,
           "projectiles": 3,
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 2
@@ -492,7 +492,7 @@
         {
           "name": "Backlash",
           "damage": 5,
-          "other": "Consumes 2 ammo",
+          "consumption": 1,
           "projectiles": 2,
           "manufacs": ["Thorpe", "Zoragon"],
           "lvl": 2
@@ -768,7 +768,7 @@
         {
           "name": "Mortar",
           "magazine": 1,
-          "other": "Consumes 2 ammo",
+          "consumption": 1,
           "AoE": 2,
           "manufacs": ["Burgnof", "Crustanix", "Rawdawg"],
           "lvl": 6
@@ -839,7 +839,8 @@
       "firerate": 2,
       "reload": 2,
       "magazine": 8,
-      "other": "Acid & fire, consumes 2 ammo, dmged enemies glow brightly",
+      "consumption": 1,
+      "other": "Acid & fire, dmged enemies glow brightly",
       "projectiles": 2
     },
     {
@@ -895,8 +896,8 @@
       "firerate": 15,
       "reload": 3,
       "magazine": 50,
-      "other":
-        "Consumes 2 ammo, creates blast shield, cannot be accessorized, fires bullets",
+      "consumption": 1,
+      "other": "creates blast shield, cannot be accessorized, fires bullets",
       "stealth": 1,
       "projectiles": 2,
       "melee": 1
@@ -978,8 +979,9 @@
       "firerate": 8,
       "reload": 2,
       "magazine": 100,
+      "consumption": 3,
       "other":
-        "Consumes 4 ammo, fires manual detonation projectiles, when reload, projectiles explode",
+        "Fires manual detonation projectiles, when reload, projectiles explode",
       "projectiles": 2
     },
     {
@@ -991,7 +993,8 @@
       "firerate": 2,
       "reload": 4,
       "magazine": 9,
-      "other": "Consumes 3 ammo, fires rockets, never capacitated",
+      "consumption": 2,
+      "other": "Fires rockets, never capacitated",
       "projectiles": 6
     },
     {
@@ -1077,8 +1080,8 @@
       "firerate": 1,
       "reload": 3,
       "magazine": 4,
-      "other":
-        "Consumes 4 ammo, fires in two-ended pitchfork spread pattern, fires bullets",
+      "consumption": 3,
+      "other": "Fires in two-ended pitchfork spread pattern, fires bullets",
       "projectiles": 10
     },
     {
@@ -1101,7 +1104,8 @@
       "firerate": 2,
       "reload": 3,
       "magazine": 8,
-      "other": "Acid & fire, consumes 2 ammo, contagious, +rng when scoped",
+      "consumption": 1,
+      "other": "Acid & fire, contagious, +rng when scoped",
       "capacitor": 3,
       "melee": 1
     },
@@ -1137,7 +1141,7 @@
       "firerate": 2,
       "reload": 4,
       "magazine": 4,
-      "other": "Consumes 2 ammo",
+      "consumption": 1,
       "AoE": 2
     },
     {
@@ -1303,7 +1307,8 @@
       "firerate": 1,
       "reload": 2,
       "magazine": 6,
-      "other": "Consumes 6 ammo, on critical kill, enemy drops additional loot",
+      "consumption": 5,
+      "other": "On critical kill, enemy drops additional loot",
       "projectiles": 6
     },
     {
@@ -1337,7 +1342,8 @@
       "firerate": 12,
       "reload": 2,
       "magazine": 50,
-      "other": "Consumes 2 ammo, fires in helix spread pattern",
+      "consumption": 1,
+      "other": "Fires in helix spread pattern",
       "projectiles": 3
     },
     {
@@ -1398,7 +1404,8 @@
       "firerate": 10,
       "reload": 0,
       "magazine": 40,
-      "other": "Consumes 2 ammo, 5-round burst",
+      "consumption": 1,
+      "other": "5-round burst",
       "projectiles": 2
     },
     {
@@ -1517,7 +1524,8 @@
       "firerate": 5,
       "reload": 4,
       "magazine": 300,
-      "other": "Consumes 6 ammo, fires grenades, cannot be accessorized",
+      "consumption": 5,
+      "other": "Fires grenades, cannot be accessorized",
       "projectiles": 3
     },
     {
@@ -1578,8 +1586,8 @@
       "firerate": 1,
       "reload": 2,
       "magazine": 12,
-      "other": "Consumes 4 ammo",
       "capacitor": 1,
+      "consumption": 3,
       "projectiles": 20
     },
     {
@@ -1628,8 +1636,9 @@
       "firerate": 2,
       "reload": 3,
       "magazine": 20,
+      "consumption": 1,
       "other":
-        "Consumes 2 ammo, extreme +explosive resist, when explosive dmged, +HP regeneration",
+        "Extreme +explosive resist, when explosive dmged, +HP regeneration",
       "projectiles": 12
     },
     {
@@ -1641,7 +1650,8 @@
       "firerate": 1,
       "reload": 3,
       "magazine": 6,
-      "other": "Radioactive, consumes 2 ammo",
+      "consumption": 1,
+      "other": "Radioactive",
       "capacitor": 1,
       "projectiles": 16,
       "stealth": 1
@@ -1789,8 +1799,8 @@
       "firerate": 2,
       "reload": 3,
       "magazine": 15,
-      "other":
-        "Consumes 3 ammo, 1-turn lock-on, 5-round burst, creates blast shield"
+      "consumption": 2,
+      "other": "1-turn lock-on, 5-round burst, creates blast shield"
     },
     {
       "name": "Waylayer",
@@ -1849,8 +1859,8 @@
       "firerate": 2,
       "reload": 5,
       "magazine": 6,
-      "other":
-        "Consumes 3 ammo, explodes into 2 grenades upon proximity or maximum range",
+      "consumption": 2,
+      "other": "Explodes into 2 grenades upon proximity or maximum range",
       "capacitor": 1,
       "stealth": 1
     },
@@ -1922,7 +1932,7 @@
       "firerate": 2,
       "reload": 4,
       "magazine": 4,
-      "other": "Consumes 2 ammo",
+      "consumption": 1,
       "AoE": 1,
       "projectiles": 2
     }

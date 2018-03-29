@@ -3,7 +3,8 @@ import { Route, HashRouter } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage.js";
 import CharacterMaker from "./components/CharacterMaker/CharacterMaker.js";
 import WeaponGenerator from "./components/WeaponGenerator/WeaponGenerator.js";
-import EnemyEncounters from "./components/EncounterGenerator/EnemyEncounters.js";
+import EnemyLore from "./components/EnemyLore/EnemyLore.js";
+import EnemyEncounters from "./components/EncounterGenerator/EncounterGenerator.js";
 import Login from "./components/Login/Login.js";
 
 export default (
@@ -12,6 +13,7 @@ export default (
       <Route component={HomePage} exact path="/" />
       <Route component={CharacterMaker} path="/characterMaker" />
       <Route component={WeaponGenerator} path="/weaponGenerator" />
+      <Route component={EnemyLore} path="/enemyLore" />
       <Route component={EnemyEncounters} path="/encounterGenerator" />
       <Route component={Login} path="/login" />
     </div>

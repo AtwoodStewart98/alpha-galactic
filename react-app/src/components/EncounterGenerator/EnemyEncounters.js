@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import EnemyLore from "./EnemyLore.js";
 import EncounterGenerator from "./EncounterGenerator.js";
 
 import { encounterView } from "../../ducks/reducer.js";

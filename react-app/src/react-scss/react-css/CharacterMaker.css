@@ -53,7 +53,7 @@
 
 .next-button button:hover {
   color: #8ac6ef;
-  border: 3px solid #8ac6ef;
+  border: 2px solid #3a3a3a;
   cursor: pointer; }
 
 .disabled-button button {
@@ -76,7 +76,7 @@
   overflow-y: scroll; }
 
 .desc-input:focus {
-  border: 3px solid #8ac6ef; }
+  border: 2px solid #3a3a3a; }
 
 .desc-counter {
   text-align: right;

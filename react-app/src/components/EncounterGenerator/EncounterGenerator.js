@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import "../../react-scss/react-css/EnemyEncounters.css";
+
 class EncounterGenerator extends Component {
   render() {
     return (

@@ -100,25 +100,28 @@ class WeaponGenerator extends Component {
         <h1>Random Weapon Generator</h1>
         <div className="weaponGeneratorFlexTop">
           <div id="weaponName">
-            <h3>Name:</h3>
+            <h3>Name</h3>
           </div>
           <div>
-            <h3>Damage:</h3>
+            <h3>Level</h3>
           </div>
           <div>
-            <h3>Range:</h3>
+            <h3>Damage</h3>
           </div>
           <div>
-            <h3>Fire Rate:</h3>
+            <h3>Range</h3>
           </div>
           <div>
-            <h3>Reload:</h3>
+            <h3>Fire Rate</h3>
           </div>
           <div>
-            <h3>Magazine:</h3>
+            <h3>Reload</h3>
+          </div>
+          <div>
+            <h3>Magazine</h3>
           </div>
           <div id="weaponOther">
-            <h3>Other:</h3>
+            <h3>Other</h3>
           </div>
         </div>
         <div className="weaponGeneratorFlexBottom">
@@ -126,12 +129,13 @@ class WeaponGenerator extends Component {
             <i>{spawnWeapon.prefix ? spawnWeapon.prefix + " " : null}</i>
             {spawnWeapon.name}
           </div>
+          <div>{spawnWeapon.lvl}</div>
           <div>{spawnWeapon.damage}</div>
           <div>{spawnWeapon.range}</div>
           <div>{spawnWeapon.firerate}</div>
           <div>{spawnWeapon.reload}</div>
           <div>{spawnWeapon.magazine}</div>
-          <div id="weaponOther">
+          <div id="weaponOtherBox">
             {spawnWeapon.other ? spawnWeapon.other + ", " : null}
             {spawnWeapon.AoE ? AoE + ", " : null}
             {spawnWeapon.capacitor ? capacitor + ", " : null}
@@ -152,19 +156,21 @@ class WeaponGenerator extends Component {
                 ? spawnWeapon.manufacturer + ", "
                 : null}
             </i>
-            {spawnWeapon.type} {spawnWeapon.lvl}
+            {spawnWeapon.type}
           </div>
         </div>
-        <button
-          onClick={() =>
-            updateWeapon(weapons.weapon_classes, weapons.manufacturers)
-          }
-        >
-          Generate a Random Weapon
-        </button>
-        <button onClick={() => updateRewardWeapon(weapons.missionrewards)}>
-          Generate a Reward Weapon
-        </button>
+        <div className="next-button">
+          <button
+            onClick={() =>
+              updateWeapon(weapons.weapon_classes, weapons.manufacturers)
+            }
+          >
+            RANDOM
+          </button>
+          <button onClick={() => updateRewardWeapon(weapons.missionrewards)}>
+            REWARD
+          </button>
+        </div>
       </div>
     );
   }

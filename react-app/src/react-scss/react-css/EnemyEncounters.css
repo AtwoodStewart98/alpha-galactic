@@ -6,24 +6,26 @@
 .encounterGeneratorFlexTop, .encounterGeneratorFlexBottom {
   display: flex;
   justify-content: center;
-  border: 3px solid #8ac6ef;
+  border: 2px solid #3a3a3a;
   margin: auto;
-  width: 80%; }
+  width: 90%; }
+  .encounterGeneratorFlexTop h3, .encounterGeneratorFlexBottom h3 {
+    font-size: 15px; }
 
 .encounterGeneratorFlexTop div, .encounterGeneratorFlexBottom div {
-  border-left: 3px solid #8ac6ef;
-  border-right: 3px solid #8ac6ef;
+  border-left: 2px solid #3a3a3a;
+  border-right: 2px solid #3a3a3a;
   text-align: center;
   font-weight: bold;
-  width: 10%;
-  min-height: 60px; }
+  width: 8%;
+  min-height: 30px; }
 
 .nav-fixer {
   list-style: none; }
   .nav-fixer li {
     color: #8ac6ef;
     background: #3a3a3a;
-    border: 3px solid #8ac6ef;
+    border: 2px solid #3a3a3a;
     text-align: center;
     width: 220px;
     padding: 25px 0px; }

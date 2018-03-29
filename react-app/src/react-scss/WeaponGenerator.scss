@@ -11,6 +11,7 @@
   @extend %grid-builder;
   div {
     @extend %grid-div-builder;
+    line-height: 2;
   }
 }
 
@@ -19,7 +20,15 @@
 }
 
 #weaponOther {
+  line-height: normal;
   text-align: left;
-  padding: 0px 5px;
-  width: 30%;
+  padding: 0 5px;
+  width: 32%;
+}
+
+#weaponOtherBox {
+  line-height: 1.5;
+  text-align: left;
+  padding: 0 5px;
+  width: 32%;
 }

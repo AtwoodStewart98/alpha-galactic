@@ -25,6 +25,9 @@ class HeaderFrame extends Component {
           <Link to="/weaponGenerator">
             <li>WEAPONS</li>
           </Link>
+          <Link to="/enemyLore">
+            <li>LORE</li>
+          </Link>
           <Link to="/encounterGenerator">
             <li>ENEMIES</li>
           </Link>

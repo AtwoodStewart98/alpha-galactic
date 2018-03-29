@@ -463,7 +463,7 @@
         {
           "name": "Vengeance",
           "range": -2,
-          "firerate": -1,
+          "firerate": -3,
           "reload": -1,
           "consumption": 2,
           "projectiles": 3,

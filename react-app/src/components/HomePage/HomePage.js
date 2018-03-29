@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 
 import { getUser, updateQuestionNumber } from "../../ducks/reducer.js";
 import cityscape from "../../assets/cityscape.png";
-import arthrotera from "../../assets/arthrotera.jpg";
+import arthrotera from "../../assets/arthrotera.png";
 import enemyfaction from "../../assets/enemy-faction.png";
 import spacestation from "../../assets/spacestation.png";
 
@@ -138,7 +138,7 @@ class HomePage extends Component {
               </Link>
             </div>
             <div className="mercenaries">
-              <Link to="/encounterGenerator">
+              <Link to="/enemyLore">
                 <img src={enemyfaction} alt="mercenaries" />
                 <p>KNOW YOUR ENEMIES</p>
               </Link>

@@ -376,9 +376,16 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
 
   if (!randomVar.magazine) {
     finalObj.magazine = magArr[randomType.id][2 + modifiers.magazine];
-  } else
+    if (finalObj.magazine === undefined) {
+      finalObj.magazine = magArr[randomType.id][4];
+    }
+  } else {
     finalObj.magazine =
       magArr[randomType.id][2 + modifiers.magazine + randomVar.magazine];
+    if (finalObj.magazine === undefined) {
+      finalObj.magazine = magArr[randomType.id][4];
+    }
+  }
 
   if (modifiers.consumption && randomVar.consumption) {
     finalObj.consumption = 1 + modifiers.consumption + randomVar.consumption;
@@ -388,10 +395,20 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
     finalObj.consumption = 1 + modifiers.consumption;
   }
 
-  if (!randomVar.projectiles) {
-    finalObj.projectiles = randomType.stats.projectiles;
-  } else {
+  if (modifiers.stealth && randomVar.stealth) {
+    finalObj.stealth = modifiers.stealth + randomVar.stealth;
+  } else if (modifiers.stealth) {
+    finalObj.stealth = modifiers.stealth;
+  }
+
+  if (modifiers.projectiles && randomVar.projectiles) {
+    finalObj.projectiles = modifiers.projectiles + randomVar.projectiles;
+  } else if (modifiers.projectiles) {
+    finalObj.projectiles = 1 + modifiers.projectiles;
+  } else if (randomVar.projectiles) {
     finalObj.projectiles = randomVar.projectiles;
+  } else {
+    finalObj.projectiles = randomType.stats.projectiles;
   }
 
   if (!initial) {
@@ -417,6 +434,8 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
 
 export function updateRewardWeapon(spawnWeapon) {
   let randomVal = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
+  randomVal.lvl = Math.floor(Math.random() * 10);
+
   return {
     type: UPDATE_REWARD_WEAPON,
     payload: randomVal

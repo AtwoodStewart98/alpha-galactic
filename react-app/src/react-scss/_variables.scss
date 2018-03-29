@@ -6,7 +6,7 @@ $transparent-overlay: rgba(58, 58, 58, 0.65);
 $my-text: #d7d7d7;
 $light-background: #bdbdbd;
 $my-font: 14px;
-$grid-border: 3px solid $my-blue;
+$grid-border: 2px solid $my-background;
 %flex-between {
   display: flex;
   justify-content: space-between;
@@ -28,15 +28,18 @@ $grid-border: 3px solid $my-blue;
   justify-content: center;
   border: $grid-border;
   margin: auto;
-  width: 80%;
+  width: 90%;
+  h3 {
+    font-size: 15px;
+  }
 }
 %grid-div-builder {
   border-left: $grid-border;
   border-right: $grid-border;
   text-align: center;
   font-weight: bold;
-  width: 10%;
-  min-height: 60px;
+  width: 8%;
+  min-height: 30px;
 }
 %my-button {
   padding: 20px;

@@ -22,7 +22,7 @@ const port = process.env.PORT || 4200;
 
 const app = express();
 
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(cors());
 app.use(json());
@@ -106,9 +106,9 @@ app.get("/auth/logout", (req, res) => {
   });
 });
 
-// app.get("*", (req, res, next) => {
-//   res.sendFile(path.join(__dirname, "../build/index.html"));
-// });
+app.get("*", (req, res, next) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 
 app.listen(port, () => {
   console.log(`It's Over ${port}!`);

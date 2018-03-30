@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 class HolkovrhysLore extends Component {
   render() {
     return (
-      <div>
+      <div className="loreganizer">
         <h2>The Holkovrhys Empire</h2>
         <p>
           <strong>Description</strong>

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 class VigilantesLore extends Component {
   render() {
     return (
-      <div>
+      <div className="loreganizer">
         <h2>Vigilantes</h2>
         <p>
           <strong>Description</strong>

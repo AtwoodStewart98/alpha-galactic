@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 class DraconisLore extends Component {
   render() {
     return (
-      <div>
+      <div className="loreganizer">
         <h2>The Draconis Timocracy</h2>
         <p>
           <strong>Description</strong>

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 class PorturuxeanLore extends Component {
   render() {
     return (
-      <div>
+      <div className="loreganizer">
         <h2>The Porturuxean Democracy</h2>
         <p>
           <strong>Description</strong>

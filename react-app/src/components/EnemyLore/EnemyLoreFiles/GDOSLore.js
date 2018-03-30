@@ -12,7 +12,7 @@ class GDOSLore extends Component {
     const { updateLore } = this.props;
 
     return (
-      <div>
+      <div className="loreganizer">
         <h2>Galactic Department of Security</h2>
         <p>
           <strong>Description</strong>

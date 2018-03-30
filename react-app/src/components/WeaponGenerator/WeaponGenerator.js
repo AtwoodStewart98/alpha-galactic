@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import "../../react-scss/react-css/WeaponGenerator.css";
 
 import { updateWeapon, updateRewardWeapon } from "../../ducks/reducer.js";
+import rainsoldier from "../../assets/rainsoldier.png";
 import weapons from "../../weapons.json";
 
 class WeaponGenerator extends Component {
@@ -97,6 +98,13 @@ class WeaponGenerator extends Component {
 
     return (
       <div>
+        <div>
+          <img
+            className="weapon-splash"
+            src={rainsoldier}
+            alt="armed soldier"
+          />
+        </div>
         <h1>Random Weapon Generator</h1>
         <div className="weaponGeneratorFlexTop">
           <div id="weaponName">

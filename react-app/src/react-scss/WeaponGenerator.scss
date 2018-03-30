@@ -1,5 +1,14 @@
 @import "variables";
 
+.weapon-splash {
+  display: block;
+  max-height: 250px;
+  min-height: 175px;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
 .weaponGeneratorFlexTop {
   @extend %grid-builder;
   div {

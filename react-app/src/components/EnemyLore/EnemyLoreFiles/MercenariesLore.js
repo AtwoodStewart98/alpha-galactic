@@ -12,7 +12,7 @@ class MercenariesLore extends Component {
     const { updateLore } = this.props;
 
     return (
-      <div>
+      <div className="loreganizer">
         <h2>Mercenaries</h2>
         <p>
           <strong>Description</strong>

@@ -12,7 +12,7 @@ class HyjakkerLore extends Component {
     const { updateLore } = this.props;
 
     return (
-      <div>
+      <div className="loreganizer">
         <h2>The Hyjakker Coalition</h2>
         <p>
           <strong>Description</strong>

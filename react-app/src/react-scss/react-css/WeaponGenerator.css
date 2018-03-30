@@ -16,6 +16,14 @@
   width: 8%;
   min-height: 30px; }
 
+.weapon-splash {
+  display: block;
+  max-height: 250px;
+  min-height: 175px;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover; }
+
 .weaponGeneratorFlexBottom div {
   line-height: 2; }
 

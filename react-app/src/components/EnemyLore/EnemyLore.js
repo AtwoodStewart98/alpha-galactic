@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateLore } from "../../ducks/reducer.js";
 import HolkovrhysLore from "./EnemyLoreFiles/HolkovrhysLore.js";
 import HyjakkerLore from "./EnemyLoreFiles/HyjakkerLore.js";
 import VigilantesLore from "./EnemyLoreFiles/VigilantesLore.js";
@@ -10,6 +9,11 @@ import ThraxLore from "./EnemyLoreFiles/ThraxLore.js";
 import DraconisLore from "./EnemyLoreFiles/DraconisLore.js";
 import GDOSLore from "./EnemyLoreFiles/GDOSLore.js";
 import PorturuxeanLore from "./EnemyLoreFiles/PorturuxeanLore.js";
+
+import { updateLore } from "../../ducks/reducer.js";
+import loreizon from "../../assets/loreizon.png";
+
+import "../../react-scss/react-css/EnemyLore.css";
 
 class EnemyLore extends Component {
   componentDidUpdate() {
@@ -23,6 +27,9 @@ class EnemyLore extends Component {
     const { updateLore, lore } = this.props;
     return (
       <div>
+        <div>
+          <img className="lore-splash" src={loreizon} alt="lore horizon" />
+        </div>
         <select onChange={e => updateLore(e.target.value)}>
           <option type="text" value="...">
             ---

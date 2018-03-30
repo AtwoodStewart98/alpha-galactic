@@ -12,17 +12,24 @@ import Tomlin from "../../../assets/tomlinrace.png";
 import Arthrotera from "../../../assets/arthroterarace.png";
 
 import {
+  getUser,
+  saveCharacter,
   updateQuestionNumber,
   resetQuestions
 } from "../../../ducks/reducer.js";
 
 class QResults extends Component {
+  componentDidMount() {
+    console.log(this.props.user);
+    this.props.getUser();
+  }
+
   render() {
     const { updateQuestionNumber, resetQuestions } = this.props;
 
     return (
       <div
-        style={{ display: this.props.questionNumber === 10 ? "block" : "none" }}
+        style={{ display: this.props.questionNumber === 9 ? "block" : "none" }}
       >
         <div className="results-flex">
           <div>
@@ -80,10 +87,19 @@ class QResults extends Component {
         <div className="next-button">
           <button
             style={{
-              display: this.props.user !== undefined ? "inline-block" : "none"
+              display: !this.props.user.id ? "inline-block" : "none"
             }}
             onClick={() => {
-              updateQuestionNumber(11);
+              updateQuestionNumber(10);
+              saveCharacter(
+                this.props.user,
+                this.props.charName,
+                this.props.trueAlignment,
+                this.props.race,
+                this.props.training,
+                this.props.faction,
+                this.props.charDesc
+              );
             }}
           >
             SAVE
@@ -132,6 +148,8 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, {
+  getUser,
+  saveCharacter,
   updateQuestionNumber,
   resetQuestions
 })(QResults);

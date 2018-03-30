@@ -95,7 +95,7 @@ class InitialWeapons extends Component {
 
     return (
       <div
-        style={{ display: this.props.questionNumber === 11 ? "block" : "none" }}
+        style={{ display: this.props.questionNumber === 10 ? "block" : "none" }}
       >
         <h1>Spawn your Beginning Weapon.</h1>
         <div className="weaponGeneratorFlexTop">

@@ -15,6 +15,7 @@ const initialState = {
   faction: "",
   charDesc: "",
   charName: "",
+  savedCharacter: {},
   spawnWeapon: {},
   encounter: "",
   lore: ""
@@ -31,6 +32,7 @@ const UPDATE_TRAINING = "UPDATE_TRAINING";
 const UPDATE_FACTION = "UPDATE_FACTION";
 const UPDATE_CHAR_DESC = "UPDATE_CHAR_DESC";
 const UPDATE_CHAR_NAME = "UPDATE_CHAR_NAME";
+const SAVE_CHARACTER = "SAVE_CHARACTER";
 const UPDATE_ENCOUNTER_VIEW = "UPDATE_ENCOUNTER_VIEW";
 const UPDATE_LORE = "UPDATE_LORE";
 const UPDATE_WEAPON = "UPDATE_WEAPON";
@@ -71,6 +73,18 @@ function reducer(state = initialState, action) {
       return Object.assign({}, state, { charDesc: action.payload });
     case UPDATE_CHAR_NAME:
       return Object.assign({}, state, { charName: action.payload });
+    case `${SAVE_CHARACTER}_PENDING`:
+      return Object.assign({}, state, { isLoading: true });
+    case `${SAVE_CHARACTER}_FULFILLED`:
+      return Object.assign({}, state, {
+        isLoading: false,
+        savedCharacter: action.payload
+      });
+    case `${SAVE_CHARACTER}_REJECTED`:
+      return Object.assign({}, state, {
+        isLoading: false,
+        didErr: true
+      });
     case UPDATE_ENCOUNTER_VIEW:
       return Object.assign({}, state, { encounter: action.payload });
     case UPDATE_LORE:
@@ -187,6 +201,27 @@ export function updateCharName(charName) {
   return {
     type: UPDATE_CHAR_NAME,
     payload: charName
+  };
+}
+
+export function saveCharacter(
+  user,
+  charName,
+  alignment,
+  race,
+  training,
+  faction,
+  charDesc
+) {
+  return {
+    type: SAVE_CHARACTER,
+    payload: axios
+      .post({ url: "/saveCharacter" })
+      .then(response => response.data)
+      .catch(err => {
+        console.log(`AXIOS ERR: ${err.message}`);
+        return err.message;
+      })
   };
 }
 

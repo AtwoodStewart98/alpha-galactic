@@ -10,7 +10,6 @@ import QFive from "./Questions/QFive.js";
 import QSix from "./Questions/QSix.js";
 import QSeven from "./Questions/QSeven.js";
 import QEight from "./Questions/QEight.js";
-import QNine from "./Questions/QNine.js";
 import QResults from "./Questions/QResults.js";
 import InitialWeapons from "./Questions/InitialWeapons.js";
 
@@ -95,7 +94,6 @@ class CharacterMaker extends Component {
           <QSix />
           <QSeven />
           <QEight />
-          <QNine />
           <QResults />
         </section>
         <InitialWeapons />

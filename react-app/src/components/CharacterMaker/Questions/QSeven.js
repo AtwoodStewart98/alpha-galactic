@@ -1,38 +1,66 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber } from "../../../ducks/reducer.js";
+import {
+  updateQuestionNumber,
+  updateCharDesc
+} from "../../../ducks/reducer.js";
 
 class QSeven extends Component {
   render() {
-    const { updateQuestionNumber } = this.props;
+    const { updateQuestionNumber, updateCharDesc } = this.props;
 
     return (
       <div
-        style={{ display: this.props.questionNumber === 7 ? "block" : "none" }}
+        style={{
+          display: this.props.questionNumber === 7 ? "block" : "none"
+        }}
       >
-        <h1>Seventh Question</h1>
-        <select>
-          <option type="text" value="type1">
-            Type One
-          </option>
-          <option type="text" value="type2">
-            Type Two
-          </option>
-          <option type="text" value="type3">
-            Type Three
-          </option>
-        </select>
+        <p className="desc-intro">
+          Create a short description of your character&#39;s history.
+        </p>
+        <textarea
+          className="desc-input"
+          name="text"
+          placeholder="Write a background..."
+          maxLength="500"
+          wrap="soft"
+          onChange={e => updateCharDesc(e.target.value)}
+        />
         <br />
-        <button onClick={() => updateQuestionNumber(8)}>Next Question</button>
+        <p
+          className="desc-counter"
+          style={{
+            color: this.props.charDesc.length > 480 ? "red" : "inherit"
+          }}
+        >
+          {this.props.charDesc.length} / 500
+        </p>
+        <div
+          className={
+            this.props.charDesc.length < 10 ? "disabled-button" : "next-button"
+          }
+        >
+          <button
+            disabled={this.props.charDesc < 10}
+            onClick={() => {
+              updateQuestionNumber(8);
+            }}
+          >
+            Next Question
+          </button>
+        </div>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => {
-  const { questionNumber } = state;
-  return { questionNumber };
+  const { questionNumber, charDesc } = state;
+  return { questionNumber, charDesc };
 };
 
-export default connect(mapStateToProps, { updateQuestionNumber })(QSeven);
+export default connect(mapStateToProps, {
+  updateQuestionNumber,
+  updateCharDesc
+})(QSeven);

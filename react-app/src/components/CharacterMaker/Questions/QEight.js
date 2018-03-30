@@ -3,12 +3,12 @@ import { connect } from "react-redux";
 
 import {
   updateQuestionNumber,
-  updateCharDesc
+  updateCharName
 } from "../../../ducks/reducer.js";
 
 class QEight extends Component {
   render() {
-    const { updateQuestionNumber, updateCharDesc } = this.props;
+    const { updateQuestionNumber, updateCharName } = this.props;
 
     return (
       <div
@@ -16,33 +16,20 @@ class QEight extends Component {
           display: this.props.questionNumber === 8 ? "block" : "none"
         }}
       >
-        <p className="desc-intro">
-          Create a short description of your character&#39;s history.
-        </p>
-        <textarea
-          className="desc-input"
-          name="text"
-          placeholder="Write a background..."
-          maxLength="500"
-          wrap="soft"
-          onChange={e => updateCharDesc(e.target.value)}
+        <p>Name your character.</p>
+        <input
+          placeholder="character name"
+          type="text"
+          onChange={e => updateCharName(e.target.value)}
         />
         <br />
-        <p
-          className="desc-counter"
-          style={{
-            color: this.props.charDesc.length > 480 ? "red" : "inherit"
-          }}
-        >
-          {this.props.charDesc.length} / 500
-        </p>
         <div
           className={
-            this.props.charDesc.length < 10 ? "disabled-button" : "next-button"
+            this.props.charName.length < 3 ? "disabled-button" : "next-button"
           }
         >
           <button
-            disabled={this.props.charDesc < 10}
+            disabled={this.props.charName < 3}
             onClick={() => {
               updateQuestionNumber(9);
             }}
@@ -56,11 +43,11 @@ class QEight extends Component {
 }
 
 const mapStateToProps = state => {
-  const { questionNumber, charDesc } = state;
-  return { questionNumber, charDesc };
+  const { questionNumber, charName } = state;
+  return { questionNumber, charName };
 };
 
 export default connect(mapStateToProps, {
   updateQuestionNumber,
-  updateCharDesc
+  updateCharName
 })(QEight);

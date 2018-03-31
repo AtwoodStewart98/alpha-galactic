@@ -110,7 +110,7 @@ app.get("/auth/logout", (req, res) => {
 
 //unsure about this
 app.get("*", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "../build/index.html"));
+  res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 app.listen(port, () => {

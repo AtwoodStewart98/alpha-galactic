@@ -24,7 +24,7 @@ const port = process.env.PORT || 4200;
 
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static(`${__dirname}/../build`));
 
 app.use(cors());
 app.use(json());
@@ -110,7 +110,7 @@ app.get("/auth/logout", (req, res) => {
 
 //unsure about this
 app.get("*", (req, res, next) => {
-  res.sendFile("./index.html");
+  res.sendFile(path.join(__dirname, "../build/index.html"));
 });
 
 app.listen(port, () => {

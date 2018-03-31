@@ -22,7 +22,7 @@ const port = process.env.PORT || 4200;
 
 const app = express();
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/app/public"));
 
 app.use(cors());
 app.use(json());

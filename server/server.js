@@ -7,10 +7,12 @@ const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
 const path = require("path");
 
-const config = require("./config.js");
-const { secret, dbUser, database, domain, clientID, clientSecret } = config;
+// const config = require("./config.js");
+// const { secret, dbUser, database, domain, clientID, clientSecret } = config;
 
-const connectionString = `postgres://${dbUser}@localhost/${database}`;
+const connectionString = `postgres://${process.env.dbUser}@localhost/${
+  process.env.database
+}`;
 
 massive(connectionString)
   .then(db => {
@@ -29,7 +31,7 @@ app.use(json());
 
 app.use(
   session({
-    secret,
+    secret: process.env.secret,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -44,9 +46,9 @@ app.use(passport.session());
 passport.use(
   new Auth0Strategy(
     {
-      domain,
-      clientID,
-      clientSecret,
+      domain: process.env.domain,
+      clientID: process.env.clientID,
+      clientSecret: process.env.clientSecret,
       callbackURL: "/auth",
       scope: "openid profile"
     },

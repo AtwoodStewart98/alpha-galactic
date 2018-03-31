@@ -22,7 +22,7 @@ const port = process.env.PORT || 4200;
 
 const app = express();
 
-app.use(express.static("/../build"));
+app.use(express.static(path.join(path.resolve("./react-app"), "public")));
 
 app.use(cors());
 app.use(json());
@@ -107,7 +107,7 @@ app.get("/auth/logout", (req, res) => {
 });
 
 app.get("*", (req, res, next) => {
-  res.sendFile("../build/index.html");
+  res.sendFile("../build/**/index.html");
 });
 
 app.listen(port, () => {

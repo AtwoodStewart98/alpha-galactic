@@ -106,6 +106,7 @@ app.get("/auth/logout", (req, res) => {
   });
 });
 
+//unsure about this
 app.get("*", (req, res, next) => {
   res.sendFile("../build/**/index.html");
 });

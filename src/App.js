@@ -25,6 +25,7 @@ class App extends Component {
       charName: "",
       spawnWeapon: {},
       savedCharacter: {},
+      savedWeapons: {},
       encounter: "",
       lore: ""
     };

@@ -1936,5 +1936,157 @@
       "AoE": 1,
       "projectiles": 2
     }
+  ],
+  "oneofakind": [
+    {
+      "name": "Eternity",
+      "type": "AP",
+      "manufacturer": "Burgnof",
+      "damage": 2,
+      "range": 150,
+      "firerate": 3,
+      "reload": 1,
+      "magazine": 10,
+      "other": "Illusionary disguise kit",
+      "stealth": 2
+    },
+    {
+      "name": "Payback",
+      "type": "RV",
+      "manufacturer": "Thorpe",
+      "damage": 4,
+      "range": 250,
+      "firerate": 1,
+      "reload": 2,
+      "magazine": 5,
+      "other":
+        "Iron sights, when dmged, +dmg equal to 1/2 dmg taken, fires bullets"
+    },
+    {
+      "name": "Doppelgünner",
+      "type": "MP",
+      "manufacturer": "Natpnot",
+      "damage": 0.5,
+      "range": 100,
+      "firerate": 18,
+      "reload": 2,
+      "magazine": 20,
+      "other":
+        "No penalties when dual-wielding, when dual-wielding, is a copy of other weapon & +firerate"
+    },
+    {
+      "name": "Iota Mauris",
+      "type": "SMG",
+      "manufacturer": "Marx Tech",
+      "damage": 0.5,
+      "range": 350,
+      "firerate": 20,
+      "reload": 1,
+      "magazine": 40,
+      "other": "Cryonic, melee is data knife",
+      "melee": 1
+    },
+    {
+      "name": "Recluse",
+      "type": "AR",
+      "manufacturer": "Crustanix",
+      "damage": 1,
+      "range": 1500,
+      "firerate": 12,
+      "reload": 3,
+      "magazine": 60,
+      "other":
+        "Under-slung Widow, +KB when semiautomatic, creates blast shield",
+      "melee": 1
+    },
+    {
+      "name": "Pebonhynr",
+      "type": "LMG",
+      "manufacturer": "Natpnot",
+      "damage": 2,
+      "range": 1750,
+      "firerate": 15,
+      "reload": 4,
+      "magazine": 300,
+      "other": "Never capacitated"
+    },
+    {
+      "name": "X-Terminator",
+      "type": "PS",
+      "manufacturer": "Rawdawg",
+      "damage": 0.5,
+      "range": 200,
+      "firerate": 1,
+      "reload": 2,
+      "magazine": 9,
+      "other": "No penalties when dual-wielding, enables SG dual-wielding",
+      "projectiles": 15
+    },
+    {
+      "name": "Vandalizer",
+      "type": "CS",
+      "manufacturer": "Hyjakker",
+      "damage": 4,
+      "range": 150,
+      "firerate": 1,
+      "reload": 3,
+      "magazine": 9,
+      "kB": 3,
+      "other": "Fires sonic blasts, scrambles technology, never capacitated",
+      "resist": 1
+    },
+    {
+      "name": "Vigilante",
+      "type": "BS",
+      "manufacturer": "Zoragon",
+      "damage": 6,
+      "range": 4500,
+      "firerate": 1,
+      "reload": 2,
+      "magazine": 5,
+      "other":
+        "Fires teleportation beacons, beacons explode into flashbangs after 2 seconds, +SR ammo regeneration"
+    },
+    {
+      "name": "Bloodmoon",
+      "type": "SS",
+      "manufacturer": "Alphernal",
+      "damage": 5,
+      "range": 5000,
+      "firerate": 2,
+      "reload": 3,
+      "magazine": 15,
+      "critical": 1,
+      "other":
+        "Cursed: transforms user into Lycan after combat, +dmg when single shot"
+    },
+    {
+      "name": "Deterrent",
+      "type": "GL",
+      "manufacturer": "Burgnof",
+      "damage": 3.5,
+      "range": 2000,
+      "firerate": 2,
+      "reload": 3,
+      "magazine": 6,
+      "consumption": 2,
+      "other": "Fires proximity mines, mines explode into smaller mines",
+      "projectiles": 4,
+      "stealth": 1
+    },
+    {
+      "name": "Quantum",
+      "type": "RL",
+      "manufacturer": "Crustanix",
+      "damage": 2.5,
+      "range": 2000,
+      "firerate": 1,
+      "reload": 4,
+      "magazine": 4,
+      "AoE": 1,
+      "consumption": 2,
+      "other": "Unobserved rockets deal infinite damage",
+      "velocity": 1
+    }
   ]
 }

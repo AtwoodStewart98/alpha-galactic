@@ -16,6 +16,7 @@ const initialState = {
   charDesc: "",
   charName: "",
   savedCharacter: {},
+  savedWeapons: {},
   spawnWeapon: {},
   encounter: "",
   lore: ""
@@ -33,6 +34,7 @@ const UPDATE_FACTION = "UPDATE_FACTION";
 const UPDATE_CHAR_DESC = "UPDATE_CHAR_DESC";
 const UPDATE_CHAR_NAME = "UPDATE_CHAR_NAME";
 const SAVE_CHARACTER = "SAVE_CHARACTER";
+const SAVE_WEAPON_TO_CHAR = "SAVE_WEAPON_TO_CHAR";
 const UPDATE_ENCOUNTER_VIEW = "UPDATE_ENCOUNTER_VIEW";
 const UPDATE_LORE = "UPDATE_LORE";
 const UPDATE_WEAPON = "UPDATE_WEAPON";
@@ -78,9 +80,23 @@ function reducer(state = initialState, action) {
     case `${SAVE_CHARACTER}_FULFILLED`:
       return Object.assign({}, state, {
         isLoading: false,
+        spawnWeapon: {},
         savedCharacter: action.payload
       });
     case `${SAVE_CHARACTER}_REJECTED`:
+      return Object.assign({}, state, {
+        isLoading: false,
+        didErr: true
+      });
+    case `${SAVE_WEAPON_TO_CHAR}_PENDING`:
+      return Object.assign({}, state, { isLoading: true });
+    case `${SAVE_WEAPON_TO_CHAR}_FULFILLED`:
+      return Object.assign({}, state, {
+        isLoading: false,
+        spawnWeapon: {},
+        savedWeapons: action.payload
+      });
+    case `${SAVE_WEAPON_TO_CHAR}_REJECTED`:
       return Object.assign({}, state, {
         isLoading: false,
         didErr: true
@@ -237,6 +253,22 @@ export function saveCharacter(
   };
 }
 
+export function saveWeaponToChar(weapon, character) {
+  return {
+    type: SAVE_WEAPON_TO_CHAR,
+    payload: axios
+      .post("/saveCharacter/updateWeapon", { weapon, character })
+      .then(response => {
+        console.log("UPDATED: ", response.data[0]);
+        return response.data[0];
+      })
+      .catch(err => {
+        console.log(`AXIOS ERR: ${err.message}`);
+        return err.message;
+      })
+  };
+}
+
 export function encounterView(encounter) {
   return {
     type: UPDATE_ENCOUNTER_VIEW,
@@ -264,7 +296,7 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
   } else {
     let tempArr = [];
     for (let i = 0; i < randomType.variants.length; i++) {
-      if (randomType.variants[i].lvl === 1) {
+      if (randomType.variants[i].lvl <= initial) {
         tempArr.push(randomType.variants[i]);
       }
     }

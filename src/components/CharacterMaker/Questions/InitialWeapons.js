@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateQuestionNumber, updateWeapon } from "../../../ducks/reducer.js";
+import {
+  updateQuestionNumber,
+  updateWeapon,
+  saveWeaponToChar
+} from "../../../ducks/reducer.js";
 import weapons from "../../../weapons.json";
 
 class InitialWeapons extends Component {
@@ -9,6 +13,7 @@ class InitialWeapons extends Component {
     const {
       updateQuestionNumber,
       updateWeapon,
+      saveWeaponToChar,
       spawnWeapon,
       savedCharacter
     } = this.props;
@@ -167,10 +172,24 @@ class InitialWeapons extends Component {
         <div className="next-button">
           <button
             onClick={() =>
-              updateWeapon(weapons.weapon_classes, weapons.manufacturers, true)
+              updateWeapon(weapons.weapon_classes, weapons.manufacturers, 1)
             }
           >
             GENERATE PRIMARY
+          </button>
+        </div>
+        <div
+          className={
+            !this.props.spawnWeapon.name ? "disabled-button" : "next-button"
+          }
+        >
+          <button
+            onClick={() => {
+              updateQuestionNumber(11);
+              saveWeaponToChar(spawnWeapon, savedCharacter);
+            }}
+          >
+            NEXT
           </button>
         </div>
       </div>
@@ -183,6 +202,8 @@ const mapStateToProps = state => {
   return { questionNumber, spawnWeapon, savedCharacter };
 };
 
-export default connect(mapStateToProps, { updateQuestionNumber, updateWeapon })(
-  InitialWeapons
-);
+export default connect(mapStateToProps, {
+  updateQuestionNumber,
+  updateWeapon,
+  saveWeaponToChar
+})(InitialWeapons);

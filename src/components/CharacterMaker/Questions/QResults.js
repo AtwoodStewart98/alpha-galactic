@@ -87,7 +87,7 @@ class QResults extends Component {
         <div className="next-button">
           <button
             style={{
-              display: !this.props.user.id ? "inline-block" : "none"
+              display: this.props.user.id ? "inline-block" : "none"
             }}
             onClick={() => {
               updateQuestionNumber(10);

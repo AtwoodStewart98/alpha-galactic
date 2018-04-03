@@ -7,12 +7,16 @@ const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
 const path = require("path");
 
-// const config = require("./config.js");
-// const { secret, dbUser, database, domain, clientID, clientSecret } = config;
+const config = require("./config.js");
+const { secret, dbUser, database, domain, clientID, clientSecret } = config;
 
-const connectionString = `postgres://${process.env.dbUser}@localhost/${
-  process.env.database
-}`;
+// PRODUCTION
+// const connectionString = `postgres://${process.env.dbUser}@localhost/${
+//   process.env.database
+// }`;
+
+//localhost
+const connectionString = `postgres://${dbUser}@localhost/${database}`;
 
 massive(connectionString)
   .then(db => {
@@ -31,7 +35,8 @@ app.use(json());
 
 app.use(
   session({
-    secret: process.env.secret,
+    // secret: process.env.secret,
+    secret,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -46,9 +51,12 @@ app.use(passport.session());
 passport.use(
   new Auth0Strategy(
     {
-      domain: process.env.domain,
-      clientID: process.env.clientID,
-      clientSecret: process.env.clientSecret,
+      // domain: process.env.domain,
+      // clientID: process.env.clientID,
+      // clientSecret: process.env.clientSecret,
+      domain,
+      clientID,
+      clientSecret,
       callbackURL: "/auth",
       scope: "openid profile"
     },
@@ -106,6 +114,25 @@ app.get("/auth/logout", (req, res) => {
   req.session.destroy(() => {
     res.redirect("http://localhost:3000/#/login");
   });
+});
+
+app.post("/saveCharacter", (req, res, next) => {
+  const db = app.get("db");
+  db
+    .saveCharacter([
+      req.body.user.id,
+      req.body.charName,
+      req.body.race,
+      req.body.alignment,
+      req.body.training,
+      req.body.faction,
+      req.body.charDesc
+    ])
+    .then(response => {
+      console.log(response);
+      res.status(200).json(response);
+    })
+    .catch(error => console.log(`Post Error: ${error}`));
 });
 
 //unsure about this

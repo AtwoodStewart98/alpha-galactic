@@ -216,7 +216,15 @@ export function saveCharacter(
   return {
     type: SAVE_CHARACTER,
     payload: axios
-      .post({ url: "/saveCharacter" })
+      .post("/saveCharacter", {
+        user,
+        charName,
+        race,
+        alignment,
+        training,
+        faction,
+        charDesc
+      })
       .then(response => response.data)
       .catch(err => {
         console.log(`AXIOS ERR: ${err.message}`);
@@ -282,7 +290,6 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
     info: manuFilter(manufacsArr)
   });
 
-  console.log(manufacObj);
   let modifiers = manufacObj.info[0].modifiers;
 
   let dmgArr = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11];
@@ -430,14 +437,35 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
     finalObj.consumption = 1 + modifiers.consumption;
   }
 
+  if (modifiers.melee && randomType.id === "AP" && randomVar.melee) {
+    finalObj.melee = randomVar.melee + modifiers.melee + 1;
+  } else if (modifiers.melee && randomType.id === "AP") {
+    finalObj.melee = modifiers.melee + 1;
+  } else if (modifiers.melee && randomVar.melee) {
+    finalObj.melee = randomVar.melee + modifiers.melee;
+  } else if (modifiers.melee) {
+    finalObj.melee = modifiers.melee;
+  }
+
   if (modifiers.stealth && randomVar.stealth) {
     finalObj.stealth = modifiers.stealth + randomVar.stealth;
   } else if (modifiers.stealth) {
     finalObj.stealth = modifiers.stealth;
   }
 
-  if (modifiers.projectiles && randomVar.projectiles) {
+  if (
+    modifiers.projectiles &&
+    randomVar.projectiles &&
+    (randomType.id === "CS" || randomType.id === "PS")
+  ) {
+    finalObj.projectiles = Math.floor(randomVar.projectiles * 1.5);
+  } else if (modifiers.projectiles && randomVar.projectiles) {
     finalObj.projectiles = modifiers.projectiles + randomVar.projectiles;
+  } else if (
+    modifiers.projectiles &&
+    (randomType.id === "CS" || randomType.id === "PS")
+  ) {
+    finalObj.projectiles = Math.floor(randomType.stats.projectiles * 1.5);
   } else if (modifiers.projectiles) {
     finalObj.projectiles = 1 + modifiers.projectiles;
   } else if (randomVar.projectiles) {
@@ -457,6 +485,17 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
     finalObj.other = randomType.other + " " + modifiers.other;
   } else if (modifiers.other) {
     finalObj.other = modifiers.other;
+  } else if (
+    manufacObj.info[0].name === "Marx Tech" &&
+    randomType.id === "SS" &&
+    randomType.other
+  ) {
+    finalObj.other = randomType.other + " +rng when scoped";
+  } else if (
+    manufacObj.info[0].name === "Marx Tech" &&
+    randomType.id === "SS"
+  ) {
+    finalObj.other = "+rng when scoped";
   }
 
   finalObj.type = randomType.id;

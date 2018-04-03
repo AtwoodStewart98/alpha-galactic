@@ -6,7 +6,12 @@ import weapons from "../../../weapons.json";
 
 class InitialWeapons extends Component {
   render() {
-    const { updateQuestionNumber, updateWeapon, spawnWeapon } = this.props;
+    const {
+      updateQuestionNumber,
+      updateWeapon,
+      spawnWeapon,
+      savedCharacter
+    } = this.props;
 
     let AoE = null;
     if (spawnWeapon.AoE === 1) {
@@ -174,8 +179,8 @@ class InitialWeapons extends Component {
 }
 
 const mapStateToProps = state => {
-  const { questionNumber, spawnWeapon } = state;
-  return { questionNumber, spawnWeapon };
+  const { questionNumber, spawnWeapon, savedCharacter } = state;
+  return { questionNumber, spawnWeapon, savedCharacter };
 };
 
 export default connect(mapStateToProps, { updateQuestionNumber, updateWeapon })(

@@ -213,6 +213,7 @@ export function saveCharacter(
   faction,
   charDesc
 ) {
+  console.log(user);
   return {
     type: SAVE_CHARACTER,
     payload: axios
@@ -225,7 +226,10 @@ export function saveCharacter(
         faction,
         charDesc
       })
-      .then(response => response.data)
+      .then(response => {
+        console.log("SUBMITTED: ", response.data[0]);
+        return response.data[0];
+      })
       .catch(err => {
         console.log(`AXIOS ERR: ${err.message}`);
         return err.message;

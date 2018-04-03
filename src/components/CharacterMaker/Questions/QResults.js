@@ -25,7 +25,7 @@ class QResults extends Component {
   }
 
   render() {
-    const { updateQuestionNumber, resetQuestions } = this.props;
+    const { updateQuestionNumber, resetQuestions, saveCharacter } = this.props;
 
     return (
       <div

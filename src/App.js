@@ -24,6 +24,7 @@ class App extends Component {
       charDesc: "",
       charName: "",
       spawnWeapon: {},
+      savedCharacter: {},
       encounter: "",
       lore: ""
     };

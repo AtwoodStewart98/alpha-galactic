@@ -117,6 +117,7 @@ app.get("/auth/logout", (req, res) => {
 });
 
 app.post("/saveCharacter", (req, res, next) => {
+  console.log(req.body);
   const db = app.get("db");
   db
     .saveCharacter([

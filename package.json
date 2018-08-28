@@ -19,6 +19,7 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-jwt": "^5.3.1",
     "express-session": "^1.15.6",
@@ -41,7 +42,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && git heroku push master"
   },
   "proxy": "http://localhost:4200"
 }

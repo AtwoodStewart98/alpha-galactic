@@ -6,9 +6,10 @@ const massive = require("massive");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
 const path = require("path");
+const dotenv = require("dotenv").config();
 
-const config = require("./config.js");
-const { secret, dbUser, database, domain, clientID, clientSecret } = config;
+//const config = require("./config.js");
+//const { secret, dbUser, database, domain, clientID, clientSecret } = config;
 
 // PRODUCTION
 // const connectionString = `postgres://${process.env.dbUser}@localhost/${
@@ -16,7 +17,9 @@ const { secret, dbUser, database, domain, clientID, clientSecret } = config;
 // }`;
 
 //localhost
-const connectionString = `postgres://${dbUser}@localhost/${database}`;
+const connectionString = `postgres://${process.env.DB_USER}@localhost/${
+  process.env.DATABASE
+}`;
 
 massive(connectionString)
   .then(db => {
@@ -24,7 +27,7 @@ massive(connectionString)
   })
   .catch(console.log());
 
-const port = process.env.PORT || 4200;
+const port = 4200;
 
 const app = express();
 
@@ -35,8 +38,7 @@ app.use(json());
 
 app.use(
   session({
-    // secret: process.env.secret,
-    secret,
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -51,12 +53,9 @@ app.use(passport.session());
 passport.use(
   new Auth0Strategy(
     {
-      // domain: process.env.domain,
-      // clientID: process.env.clientID,
-      // clientSecret: process.env.clientSecret,
-      domain,
-      clientID,
-      clientSecret,
+      domain: process.env.DOMAIN,
+      clientID: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
       callbackURL: "/auth",
       scope: "openid profile"
     },

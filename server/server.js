@@ -27,7 +27,7 @@ massive(connectionString)
   })
   .catch(console.log());
 
-const port = 4200;
+const port = process.env.PORT || 4200;
 
 const app = express();
 

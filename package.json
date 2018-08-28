@@ -43,7 +43,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && git heroku push master"
+    "deploy": "git push && git heroku push master"
   },
   "proxy": "http://localhost:4200"
 }

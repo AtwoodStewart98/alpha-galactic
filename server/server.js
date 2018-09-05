@@ -62,18 +62,17 @@ passport.use(
     (accessToken, refreshToken, extraParams, profile, done) => {
       console.log(profile);
       const db = app.get("db");
-      db
-        .getUserByAuthId([profile.id])
+      db.getUserByAuthId([profile.id])
         .then((user, err) => {
           console.log(`INITIAL: ${user}`);
           if (!user[0]) {
             console.log(`CREATING USER`);
-            db
-              .createUserByAuth([profile.id, profile.displayName])
-              .then((user, err) => {
+            db.createUserByAuth([profile.id, profile.displayName]).then(
+              (user, err) => {
                 console.log(`USER CREATED: ${JSON.stringify(user[0])}`);
                 return done(err, user[0]);
-              });
+              }
+            );
           } else {
             console.log(`FOUND USER: ${user[0]}`);
             return done(err, user[0]);
@@ -118,16 +117,15 @@ app.get("/auth/logout", (req, res) => {
 app.post("/saveCharacter", (req, res, next) => {
   console.log(req.body);
   const db = app.get("db");
-  db
-    .saveCharacter([
-      req.body.user.id,
-      req.body.charName,
-      req.body.race,
-      req.body.alignment,
-      req.body.training,
-      req.body.faction,
-      req.body.charDesc
-    ])
+  db.saveCharacter([
+    req.body.user.id,
+    req.body.charName,
+    req.body.race,
+    req.body.alignment,
+    req.body.training,
+    req.body.faction,
+    req.body.charDesc
+  ])
     .then(response => {
       console.log(response);
       res.status(200).json(response);
@@ -138,31 +136,30 @@ app.post("/saveCharacter", (req, res, next) => {
 app.post("/saveCharacter/updateWeapon", (req, res, next) => {
   console.log(req.body);
   const db = app.get("db");
-  db
-    .updateWeaponToChar([
-      req.body.character.id,
-      req.body.weapon.prefix,
-      req.body.weapon.name,
-      req.body.weapon.lvl,
-      req.body.weapon.damage,
-      req.body.weapon.range,
-      req.body.weapon.firerate,
-      req.body.weapon.reload,
-      req.body.weapon.magazine,
-      req.body.weapon.other,
-      req.body.weapon.AoE,
-      req.body.weapon.capacitor,
-      req.body.weapon.critical,
-      req.body.weapon.kB,
-      req.body.weapon.melee,
-      req.body.weapon.resist,
-      req.body.weapon.stealth,
-      req.body.weapon.velocity,
-      req.body.weapon.consumption,
-      req.body.weapon.projectiles,
-      req.body.weapon.manufacturer,
-      req.body.weapon.type
-    ])
+  db.updateWeaponToChar([
+    req.body.character.id,
+    req.body.weapon.prefix,
+    req.body.weapon.name,
+    req.body.weapon.lvl,
+    req.body.weapon.damage,
+    req.body.weapon.range,
+    req.body.weapon.firerate,
+    req.body.weapon.reload,
+    req.body.weapon.magazine,
+    req.body.weapon.other,
+    req.body.weapon.AoE,
+    req.body.weapon.capacitor,
+    req.body.weapon.critical,
+    req.body.weapon.kB,
+    req.body.weapon.melee,
+    req.body.weapon.resist,
+    req.body.weapon.stealth,
+    req.body.weapon.velocity,
+    req.body.weapon.consumption,
+    req.body.weapon.projectiles,
+    req.body.weapon.manufacturer,
+    req.body.weapon.type
+  ])
     .then(response => {
       console.log(response);
       res.status(200).json(response);

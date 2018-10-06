@@ -1,5 +1,15 @@
 @import "variables";
 
+// -- HEADER CONTAINER -- //
+
+.header-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+// -- MAIN NAV -- //
+
 .nav-flexer {
   @extend %flex-around;
   background-color: $dark-gray;
@@ -25,5 +35,68 @@
       padding: 10px 20px;
       line-height: 160%;
     }
+  }
+}
+
+// -- MENU ICON -- //
+
+.burger-menu {
+  margin: auto 28px;
+  display: inline-block;
+  cursor: pointer;
+
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+  }
+
+  &:hover {
+    div {
+      background-color: $light-blue;
+    }
+  }
+}
+
+// -- DROPDOWN NAV -- //
+
+.dropdown-menu {
+  background-color: $dark-gray;
+  width: 250px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    a {
+      padding: 10px;
+      line-height: 160%;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// -- MEDIA QUERIES -- //
+
+@media screen and (max-width: 964px) {
+  .nav-flexer {
+    justify-content: flex-start;
+    ul {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 965px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: none;
   }
 }

@@ -7,6 +7,11 @@
   display: flex;
   justify-content: space-evenly; }
 
+.header-nav {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
 .nav-flexer {
   background-color: #3a3a3a; }
   .nav-flexer a:hover {
@@ -23,3 +28,39 @@
     .nav-flexer ul a {
       padding: 10px 20px;
       line-height: 160%; }
+
+.burger-menu {
+  margin: auto 28px;
+  display: inline-block;
+  cursor: pointer; }
+  .burger-menu div {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0; }
+  .burger-menu:hover div {
+    background-color: #8ac6ef; }
+
+.dropdown-menu {
+  background-color: #3a3a3a;
+  width: 250px; }
+  .dropdown-menu ul {
+    list-style: none;
+    margin: 0; }
+    .dropdown-menu ul a {
+      padding: 10px;
+      line-height: 160%; }
+      .dropdown-menu ul a:hover {
+        text-decoration: none; }
+
+@media screen and (max-width: 964px) {
+  .nav-flexer {
+    justify-content: flex-start; }
+    .nav-flexer ul {
+      display: none; } }
+
+@media screen and (min-width: 965px) {
+  .burger-menu {
+    display: none; }
+  .dropdown-menu {
+    display: none; } }

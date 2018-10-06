@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const initialState = {
+  burgerToggle: false,
   user: {},
   isLoading: false,
   didErr: false,
@@ -22,6 +23,7 @@ const initialState = {
   lore: ""
 };
 
+const UPDATE_BURGER = "UPDATE_BURGER";
 const UPDATE_QUESTION = "UPDATE_QUESTION";
 const RESET_QUESTIONS = "RESET_QUESTIONS";
 const UPDATE_ALIGNMENT = "UPDATE_ALIGNMENT";
@@ -44,6 +46,8 @@ const GET_USER = "GET_USER";
 function reducer(state = initialState, action) {
   console.log("REDUCER HIT: Action -> ", action);
   switch (action.type) {
+    case UPDATE_BURGER:
+      return Object.assign({}, state, { burgerToggle: !state.burgerToggle });
     case UPDATE_QUESTION:
       return Object.assign({}, state, { questionNumber: action.payload });
     case RESET_QUESTIONS:
@@ -124,6 +128,12 @@ function reducer(state = initialState, action) {
     default:
       return state;
   }
+}
+
+export function updateBurger() {
+  return {
+    type: UPDATE_BURGER
+  };
 }
 
 export function updateQuestionNumber(questionNumber) {

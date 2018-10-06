@@ -30,7 +30,7 @@ class HomePage extends Component {
     const { updateQuestionNumber } = this.props;
 
     return (
-      <div>
+      <div className="home-container">
         <div className="home-flex">
           <div>
             <div className="home-login">
@@ -245,5 +245,8 @@ class HomePage extends Component {
 const mapStateToProps = state => state;
 
 export default withRouter(
-  connect(mapStateToProps, { getUser, updateQuestionNumber })(HomePage)
+  connect(
+    mapStateToProps,
+    { getUser, updateQuestionNumber }
+  )(HomePage)
 );

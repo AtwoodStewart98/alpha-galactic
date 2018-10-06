@@ -1,3 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
-.App {
-  margin: 0 auto; }
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ededed;
+  font-family: "Montserrat", sans-serif; }
+
+a,
+a:visited {
+  text-decoration: none;
+  font-weight: normal;
+  color: #fff; }
+  a:link,
+  a:visited:link {
+    color: #3a3a3a; }
+  a:hover,
+  a:visited:hover {
+    color: #8ac6ef;
+    text-decoration: underline; }

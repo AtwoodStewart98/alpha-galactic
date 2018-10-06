@@ -7,11 +7,11 @@ gulp.task("hello", () => {
 
 gulp.task("sass", () => {
   return gulp
-    .src("react-app/src/react-scss/*.scss")
+    .src("src/react-scss/*.scss")
     .pipe(sass())
-    .pipe(gulp.dest("react-app/src/react-scss/react-css"));
+    .pipe(gulp.dest("src/react-scss/react-css"));
 });
 
 gulp.task("watch", () => {
-  gulp.watch("react-app/**/*.scss", ["sass"]);
+  gulp.watch("src/**/*.scss", ["sass"]);
 });

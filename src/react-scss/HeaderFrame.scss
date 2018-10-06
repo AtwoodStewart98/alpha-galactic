@@ -1,40 +1,29 @@
 @import "variables";
 
-a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #fff;
-}
-
-.app-title {
-  font-family: "Orbitron", sans-serif;
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 25px 0px 25px 40px;
-}
-
-.app-title:hover {
-  color: $my-blue;
-}
-
 .nav-flexer {
-  @extend %flex-between;
-  background-color: $my-background;
+  @extend %flex-around;
+  background-color: $dark-gray;
+
+  a:hover {
+    color: $light-blue;
+    text-decoration: none;
+  }
+
+  .app-title {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 28px 0px;
+  }
+
   ul {
     @extend %flex-evenly;
     list-style: none;
-  }
-  ul a {
-    padding: 10px 20px;
-    line-height: 160%;
-  }
-  a:hover {
-    color: $my-blue;
-    text-decoration: none;
-  }
-  a:visited {
-    color: #fff;
-    font-weight: normal;
+    padding: 0;
+
+    a {
+      padding: 10px 20px;
+      line-height: 160%;
+    }
   }
 }

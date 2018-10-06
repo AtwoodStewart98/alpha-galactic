@@ -11,7 +11,7 @@
 }
 
 .home-login {
-  background: $my-background;
+  background: $dark-gray;
   color: $my-text;
   width: 300px;
   height: 320px;
@@ -30,9 +30,9 @@
     @include transition(0.4s);
   }
   button:hover {
-    color: $my-blue;
+    color: $light-blue;
     background-color: #696969;
-    @include hover-border($my-blue);
+    @include hover-border($light-blue);
   }
   img {
     padding: 10px;
@@ -88,7 +88,7 @@
 }
 
 .linx {
-  background: $my-background;
+  background: $dark-gray;
   color: $my-text;
   text-align: center;
   padding-bottom: 20px;
@@ -133,12 +133,12 @@
 .sci-fi-armory:hover,
 .arthrotera-alien:hover,
 .mercenaries:hover {
-  @include hover-border($my-blue);
+  @include hover-border($light-blue);
 }
 
 .selling-points {
   @extend %flex-evenly;
-  color: $my-background;
+  color: $dark-gray;
   h2 {
     text-align: center;
     font-size: 20px;
@@ -180,7 +180,7 @@
 }
 
 .home-footer {
-  background: $my-background;
+  background: $dark-gray;
   color: $my-text;
   padding: 20px 0;
   text-align: center;

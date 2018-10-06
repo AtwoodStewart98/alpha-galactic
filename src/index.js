@@ -6,7 +6,6 @@ import { HashRouter } from "react-router-dom";
 import registerServiceWorker from "./registerServiceWorker";
 
 import store from "./store.js";
-import "./index.css";
 
 ReactDOM.render(
   <HashRouter>

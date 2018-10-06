@@ -1,37 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
 .nav-flexer {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 .nav-flexer ul {
   display: flex;
   justify-content: space-evenly; }
 
-a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #fff; }
-
-.app-title {
-  font-family: "Orbitron", sans-serif;
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 25px 0px 25px 40px; }
-
-.app-title:hover {
-  color: #8ac6ef; }
-
 .nav-flexer {
   background-color: #3a3a3a; }
-  .nav-flexer ul {
-    list-style: none; }
-  .nav-flexer ul a {
-    padding: 10px 20px;
-    line-height: 160%; }
   .nav-flexer a:hover {
     color: #8ac6ef;
     text-decoration: none; }
-  .nav-flexer a:visited {
-    color: #fff;
-    font-weight: normal; }
+  .nav-flexer .app-title {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 28px 0px; }
+  .nav-flexer ul {
+    list-style: none;
+    padding: 0; }
+    .nav-flexer ul a {
+      padding: 10px 20px;
+      line-height: 160%; }

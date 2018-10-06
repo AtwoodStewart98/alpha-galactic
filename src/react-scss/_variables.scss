@@ -1,38 +1,58 @@
+// -- FONTS -- //
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
-$my-blue: #8ac6ef;
-$my-background: #3a3a3a;
+
+// -- COLORS -- //
+
+$light-blue: #8ac6ef;
+$dark-gray: #3a3a3a;
 $transparent-background: rgba(58, 58, 58, 0.5);
 $transparent-overlay: rgba(58, 58, 58, 0.65);
 $my-text: #d7d7d7;
 $light-background: #bdbdbd;
+
 $my-font: 14px;
-$grid-border: 2px solid $my-background;
+$grid-border: 2px solid $dark-gray;
+
+// -- FLEX STYLES -- //
+
+%flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
 %flex-between {
   display: flex;
   justify-content: space-between;
 }
+
 %flex-evenly {
   display: flex;
   justify-content: space-evenly;
 }
+
 %flex-center {
   display: flex;
   justify-content: center;
 }
+
 %background-setter {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 %grid-builder {
   display: flex;
   justify-content: center;
   border: $grid-border;
   margin: auto;
   width: 90%;
+
   h3 {
     font-size: 15px;
   }
 }
+
 %grid-div-builder {
   border-left: $grid-border;
   border-right: $grid-border;
@@ -41,11 +61,13 @@ $grid-border: 2px solid $my-background;
   width: 8%;
   min-height: 30px;
 }
+
 %my-button {
   padding: 20px;
   text-align: center;
+
   button {
-    background-color: $my-background;
+    background-color: $dark-gray;
     color: $my-text;
     border: 2px solid $my-text;
     font-size: 15px;
@@ -53,11 +75,13 @@ $grid-border: 2px solid $my-background;
     height: 50px;
   }
 }
+
 @mixin hover-border($color) {
   -webkit-box-shadow: 0px 0px 0px 3px $color;
   -moz-box-shadow: 0px 0px 0px 3px $color;
   box-shadow: 0px 0px 0px 3px $color;
 }
+
 @mixin transition($time) {
   -webkit-transition-duration: $time;
   -moz-transition-duration: $time;

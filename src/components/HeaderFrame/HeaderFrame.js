@@ -4,16 +4,44 @@ import { connect } from "react-redux";
 
 import "../../react-scss/react-css/HeaderFrame.css";
 
-import { updateBurger, updateQuestionNumber } from "../../ducks/reducer.js";
+import { updateQuestionNumber } from "../../ducks/reducer.js";
 
 class HeaderFrame extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showBurger: false
+    };
+
+    this.updateBurger = this.updateBurger.bind(this);
+    this.screenDetector = this.screenDetector.bind(this);
+  }
+
+  updateBurger() {
+    this.setState(state => ({
+      showBurger: !state.showBurger
+    }));
+  }
+
+  screenDetector(el) {
+    if (el.matches) {
+      this.setState(state => ({
+        showBurger: false
+      }));
+    }
+  }
+
   render() {
-    const { updateBurger, updateQuestionNumber } = this.props;
+    const { updateQuestionNumber } = this.props;
+
+    let mediaMatch = window.matchMedia("(min-width: 965px)");
+    mediaMatch.addListener(this.screenDetector);
 
     return (
       <div className="header-nav">
         <div className="nav-flexer">
-          <div className="burger-menu" onClick={() => updateBurger()}>
+          <div className="burger-menu" onClick={this.updateBurger}>
             <div />
             <div />
             <div />
@@ -41,22 +69,25 @@ class HeaderFrame extends Component {
         </div>
         <div
           className="dropdown-menu"
-          style={{ display: this.props.toggleBurger ? "block" : "none" }}
+          style={{ display: this.state.showBurger ? "block" : "none" }}
         >
           <ul>
-            <Link to="/characterMaker" onClick={() => updateQuestionNumber(0)}>
+            <Link
+              to="/characterMaker"
+              onClick={(() => updateQuestionNumber(0), this.updateBurger)}
+            >
               <li>CHARACTER</li>
             </Link>
-            <Link to="/weaponGenerator">
+            <Link to="/weaponGenerator" onClick={this.updateBurger}>
               <li>WEAPONS</li>
             </Link>
-            <Link to="/enemyLore">
+            <Link to="/enemyLore" onClick={this.updateBurger}>
               <li>LORE</li>
             </Link>
-            <Link to="/encounterGenerator">
+            <Link to="/encounterGenerator" onClick={this.updateBurger}>
               <li>ENEMIES</li>
             </Link>
-            <Link to="/login">
+            <Link to="/login" onClick={this.updateBurger}>
               <li>LOGIN</li>
             </Link>
           </ul>
@@ -67,11 +98,11 @@ class HeaderFrame extends Component {
 }
 
 const mapStateToProps = state => {
-  const { burgerToggle, questionNumber } = state;
-  return { burgerToggle, questionNumber };
+  const { questionNumber } = state;
+  return { questionNumber };
 };
 
 export default connect(
   mapStateToProps,
-  { updateBurger, updateQuestionNumber }
+  { updateQuestionNumber }
 )(HeaderFrame);

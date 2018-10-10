@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      burgerToggle: false,
+      updateBurger: false,
       user: {},
       isLoading: false,
       didErr: false,

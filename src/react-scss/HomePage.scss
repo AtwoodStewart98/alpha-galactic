@@ -1,30 +1,33 @@
 @import "variables";
 
+// -- TOP SECTION -- //
+
 .home-container {
   padding-top: 80px;
 }
 
 .home-flex {
-  width: 100%;
   height: 520px;
+  width: 100%;
   background-image: url("../../assets/homesplash.png");
   background-size: cover;
   @extend %background-setter;
   @extend %flex-between;
-  height: 520px;
 }
 
 .home-login {
   background: $dark-gray;
-  color: $my-text;
+  color: $lighter-gray;
   width: 300px;
   height: 320px;
   padding: 5px;
   margin: 80px 40px;
   text-align: center;
+
   p {
     padding: 0px 12px;
   }
+
   button {
     background-color: #a8a8a8;
     color: #fff;
@@ -32,12 +35,14 @@
     font-size: 18px;
     padding: 10px 30px;
     @include transition(0.4s);
+
+    &:hover {
+      color: $light-blue;
+      background-color: #696969;
+      @include hover-border($light-blue);
+    }
   }
-  button:hover {
-    color: $light-blue;
-    background-color: #696969;
-    @include hover-border($light-blue);
-  }
+
   img {
     padding: 10px;
   }
@@ -45,20 +50,24 @@
 
 .descriptor {
   background: $transparent-background;
-  color: $my-text;
+  color: $lighter-gray;
   width: 400px;
   height: 250px;
   padding: 10px 0px 10px 10px;
   margin: 100px 20px;
+
   h2 {
     padding-left: 8px;
     font-family: "Montserrat", sans-serif;
   }
+
   p {
     padding-left: 8px;
     line-height: 1.5;
   }
 }
+
+// -- DESCRIPTION SECTION -- //
 
 .section-two {
   h2 {
@@ -93,9 +102,10 @@
 
 .linx {
   background: $dark-gray;
-  color: $my-text;
+  color: $lighter-gray;
   text-align: center;
   padding-bottom: 20px;
+
   h2 {
     padding-top: 20px;
   }
@@ -104,11 +114,13 @@
 .linx-flex {
   @extend %flex-evenly;
   margin-bottom: 30px;
+
   div {
     width: 25%;
     background: $light-background;
     text-align: center;
   }
+
   img {
     max-height: 100%;
     max-width: 100%;
@@ -122,9 +134,10 @@
   height: 480px;
   width: 320px !important;
   @include transition(0.4s);
+
   p {
     background: $transparent-overlay;
-    color: $my-text;
+    color: $lighter-gray;
     width: 320px;
     height: 80px;
     position: absolute;
@@ -143,12 +156,14 @@
 .selling-points {
   @extend %flex-evenly;
   color: $dark-gray;
+
   h2 {
     text-align: center;
     font-size: 20px;
   }
+
   p {
-    font-size: $my-font;
+    font-size: $lighter-gray;
     line-height: 1.5;
   }
 }
@@ -173,11 +188,13 @@
   height: 500px;
   width: auto;
   padding: 30px;
+
   h2 {
     margin: 0 auto;
   }
+
   p {
-    font-size: $my-font;
+    font-size: $lighter-gray;
     line-height: 1.75;
     width: 615px;
   }
@@ -185,10 +202,19 @@
 
 .home-footer {
   background: $dark-gray;
-  color: $my-text;
+  color: $lighter-gray;
   padding: 20px 0;
   text-align: center;
+
   p {
     margin: 0 auto;
+  }
+}
+
+// -- MEDIA QUERIES -- //
+
+@media screen and (max-width: 839px) {
+  .home-flex {
+    display: block;
   }
 }

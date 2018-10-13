@@ -39,7 +39,7 @@
     background-color: #fff;
     margin: 6px 0; }
   .burger-menu:hover div {
-    background-color: #8ac6ef; }
+    background-color: #8ac6ef !important; }
 
 .dropdown-menu {
   background-color: #3a3a3a;

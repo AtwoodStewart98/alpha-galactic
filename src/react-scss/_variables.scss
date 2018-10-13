@@ -6,9 +6,9 @@
 
 $light-blue: #8ac6ef;
 $dark-gray: #3a3a3a;
+$lighter-gray: #d7d7d7;
 $transparent-background: rgba(58, 58, 58, 0.5);
 $transparent-overlay: rgba(58, 58, 58, 0.65);
-$my-text: #d7d7d7;
 $light-background: #bdbdbd;
 
 $my-font: 14px;
@@ -40,6 +40,8 @@ $grid-border: 2px solid $dark-gray;
   display: flex;
   justify-content: flex-start;
 }
+
+// -- BACKGROUND IMAGE -- //
 
 %background-setter {
   background-repeat: no-repeat;
@@ -73,8 +75,8 @@ $grid-border: 2px solid $dark-gray;
 
   button {
     background-color: $dark-gray;
-    color: $my-text;
-    border: 2px solid $my-text;
+    color: $lighter-gray;
+    border: 2px solid $lighter-gray;
     font-size: 15px;
     width: 150px;
     height: 50px;

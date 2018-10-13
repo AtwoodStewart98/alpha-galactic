@@ -11,6 +11,7 @@
 
 .weaponGeneratorFlexTop {
   @extend %grid-builder;
+
   div {
     @extend %grid-div-builder;
   }
@@ -18,6 +19,7 @@
 
 .weaponGeneratorFlexBottom {
   @extend %grid-builder;
+
   div {
     @extend %grid-div-builder;
     line-height: 2;

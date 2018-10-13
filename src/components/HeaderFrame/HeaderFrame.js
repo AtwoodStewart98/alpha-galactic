@@ -42,9 +42,21 @@ class HeaderFrame extends Component {
       <div className="header-nav">
         <div className="nav-flexer">
           <div className="burger-menu" onClick={this.updateBurger}>
-            <div />
-            <div />
-            <div />
+            <div
+              style={{
+                backgroundColor: this.state.showBurger ? "#8ac6ef" : "#d7d7d7"
+              }}
+            />
+            <div
+              style={{
+                backgroundColor: this.state.showBurger ? "#8ac6ef" : "#d7d7d7"
+              }}
+            />
+            <div
+              style={{
+                backgroundColor: this.state.showBurger ? "#8ac6ef" : "#d7d7d7"
+              }}
+            />
           </div>
           <Link to="/">
             <h1 className="app-title">ALPHA GALACTIC</h1>

@@ -54,7 +54,7 @@
 
   &:hover {
     div {
-      background-color: $light-blue;
+      background-color: $light-blue !important;
     }
   }
 }

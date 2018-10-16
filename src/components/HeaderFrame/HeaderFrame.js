@@ -25,7 +25,7 @@ class HeaderFrame extends Component {
   }
 
   screenDetector(el) {
-    if (el.matches) {
+    if (el.matches && this.state.showBurger) {
       this.setState(state => ({
         showBurger: false
       }));

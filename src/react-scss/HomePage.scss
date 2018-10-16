@@ -79,16 +79,19 @@
 .cityscape {
   display: block;
   width: 100%;
-  height: auto;
+  min-height: 270px;
   margin: 0 auto;
   overflow: hidden;
+  object-fit: cover;
 }
 
 .cityscape-flex {
   @extend %flex-evenly;
+
   div {
     padding: 40px;
   }
+
   p {
     font-size: $my-font;
   }
@@ -214,7 +217,25 @@
 // -- MEDIA QUERIES -- //
 
 @media screen and (max-width: 839px) {
+  .home-container {
+    padding-top: 0px;
+  }
+
   .home-flex {
+    display: block;
+    height: 770px;
+    padding-top: 60px;
+  }
+
+  .home-login {
+    margin: 60px auto;
+  }
+
+  .descriptor {
+    margin: 0 auto;
+  }
+
+  .cityscape-flex {
     display: block;
   }
 }

@@ -22,3 +22,9 @@ a:visited {
     text-decoration: underline;
   }
 }
+
+@media screen and (max-width: 414px) {
+  body {
+    width: 100vh;
+  }
+}

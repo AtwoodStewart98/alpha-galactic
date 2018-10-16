@@ -103,6 +103,8 @@
   font-size: $my-font;
 }
 
+// -- GAME FEATURES -- //
+
 .linx {
   background: $dark-gray;
   color: $lighter-gray;
@@ -119,42 +121,35 @@
   margin-bottom: 30px;
 
   div {
-    width: 25%;
+    position: relative;
+    height: 480px;
+    width: 320px;
     background: $light-background;
-    text-align: center;
+    @include transition(0.4s);
+
+    &:hover {
+      @include hover-border($light-blue);
+    }
   }
 
   img {
-    max-height: 100%;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
   }
-}
-
-.sci-fi-armory,
-.arthrotera-alien,
-.mercenaries {
-  position: relative;
-  height: 480px;
-  width: 320px !important;
-  @include transition(0.4s);
 
   p {
-    background: $transparent-overlay;
-    color: $lighter-gray;
+    position: absolute;
     width: 320px;
     height: 80px;
-    position: absolute;
+    background: $transparent-overlay;
+    color: $lighter-gray;
     bottom: -18px;
     font-size: 18px;
     line-height: 80px;
   }
 }
 
-.sci-fi-armory:hover,
-.arthrotera-alien:hover,
-.mercenaries:hover {
-  @include hover-border($light-blue);
-}
+// -- SELLING POINTS -- //
 
 .selling-points {
   @extend %flex-evenly;
@@ -166,7 +161,7 @@
   }
 
   p {
-    font-size: $lighter-gray;
+    font-size: $my-font;
     line-height: 1.5;
   }
 }
@@ -197,7 +192,7 @@
   }
 
   p {
-    font-size: $lighter-gray;
+    font-size: $my-font;
     line-height: 1.75;
     width: 615px;
   }
@@ -215,6 +210,26 @@
 }
 
 // -- MEDIA QUERIES -- //
+
+@media screen and (max-width: 1114px) {
+  .linx-flex {
+    display: block;
+
+    div {
+      height: 600px;
+      width: 400px;
+      margin: 40px auto;
+    }
+
+    p {
+      height: 100px;
+      width: 400px;
+      bottom: -20px;
+      font-size: 20px;
+      line-height: 100px;
+    }
+  }
+}
 
 @media screen and (max-width: 839px) {
   .home-container {
@@ -237,5 +252,11 @@
 
   .cityscape-flex {
     display: block;
+
+    div {
+      width: 70%;
+      margin: 0 auto;
+      padding: 15px;
+    }
   }
 }

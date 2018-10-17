@@ -30,7 +30,7 @@ class HomePage extends Component {
     const { updateQuestionNumber } = this.props;
 
     return (
-      <div>
+      <div className="home-container">
         <div className="home-flex">
           <div>
             <div className="home-login">
@@ -146,7 +146,7 @@ class HomePage extends Component {
           </div>
         </div>
         <div className="selling-points">
-          <div className="sell-point-div">
+          <div>
             <div className="fontawesome-center">
               <FontAwesomeIcon icon="times-circle" size="5x" />
             </div>
@@ -159,7 +159,7 @@ class HomePage extends Component {
               factor in this game.
             </p>
           </div>
-          <div className="sell-point-div">
+          <div>
             <div className="fontawesome-center">
               <FontAwesomeIcon icon="cloud" size="5x" />
             </div>
@@ -172,7 +172,7 @@ class HomePage extends Component {
               carry around multiple heavy manuals and papers for gameplay.
             </p>
           </div>
-          <div className="sell-point-div">
+          <div>
             <div className="fontawesome-center">
               <FontAwesomeIcon icon="id-badge" size="5x" />
             </div>
@@ -184,7 +184,7 @@ class HomePage extends Component {
               profile and selecting by name.
             </p>
           </div>
-          <div className="sell-point-div">
+          <div>
             <div className="fontawesome-center">
               <FontAwesomeIcon icon="book" size="5x" />
             </div>
@@ -245,5 +245,8 @@ class HomePage extends Component {
 const mapStateToProps = state => state;
 
 export default withRouter(
-  connect(mapStateToProps, { getUser, updateQuestionNumber })(HomePage)
+  connect(
+    mapStateToProps,
+    { getUser, updateQuestionNumber }
+  )(HomePage)
 );

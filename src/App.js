@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+
 import "./react-scss/react-css/App.css";
 
 import HeaderFrame from "./components/HeaderFrame/HeaderFrame.js";
@@ -9,6 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      updateBurger: false,
       user: {},
       isLoading: false,
       didErr: false,

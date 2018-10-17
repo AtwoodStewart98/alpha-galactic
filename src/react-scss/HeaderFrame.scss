@@ -1,40 +1,103 @@
 @import "variables";
 
-a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #fff;
+// -- HEADER CONTAINER -- //
+
+.header-nav {
+  position: fixed;
+  z-index: +1;
+  top: 0;
+  width: 100%;
 }
 
-.app-title {
-  font-family: "Orbitron", sans-serif;
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 25px 0px 25px 40px;
-}
-
-.app-title:hover {
-  color: $my-blue;
-}
+// -- MAIN NAV -- //
 
 .nav-flexer {
-  @extend %flex-between;
-  background-color: $my-background;
+  @extend %flex-around;
+  background-color: $dark-gray;
+
+  a:hover {
+    color: $light-blue;
+    text-decoration: none;
+  }
+
+  .app-title {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 28px 0px;
+  }
+
   ul {
     @extend %flex-evenly;
     list-style: none;
+    padding: 0;
+
+    a {
+      padding: 10px 20px;
+      line-height: 160%;
+    }
   }
-  ul a {
-    padding: 10px 20px;
-    line-height: 160%;
+}
+
+// -- MENU ICON -- //
+
+.burger-menu {
+  margin: auto 28px;
+  display: inline-block;
+  cursor: pointer;
+
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
   }
-  a:hover {
-    color: $my-blue;
-    text-decoration: none;
+
+  &:hover {
+    div {
+      background-color: $light-blue !important;
+    }
   }
-  a:visited {
-    color: #fff;
-    font-weight: normal;
+}
+
+// -- DROPDOWN NAV -- //
+
+.dropdown-menu {
+  background-color: $dark-gray;
+  width: 250px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    a {
+      padding: 10px;
+      line-height: 160%;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// -- MEDIA QUERIES -- //
+
+@media screen and (max-width: 964px) {
+  .nav-flexer {
+    justify-content: flex-start;
+    ul {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 965px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: none;
   }
 }

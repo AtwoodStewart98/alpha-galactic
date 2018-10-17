@@ -11,12 +11,14 @@
   background-repeat: no-repeat;
   background-position: center; }
 
+.home-container {
+  padding-top: 80px; }
+
 .home-flex {
-  width: 100%;
   height: 520px;
+  width: 100%;
   background-image: url("../../assets/homesplash.png");
-  background-size: cover;
-  height: 520px; }
+  background-size: cover; }
 
 .home-login {
   background: #3a3a3a;
@@ -37,12 +39,12 @@
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
     transition-duration: 0.4s; }
-  .home-login button:hover {
-    color: #8ac6ef;
-    background-color: #696969;
-    -webkit-box-shadow: 0px 0px 0px 3px #8ac6ef;
-    -moz-box-shadow: 0px 0px 0px 3px #8ac6ef;
-    box-shadow: 0px 0px 0px 3px #8ac6ef; }
+    .home-login button:hover {
+      color: #8ac6ef;
+      background-color: #696969;
+      -webkit-box-shadow: 0px 0px 0px 3px #8ac6ef;
+      -moz-box-shadow: 0px 0px 0px 3px #8ac6ef;
+      box-shadow: 0px 0px 0px 3px #8ac6ef; }
   .home-login img {
     padding: 10px; }
 
@@ -67,9 +69,10 @@
 .cityscape {
   display: block;
   width: 100%;
-  height: auto;
+  min-height: 270px;
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  object-fit: cover; }
 
 .cityscape-flex div {
   padding: 40px; }
@@ -89,47 +92,42 @@
   padding-bottom: 20px; }
   .linx h2 {
     padding-top: 20px; }
+  .linx p {
+    padding: 0 20px; }
 
 .linx-flex {
   margin-bottom: 30px; }
   .linx-flex div {
-    width: 25%;
+    position: relative;
+    height: 480px;
+    width: 320px;
     background: #bdbdbd;
-    text-align: center; }
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s; }
+    .linx-flex div:hover {
+      -webkit-box-shadow: 0px 0px 0px 3px #8ac6ef;
+      -moz-box-shadow: 0px 0px 0px 3px #8ac6ef;
+      box-shadow: 0px 0px 0px 3px #8ac6ef; }
   .linx-flex img {
-    max-height: 100%;
-    max-width: 100%; }
-
-.sci-fi-armory,
-.arthrotera-alien,
-.mercenaries {
-  position: relative;
-  height: 480px;
-  width: 320px !important;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  transition-duration: 0.4s; }
-  .sci-fi-armory p,
-  .arthrotera-alien p,
-  .mercenaries p {
-    background: rgba(58, 58, 58, 0.65);
-    color: #d7d7d7;
+    height: 100%;
+    width: 100%; }
+  .linx-flex p {
+    position: absolute;
+    padding: 0;
     width: 320px;
     height: 80px;
-    position: absolute;
+    background: rgba(58, 58, 58, 0.65);
+    color: #d7d7d7;
     bottom: -18px;
     font-size: 18px;
     line-height: 80px; }
 
-.sci-fi-armory:hover,
-.arthrotera-alien:hover,
-.mercenaries:hover {
-  -webkit-box-shadow: 0px 0px 0px 3px #8ac6ef;
-  -moz-box-shadow: 0px 0px 0px 3px #8ac6ef;
-  box-shadow: 0px 0px 0px 3px #8ac6ef; }
-
 .selling-points {
   color: #3a3a3a; }
+  .selling-points div {
+    max-width: 20%;
+    padding: 40px 20px 20px; }
   .selling-points h2 {
     text-align: center;
     font-size: 20px; }
@@ -137,13 +135,10 @@
     font-size: 14px;
     line-height: 1.5; }
 
-.sell-point-div {
-  max-width: 20%;
-  padding: 40px 20px 20px; }
-
 .fontawesome-center {
   text-align: center;
-  max-width: 100% !important; }
+  max-width: 100% !important;
+  padding: 0px !important; }
 
 .lore-blurb {
   width: 100%;
@@ -168,3 +163,54 @@
   text-align: center; }
   .home-footer p {
     margin: 0 auto; }
+
+@media screen and (max-width: 1114px) {
+  .linx-flex {
+    display: block; }
+    .linx-flex div {
+      height: 600px;
+      width: 400px;
+      margin: 40px auto; }
+    .linx-flex p {
+      height: 100px;
+      width: 400px;
+      bottom: -20px;
+      font-size: 20px;
+      line-height: 100px; } }
+
+@media screen and (max-width: 964px) {
+  .selling-points {
+    display: block; }
+    .selling-points div {
+      background-color: #d7d7d7;
+      max-width: 60%;
+      margin: 20px auto;
+      padding: 20px; }
+  .fontaweome-center {
+    background-color: none; } }
+
+@media screen and (max-width: 839px) {
+  .home-container {
+    padding-top: 0px; }
+  .home-flex {
+    display: block;
+    height: 770px;
+    padding-top: 60px; }
+  .home-login {
+    margin: 60px auto; }
+  .descriptor {
+    margin: 0 auto; }
+  .cityscape-flex {
+    display: block; }
+    .cityscape-flex div {
+      width: 70%;
+      margin: 0 auto;
+      padding: 15px; }
+  .lore-blurb {
+    padding: 30px 10% 30px 30px; }
+    .lore-blurb p {
+      width: 100%; } }
+
+@media screen and (max-width: 720px) {
+  .lore-blurb {
+    height: 790px; } }

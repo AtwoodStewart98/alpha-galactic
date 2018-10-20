@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import { updateLore } from "../../../ducks/reducer.js";
+
 class HolkovrhysLore extends Component {
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
+    const { updateLore } = this.props;
+
     return (
       <div className="loreganizer">
         <h2>The Holkovrhys Empire</h2>
@@ -142,11 +150,28 @@ class HolkovrhysLore extends Component {
         <p>
           <strong>Notable Relations</strong>
         </p>
+        <p>
+          <a onClick={() => updateLore("Hyjakkers")}>Hyjakker</a> - It would be
+          typically assumed that two selfish, race-centric factions would be at
+          odds with one another, but such is not the case between the Xiphave
+          and the Holkovrhys. Probably due to identifying the fact that alone,
+          neither has the power to challenge the Galactic Alliance, Emperor
+          Docstiertun and Perdio Longhurst have forged a strong alliance with
+          free exchange of tech and information. The satellite asteroid Laugandy
+          is used as neutral ground where their scientists can freely
+          collaborate on diabolical projects.
+        </p>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => state;
+const mapStateToProps = state => {
+  const { lore } = state;
+  return { lore };
+};
 
-export default connect(mapStateToProps)(HolkovrhysLore);
+export default connect(
+  mapStateToProps,
+  { updateLore }
+)(HolkovrhysLore);

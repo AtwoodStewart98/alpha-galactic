@@ -1,5 +1,9 @@
 @import "variables";
 
+.lore-container {
+  padding-top: 80px;
+}
+
 .lore-splash {
   display: block;
   max-height: 250px;
@@ -11,12 +15,14 @@
 
 .loreganizer {
   padding: 40px;
+
   a {
     font-weight: bold;
     color: $dark-gray;
-  }
-  a:hover {
-    text-decoration: none;
-    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }

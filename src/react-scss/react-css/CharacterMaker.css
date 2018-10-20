@@ -14,6 +14,9 @@
     width: 150px;
     height: 50px; }
 
+.character-container {
+  padding-top: 80px; }
+
 .character-splash {
   display: block;
   height: auto;
@@ -24,7 +27,8 @@
 .char-questions {
   padding: 30px 3%;
   line-height: 1.5; }
-  .char-questions a {
+  .char-questions div p a {
+    color: #3a3a3a;
     font-weight: bold; }
 
 .question-block label {
@@ -36,14 +40,14 @@
   padding: 5px;
   border: 2px solid #3a3a3a; }
 
+.race-questions .radio-selector {
+  margin-top: 50px; }
+
 .race-questions p {
   min-height: 150px; }
 
 .race-questions label {
   margin-left: 250px; }
-
-.race-questions .radio-selector {
-  margin-top: 50px; }
 
 .radio-selector {
   float: left;

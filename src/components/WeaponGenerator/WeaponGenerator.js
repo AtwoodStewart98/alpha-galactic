@@ -97,7 +97,7 @@ class WeaponGenerator extends Component {
     }
 
     return (
-      <div>
+      <div className="weapon-container">
         <div>
           <img
             className="weapon-splash"
@@ -189,6 +189,7 @@ const mapStateToProps = state => {
   return { spawnWeapon };
 };
 
-export default connect(mapStateToProps, { updateWeapon, updateRewardWeapon })(
-  WeaponGenerator
-);
+export default connect(
+  mapStateToProps,
+  { updateWeapon, updateRewardWeapon }
+)(WeaponGenerator);

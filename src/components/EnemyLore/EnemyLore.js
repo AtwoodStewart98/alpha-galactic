@@ -25,8 +25,9 @@ class EnemyLore extends Component {
 
   render() {
     const { updateLore, lore } = this.props;
+
     return (
-      <div>
+      <div className="lore-container">
         <div>
           <img className="lore-splash" src={loreizon} alt="lore horizon" />
         </div>
@@ -77,4 +78,7 @@ const mapStateToProps = state => {
   return { lore };
 };
 
-export default connect(mapStateToProps, { updateLore })(EnemyLore);
+export default connect(
+  mapStateToProps,
+  { updateLore }
+)(EnemyLore);

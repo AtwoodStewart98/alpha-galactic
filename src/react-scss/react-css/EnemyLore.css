@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
+.lore-container {
+  padding-top: 80px; }
+
 .lore-splash {
   display: block;
   max-height: 250px;
@@ -12,6 +15,6 @@
   .loreganizer a {
     font-weight: bold;
     color: #3a3a3a; }
-  .loreganizer a:hover {
-    text-decoration: none;
-    cursor: pointer; }
+    .loreganizer a:hover {
+      text-decoration: none;
+      cursor: pointer; }

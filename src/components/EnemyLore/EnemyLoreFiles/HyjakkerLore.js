@@ -178,7 +178,7 @@ class HyjakkerLore extends Component {
           command center is home to infamous names such as Daccus Hellway,
           Ghast, Reaper, and Syren. Purplish-black and armed to the teeth with
           laser cannons, missiles, and anti-fighter artillery, this gigantic
-          spaceship constantly patrols the Hyjakker&39;s established territory
+          spaceship constantly patrols the Hyjakker&#39;s established territory
           in search of trespassers and returning raiders. Able to carry
           thousands of tons of loot and hundreds of probes and fighters, the
           Wraith is a ship few have seen and even fewer have lived to speak
@@ -231,4 +231,7 @@ const mapStateToProps = state => {
   return { lore };
 };
 
-export default connect(mapStateToProps, { updateLore })(HyjakkerLore);
+export default connect(
+  mapStateToProps,
+  { updateLore }
+)(HyjakkerLore);

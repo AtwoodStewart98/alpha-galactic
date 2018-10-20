@@ -1,5 +1,9 @@
 @import "variables";
 
+.character-container {
+  padding-top: 80px;
+}
+
 .character-splash {
   display: block;
   height: auto;
@@ -11,7 +15,9 @@
 .char-questions {
   padding: 30px 3%;
   line-height: 1.5;
-  a {
+
+  div p a {
+    color: $dark-gray;
     font-weight: bold;
   }
 }
@@ -21,6 +27,7 @@
     margin-left: 50px;
     display: block;
   }
+
   img {
     float: left;
     padding: 5px;
@@ -29,14 +36,16 @@
 }
 
 .race-questions {
+  .radio-selector {
+    margin-top: 50px;
+  }
+
   p {
     min-height: 150px;
   }
+
   label {
     margin-left: 250px;
-  }
-  .radio-selector {
-    margin-top: 50px;
   }
 }
 

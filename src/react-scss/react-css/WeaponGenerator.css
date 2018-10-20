@@ -16,6 +16,9 @@
   width: 8%;
   min-height: 30px; }
 
+.weapon-container {
+  padding-top: 80px; }
+
 .weapon-splash {
   display: block;
   max-height: 250px;

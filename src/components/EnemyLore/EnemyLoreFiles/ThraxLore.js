@@ -7,6 +7,9 @@ class ThraxLore extends Component {
       <div className="loreganizer">
         <h2>Thraxian Invaders</h2>
         <p>
+          <strong>Neutral Faction</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>
@@ -63,6 +66,45 @@ class ThraxLore extends Component {
           treasures and secrets are kept. If fighting him in combat, do not let
           his aging body fool you of his strength; his top-of-the-line
           cybernetics have ensured he has lost none of his battle prowess.
+        </p>
+        <p>
+          The Assemblage - No gods or supernatural deities are recognized by the
+          Thrax, but one name can bring whispers of reverence among even the
+          most hardened warriors; that of The Assemblage. Leaders of the
+          Galactic Alliance are unclear of the nature of who or what this title
+          is attributed to, but the truth is a combination of the rumors and
+          suppositions floating about. Once a Thraxian scientist, now a cyborg
+          more artificial than biological, and whose expansive stores of
+          knowledge makes it more of a mechanical superbeing than anything else.
+          It does not lead its subjects directly, rather it manipulates the
+          stream of information and data that guides the Thraxian fleets in
+          decision-making. Its true motives are a mystery to all but itself.
+        </p>
+        <p>
+          <strong>Notable Locations</strong>
+        </p>
+        <p>
+          Errato - Although the Thrax tend to seclude themselves to systems in
+          close proximity to the galaxy&#39;s center, this is one such outpost
+          within the confines of Alliance territory they relentlessly hold onto.
+          This planet once housed a notable factory/laboratory complex for the
+          Colossus corporation, until the system&#39;s star went supernova and
+          completely irradiated the planet, which miraculously survived the
+          initial explosion. Once abandoned, the Thrax took an undetected route
+          through Alliance lines and secured a foothold on the planet, which
+          they somehow are able to keep from falling into the black hole that is
+          the star&#39;s corpse.
+        </p>
+        <p>
+          The Center of the Galaxy - It is no secret the Thrax choose to make
+          their territory surrounding the supermassive black hole at the
+          galaxy&#39;s center, but their reasons for doing so are unclear. It is
+          known they have constructed a space station of absolutely gargantuan
+          proportions closer than any ship can safely be piloted. Some kind of
+          world-shattering gravitational power keeps it from collapsing into the
+          center, and it is this power that both the Galactic Alliance and the
+          Holkovrhys Empire fear. Many worry this technological feat, if
+          weaponized, could be a superweapon to outclass all other superweapons.
         </p>
       </div>
     );

@@ -15,6 +15,9 @@ class HyjakkerLore extends Component {
       <div className="loreganizer">
         <h2>The Hyjakker Coalition</h2>
         <p>
+          <strong>Evil Faction</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>

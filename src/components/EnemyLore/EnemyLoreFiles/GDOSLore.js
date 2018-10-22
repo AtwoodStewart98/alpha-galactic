@@ -15,6 +15,9 @@ class GDOSLore extends Component {
       <div className="loreganizer">
         <h2>Galactic Department of Security</h2>
         <p>
+          <strong>Good Faction</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>
@@ -195,4 +198,7 @@ const mapStateToProps = state => {
   return { lore };
 };
 
-export default connect(mapStateToProps, { updateLore })(GDOSLore);
+export default connect(
+  mapStateToProps,
+  { updateLore }
+)(GDOSLore);

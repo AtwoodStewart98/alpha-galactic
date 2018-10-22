@@ -15,6 +15,9 @@ class MercenariesLore extends Component {
       <div className="loreganizer">
         <h2>Mercenaries</h2>
         <p>
+          <strong>Neutral Faction</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>
@@ -88,4 +91,7 @@ class MercenariesLore extends Component {
 
 const mapStateToProps = state => state;
 
-export default connect(mapStateToProps, { updateLore })(MercenariesLore);
+export default connect(
+  mapStateToProps,
+  { updateLore }
+)(MercenariesLore);

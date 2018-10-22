@@ -68,6 +68,12 @@ class EnemyLore extends Component {
         {lore === "Draconis" ? <DraconisLore /> : null}
         {lore === "GDOS" ? <GDOSLore /> : null}
         {lore === "Porturuxeans" ? <PorturuxeanLore /> : null}
+        <div className="home-footer">
+          <p>
+            This website and its content, excepting images, is copyright of
+            Stewart Atwood - ©Stewart Atwood 2018. All rights reserved.
+          </p>
+        </div>
       </div>
     );
   }

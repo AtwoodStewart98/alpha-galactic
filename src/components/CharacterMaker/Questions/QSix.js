@@ -156,7 +156,7 @@ class QSix extends Component {
               Galactic Alliance would be much more concerned about them.
               Notoriously xenophobic and technophilic, Thraxian invaders will
               destroy any trespassing ship in their territory, provoked or not,
-              and will raid colonies they feel are too close to their borders
+              and raid any colonies they feel are too close to their borders
               with indiscriminate force. However, their neurotic need to
               physically augment themselves can overpower their reclusive
               nature, and sometimes loners will venture out to interact with
@@ -313,7 +313,10 @@ const mapStateToProps = state => {
   return { questionNumber, faction, trueAlignment, race };
 };
 
-export default connect(mapStateToProps, {
-  updateQuestionNumber,
-  updateFaction
-})(QSix);
+export default connect(
+  mapStateToProps,
+  {
+    updateQuestionNumber,
+    updateFaction
+  }
+)(QSix);

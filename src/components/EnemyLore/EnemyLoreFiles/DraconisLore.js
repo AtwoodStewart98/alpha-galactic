@@ -7,6 +7,9 @@ class DraconisLore extends Component {
       <div className="loreganizer">
         <h2>The Draconis Timocracy</h2>
         <p>
+          <strong>Good Faction</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>

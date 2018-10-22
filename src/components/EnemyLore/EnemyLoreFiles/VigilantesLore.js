@@ -7,6 +7,9 @@ class VigilantesLore extends Component {
       <div className="loreganizer">
         <h2>Vigilantes</h2>
         <p>
+          <strong>Evil Faction</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>

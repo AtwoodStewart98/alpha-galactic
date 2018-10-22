@@ -7,6 +7,9 @@ class PorturuxeanLore extends Component {
       <div className="loreganizer">
         <h2>The Porturuxean Democracy</h2>
         <p>
+          <strong>Good Faction</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>

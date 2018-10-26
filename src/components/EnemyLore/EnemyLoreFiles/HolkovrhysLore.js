@@ -18,6 +18,9 @@ class HolkovrhysLore extends Component {
           <strong>Evil Faction</strong>
         </p>
         <p>
+          <strong>Lvls 1-10</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>

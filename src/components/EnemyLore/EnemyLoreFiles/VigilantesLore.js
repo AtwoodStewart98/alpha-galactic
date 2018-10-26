@@ -10,6 +10,9 @@ class VigilantesLore extends Component {
           <strong>Evil Faction</strong>
         </p>
         <p>
+          <strong>Lvls 1-6</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>

@@ -1,13 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import { updateLore } from "../../../ducks/reducer.js";
+
 class ThraxLore extends Component {
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
+    const { updateLore } = this.props;
+
     return (
       <div className="loreganizer">
         <h2>Thraxian Invaders</h2>
         <p>
           <strong>Neutral Faction</strong>
+        </p>
+        <p>
+          <strong>Lvls 4-10</strong>
         </p>
         <p>
           <strong>Description</strong>
@@ -106,11 +117,32 @@ class ThraxLore extends Component {
           Holkovrhys Empire fear. Many worry this technological feat, if
           weaponized, could be a superweapon to outclass all other superweapons.
         </p>
+        <p>
+          <strong>Notable Relations</strong>
+        </p>
+        <p>
+          <a onClick={() => updateLore("Colossus, Inc")}>Colossus, Inc</a> -
+          Although the Thrax generally prefer to not associate with anyone
+          outside their own ranks, they have fostered what can only be described
+          as a &#39;relationship&#39; with the Colossus corporation. Sometimes
+          they can be found tentatively meeting on Colossus&#39;s terms, usually
+          bartering technology or information, or negotiating a research site in
+          close proximity to Thrax territory. Other times raiders will strike
+          Colossus laboratories and firms in order to forcibly seize tech or
+          send a message. The company seems to put up with these infrequent,
+          albeit aggressive retaliations and cut their losses, at least for now.
+        </p>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => state;
+const mapStateToProps = state => {
+  const { lore } = state;
+  return { lore };
+};
 
-export default connect(mapStateToProps)(ThraxLore);
+export default connect(
+  mapStateToProps,
+  { updateLore }
+)(ThraxLore);

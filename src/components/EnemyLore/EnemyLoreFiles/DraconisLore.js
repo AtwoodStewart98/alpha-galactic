@@ -10,6 +10,9 @@ class DraconisLore extends Component {
           <strong>Good Faction</strong>
         </p>
         <p>
+          <strong>Lvls 1-10</strong>
+        </p>
+        <p>
           <strong>Description</strong>
         </p>
         <p>

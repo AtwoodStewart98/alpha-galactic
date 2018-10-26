@@ -11,7 +11,7 @@
   object-fit: cover; }
 
 .loreganizer {
-  padding: 40px 60px; }
+  padding: 40px 120px; }
   .loreganizer a {
     font-weight: bold;
     color: #3a3a3a; }
@@ -19,4 +19,4 @@
       text-decoration: none;
       cursor: pointer; }
   .loreganizer p {
-    line-height: 1.5; }
+    line-height: 1.6; }

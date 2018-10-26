@@ -1,93 +1,71 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
 .nav-flexer {
   display: flex;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
 
 .nav-flexer ul {
   display: flex;
-  justify-content: space-evenly;
-}
+  justify-content: space-evenly; }
 
 .header-nav {
   position: fixed;
   z-index: +1;
   top: 0;
-  width: 100%;
-}
+  width: 100%; }
 
 .nav-flexer {
-  background-color: #3a3a3a;
-}
-.nav-flexer a:hover {
-  color: #8ac6ef;
-  text-decoration: none;
-}
-.nav-flexer .app-title {
-  font-family: "Orbitron", sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 28px 0px;
-}
-.nav-flexer ul {
-  list-style: none;
-  padding: 0;
-}
-.nav-flexer ul a {
-  padding: 10px 20px;
-  line-height: 160%;
-}
-.nav-flexer ul li {
-  color: #d7d7d7;
-}
+  background-color: #3a3a3a; }
+  .nav-flexer a:hover {
+    color: #8ac6ef;
+    text-decoration: none; }
+  .nav-flexer .app-title {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 28px 0px; }
+  .nav-flexer ul {
+    list-style: none;
+    padding: 0; }
+    .nav-flexer ul a {
+      padding: 10px 20px;
+      line-height: 160%; }
+    .nav-flexer ul li {
+      color: #d7d7d7; }
 
 .burger-menu {
   margin: auto 28px;
   display: inline-block;
-  cursor: pointer;
-}
-.burger-menu div {
-  width: 35px;
-  height: 5px;
-  background-color: #fff;
-  margin: 6px 0;
-}
-.burger-menu:hover div {
-  background-color: #8ac6ef !important;
-}
+  cursor: pointer; }
+  .burger-menu div {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0; }
+  .burger-menu:hover div {
+    background-color: #8ac6ef !important; }
 
 .dropdown-menu {
   background-color: #3a3a3a;
-  width: 250px;
-}
-.dropdown-menu ul {
-  list-style: none;
-  margin: 0;
-}
-.dropdown-menu ul a {
-  padding: 10px;
-  color: #d7d7d7;
-  line-height: 160%;
-}
-.dropdown-menu ul a:hover {
-  text-decoration: none;
-  color: #8ac6ef;
-}
+  width: 250px; }
+  .dropdown-menu ul {
+    list-style: none;
+    margin: 0; }
+    .dropdown-menu ul a {
+      padding: 10px;
+      color: #d7d7d7;
+      line-height: 160%; }
+      .dropdown-menu ul a:hover {
+        text-decoration: none;
+        color: #8ac6ef; }
 
 @media screen and (max-width: 964px) {
   .nav-flexer {
-    justify-content: flex-start;
-  }
-  .nav-flexer ul {
-    display: none;
-  }
-}
+    justify-content: flex-start; }
+    .nav-flexer ul {
+      display: none; } }
 
 @media screen and (min-width: 965px) {
   .burger-menu {
-    display: none;
-  }
+    display: none; }
   .dropdown-menu {
-    display: none;
-  }
-}
+    display: none; } }

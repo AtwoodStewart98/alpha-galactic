@@ -2,6 +2,27 @@
 
 .lore-container {
   padding-top: 80px;
+
+  select {
+    margin: 20px 10vw 0 0;
+    height: 25px;
+    width: 225px;
+    float: right;
+    background-color: $lighter-gray;
+    border: 2px solid $dark-gray;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+
+    &:focus {
+      outline: none;
+      border: 2px solid $light-blue;
+    }
+
+    &:hover {
+      border: 2px solid $light-blue;
+    }
+  }
 }
 
 .lore-splash {
@@ -14,7 +35,7 @@
 }
 
 .loreganizer {
-  padding: 40px 120px;
+  padding: 50px 10vw;
 
   a {
     font-weight: bold;

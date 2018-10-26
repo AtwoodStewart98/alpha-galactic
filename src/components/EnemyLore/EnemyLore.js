@@ -31,12 +31,17 @@ class EnemyLore extends Component {
 
     return (
       <div className="lore-container">
-        <div>
-          <img className="lore-splash" src={loreizon} alt="lore horizon" />
-        </div>
-        <select onChange={e => updateLore(e.target.value)}>
+        {lore !== "..." ? null : (
+          <div>
+            <img className="lore-splash" src={loreizon} alt="lore horizon" />
+          </div>
+        )}
+        <select
+          className="lore-dropdown"
+          onChange={e => updateLore(e.target.value)}
+        >
           <option type="text" value="...">
-            ---
+            - Choose Faction -
           </option>
           <option type="text" value="Colossus, Inc">
             Colossus, Inc

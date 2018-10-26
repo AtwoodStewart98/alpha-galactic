@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Orbitron");
 .lore-container {
   padding-top: 80px; }
+  .lore-container select {
+    margin: 20px 10vw 0 0;
+    height: 25px;
+    width: 225px;
+    float: right;
+    background-color: #d7d7d7;
+    border: 2px solid #3a3a3a;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 14px; }
+    .lore-container select:focus {
+      outline: none;
+      border: 2px solid #8ac6ef; }
+    .lore-container select:hover {
+      border: 2px solid #8ac6ef; }
 
 .lore-splash {
   display: block;
@@ -11,7 +26,7 @@
   object-fit: cover; }
 
 .loreganizer {
-  padding: 40px 120px; }
+  padding: 50px 10vw; }
   .loreganizer a {
     font-weight: bold;
     color: #3a3a3a; }

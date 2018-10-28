@@ -132,6 +132,9 @@ class ThraxLore extends Component {
           send a message. The company seems to put up with these infrequent,
           albeit aggressive retaliations and cut their losses, at least for now.
         </p>
+        <p>
+          <a onClick={() => updateLore("...")}>Robotics</a> -
+        </p>
       </div>
     );
   }

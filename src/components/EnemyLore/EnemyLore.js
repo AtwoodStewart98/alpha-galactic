@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import ColossusLore from "./EnemyLoreFiles/ColossusLore.js";
 import HolkovrhysLore from "./EnemyLoreFiles/HolkovrhysLore.js";
 import HyjakkerLore from "./EnemyLoreFiles/HyjakkerLore.js";
-import OperationMLore from "./EnemyLoreFiles/OperationMLore.js";
+import OmnicronDawnLore from "./EnemyLoreFiles/OmnicronDawnLore.js";
 import PUNKLore from "./EnemyLoreFiles/PUNKLore.js";
 import VigilantesLore from "./EnemyLoreFiles/VigilantesLore.js";
 import MercenariesLore from "./EnemyLoreFiles/MercenariesLore.js";
@@ -52,7 +52,7 @@ class EnemyLore extends Component {
           <option type="text" value="Holkovrhys">
             Holkovrhys
           </option>
-          <option type="text" value="Operation M">
+          <option type="text" value="Omnicron Dawn">
             Operation M
           </option>
           <option type="text" value="P.U.N.K.">
@@ -108,7 +108,7 @@ class EnemyLore extends Component {
         {lore === "Colossus, Inc" ? <ColossusLore /> : null}
         {lore === "Holkovrhys" ? <HolkovrhysLore /> : null}
         {lore === "Hyjakker" ? <HyjakkerLore /> : null}
-        {lore === "Operation M" ? <OperationMLore /> : null}
+        {lore === "Omnicron Dawn" ? <OmnicronDawnLore /> : null}
         {lore === "P.U.N.K." ? <PUNKLore /> : null}
         {lore === "Vigilantes" ? <VigilantesLore /> : null}
         {lore === "Mercenaries" ? <MercenariesLore /> : null}

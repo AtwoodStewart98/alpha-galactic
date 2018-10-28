@@ -10,7 +10,7 @@ class PUNKLore extends Component {
           <strong>Evil Faction</strong>
         </p>
         <p>
-          <strong>Lvls 4-10</strong>
+          <strong>Lvls 6-10</strong>
         </p>
         <p>
           <strong>Description</strong>

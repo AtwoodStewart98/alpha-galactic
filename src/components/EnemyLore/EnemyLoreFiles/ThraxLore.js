@@ -133,7 +133,11 @@ class ThraxLore extends Component {
           albeit aggressive retaliations and cut their losses, at least for now.
         </p>
         <p>
-          <a onClick={() => updateLore("...")}>Robotics</a> -
+          <a onClick={() => updateLore("...")}>Robotics</a> - On occasion, the
+          Thrax will recruit from the ranks of mercenary AIs to accompany them
+          on excursions and to provide extra firepower. Despite their
+          xenophobia, they appear to be more accepting of this machine-based
+          faction and those who employ the artificial.
         </p>
       </div>
     );

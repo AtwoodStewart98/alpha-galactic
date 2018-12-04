@@ -97,6 +97,43 @@ class DraconisLore extends Component {
           philosophies with P.U.N.K. soldiers at staff-point before violently
           executing them.
         </p>
+        <p>
+          Grand Arbiter Rawei - The only position that reports to the Draconis
+          leader directly and regularly, the Grand Arbiter is tasked with
+          observing important battlefields and political situations. Rawei is
+          unorthodox from others in his line because he not only actively
+          engages enemies as opposed to recording from the sidelines, but even
+          tries to befriend and recruit them. A serious individual with a
+          peculiar soft spot for Nereann, Rawei will always ensure that justice
+          will be the final outcome.
+        </p>
+        <p>
+          Ides - Once a preeminent leader among the talonfang warriors, she went
+          missing deep in enemy territory after she stayed behind to fend off an
+          army of Holkovrhys from the rest of her regiment. Battered and broken,
+          but miraculously victorious, she has been reduced to a wandering
+          mercenary hiding in plain sight within cities of the Empire, trying to
+          find a way to escape and get back to her people. Her devotion to the
+          code has been more thoroughly tested than any other Draconis, and
+          although weary, she has not given up hope yet.
+        </p>
+        <p>
+          Lieutenant General Vetradonna - After the Draconis joined the
+          Alliance, their generals have suffered nothing short of constant
+          headaches balancing the new threats of the Holkovrhys and Hyjakkers
+          alongside the Thrax they had already been combating, on top of
+          controlling how they conduct themselves under the Integrities in an
+          ever-changing social environment. Vetradonna is the most senior of the
+          generals, and as such, serves as the focal point of scrutiny by Epicon
+          Racnos, her peers, and the troops she commands. Despite all the
+          pressure, she seems to continue to make all the right calls, and even
+          though she sometimes verbally complains about being too old to cope
+          with her job, people close to her know she feels right at home in the
+          center of attention. She has frustrated Rawei at times by
+          out-reasoning even the Grand Arbiter, proving time and again her
+          ability and judgment in commanding the Draconis military.
+        </p>
+        <p>Malingara -</p>
       </div>
     );
   }

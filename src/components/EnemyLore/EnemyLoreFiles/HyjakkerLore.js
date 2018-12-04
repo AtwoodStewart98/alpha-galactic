@@ -58,13 +58,14 @@ class HyjakkerLore extends Component {
           <strong>Notable Members</strong>
         </p>
         <p>
-          "Reaper" - This dangerous raiding captain is either seen alongside his
-          partner Syren in various special operations missions, or as
-          co-commander of the Hyjakker helicarrier, Wraith. He is most infamous
-          for evading capture from the GDOS by fighting his way to an escape
-          vessel with nothing but his fists. No-one is quite sure how he picked
-          up his nickname, but one thing&#39;s for sure; he is a crafty opponent
-          with plenty of combat experience, both in the air and on the ground.
+          &#34;Reaper&#34; - This dangerous raiding captain is either seen
+          alongside his partner Syren in various special operations missions, or
+          as co-commander of the Hyjakker helicarrier, Wraith. He is most
+          infamous for evading capture from the GDOS by fighting his way to an
+          escape vessel with nothing but his fists. No-one is quite sure how he
+          picked up his nickname, but one thing&#39;s for sure; he is a crafty
+          opponent with plenty of combat experience, both in the air and on the
+          ground.
         </p>
         <p>
           Syren - The most notable female officer in the Hyjakker hierarchy, she
@@ -100,7 +101,7 @@ class HyjakkerLore extends Component {
           wrath.
         </p>
         <p>
-          Brutenant the Wanted - A minor captain in the organization, this
+          Tempro the Wanted - A minor captain in the organization, this
           wandering rogue is known simply for holding the most bounties among
           any criminal in the territory of the Galactic Alliance. Most of his
           offenses are insignificant, but the sheer amount that he&#39;s racked

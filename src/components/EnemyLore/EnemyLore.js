@@ -61,8 +61,17 @@ class EnemyLore extends Component {
           <option type="text" value="Vigilantes">
             Vigilantes
           </option>
+          <option type="text" value="Assassins">
+            Assassins
+          </option>
           <option type="text" value="Mercenaries">
             Mercenaries
+          </option>
+          <option type="text" value="Robotics">
+            Robotics
+          </option>
+          <option type="text" value="Thugs">
+            Thugs
           </option>
           <option type="text" value="Thrax">
             Thrax

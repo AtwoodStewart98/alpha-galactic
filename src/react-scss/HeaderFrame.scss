@@ -15,6 +15,10 @@
   @extend %flex-around;
   background-color: $dark-gray;
 
+  a {
+    color: #fff;
+  }
+
   a:hover {
     color: $light-blue;
     text-decoration: none;

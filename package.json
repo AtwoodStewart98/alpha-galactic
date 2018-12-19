@@ -24,10 +24,11 @@
     "express": "^4.16.3",
     "express-jwt": "^5.3.1",
     "express-session": "^1.15.6",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-sass": "^3.2.1",
     "jwks-rsa": "^1.2.1",
     "massive": "^4.7.1",
+    "mongodb": "^3.1.10",
     "passport": "^0.4.0",
     "passport-auth0": "^0.6.1",
     "path": "^0.12.7",
@@ -35,7 +36,7 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "^1.1.1",
+    "react-scripts": "^2.1.1",
     "redux": "^3.7.2",
     "redux-promise-middleware": "^5.0.0"
   },
@@ -46,5 +47,11 @@
     "eject": "react-scripts eject",
     "deploy": "git push && git heroku push master"
   },
-  "proxy": "http://localhost:4200"
+  "proxy": "http://localhost:4200",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

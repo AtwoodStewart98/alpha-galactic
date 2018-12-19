@@ -158,6 +158,7 @@ class GDOSLore extends Component {
           <strong>Notable Relationships</strong>
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("Hyjakker")}>Hyjakker</a> - The GDOS has
           no tolerance whatsoever for these persistent terrorists and their
           anarchist agenda. The primary target of TAC operations missions and
@@ -169,6 +170,7 @@ class GDOSLore extends Component {
           will make certain that those pirates are brought down.
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("Porturuxeans")}>Porturuxeans</a> - Since
           this nation is known for developing some of the most advanced
           defensive weapons technology in the Alliance, it has been approached

@@ -79,6 +79,7 @@ class MercenariesLore extends Component {
           <strong>Notable Relationships</strong>
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("Vigilantes")}>Vigilantes</a> - Although
           mercenaries have no definitive alignment and come from all kinds of
           backgrounds, they collectively despise this far more unscrupulous and

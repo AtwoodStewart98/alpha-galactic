@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/spacestation.175dc670.png"
   },
   {
-    "revision": "0179d97c61c2b538ff71",
-    "url": "/static/css/main.88c24784.chunk.css"
+    "revision": "3c6a0659ccaf92fdc056",
+    "url": "/static/css/main.7d166c87.chunk.css"
   },
   {
     "revision": "113b8d6a5214a307ad39",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/static/media/enemy-faction.05d69581.png"
   },
   {
-    "revision": "0179d97c61c2b538ff71",
-    "url": "/static/js/main.0179d97c.chunk.js"
+    "revision": "3c6a0659ccaf92fdc056",
+    "url": "/static/js/main.3c6a0659.chunk.js"
   },
   {
     "revision": "940ab008379171e9b6544db45d398860",
@@ -44,15 +44,15 @@ self.__precacheManifest = [
     "url": "/static/media/loreizon.e25e4ad4.png"
   },
   {
-    "revision": "af0d7d87bd0e183ab1a95b0a1b9fc342",
-    "url": "/static/media/foresttakeoff.af0d7d87.png"
-  },
-  {
     "revision": "de2261dbd53d6242350e1f9489e3dd60",
     "url": "/static/media/homesplash.de2261db.png"
   },
   {
-    "revision": "8ddf87219f7df48708804ed2055b6c6a",
+    "revision": "af0d7d87bd0e183ab1a95b0a1b9fc342",
+    "url": "/static/media/foresttakeoff.af0d7d87.png"
+  },
+  {
+    "revision": "7f3a9ed3ae2dc8bbdcde8bfeef098196",
     "url": "/index.html"
   }
 ];

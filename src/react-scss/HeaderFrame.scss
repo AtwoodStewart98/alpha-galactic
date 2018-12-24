@@ -14,7 +14,10 @@
 .nav-flexer {
   @extend %flex-around;
   background-color: $dark-gray;
-  color: #fff;
+
+  a {
+    color: #fff;
+  }
 
   a:hover {
     color: $light-blue;

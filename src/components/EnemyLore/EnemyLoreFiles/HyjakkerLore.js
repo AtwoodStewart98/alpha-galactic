@@ -195,6 +195,7 @@ class HyjakkerLore extends Component {
           <strong>Notable Relationships</strong>
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("GDOS")}>GDOS</a> - Naturally the GDOS
           are bitter enemies with this faction, as they both have very different
           and opposing agendas. Hyjakker gangs frequently raid planets protected
@@ -205,6 +206,7 @@ class HyjakkerLore extends Component {
           at their disposal, so their war will certainly be lengthy and bloody.
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("Holkovrhys")}>Holkovrhys</a> - Back when
           the Galactic Alliance was beginning to take the Hyjakkers and the
           Holkovrhys Empire seriously as threats, Emperor Docstiertun and Perdio
@@ -217,6 +219,7 @@ class HyjakkerLore extends Component {
           unproven.
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("Porturuxeans")}>Porturuxeans</a> - The
           President of the Porturuxean Democracy holds more grudges against the
           Hyjakkers than any other member of the Galactic Alliance. Because the

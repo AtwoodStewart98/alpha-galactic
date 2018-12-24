@@ -80,14 +80,19 @@ class OmnicronDawnLore extends Component {
           <strong>**||\\|0!74_|32|3_|3|470|\\5**</strong>
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("Holkovrhys")}>[ERR~./REDACTED]</a> -
           [INFORMATION REDACTED].
         </p>
         <p>
-          <a onClick={() => updateLore("Hyjakker")}>[ERR~./REDACTED|$EXEC*]</a>{" "}
+          {/* eslint-disable-next-line */}
+          <a onClick={() => updateLore("Hyjakker")}>
+            [ERR~./REDACTED|$EXEC*]
+          </a>{" "}
           - [INFORMATION REDACTED].
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("Porturuxeans")}>
             [INITIALIZING|/-\|/-\$psychScrmbl.EXE]
           </a>{" "}

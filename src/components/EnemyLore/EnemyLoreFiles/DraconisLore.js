@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import { updateLore } from "../../../ducks/reducer.js";
+
 class DraconisLore extends Component {
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
+    const { updateLore } = this.props;
+
     return (
       <div className="loreganizer">
         <h2>The Draconis Timocracy</h2>
@@ -133,12 +141,110 @@ class DraconisLore extends Component {
           out-reasoning even the Grand Arbiter, proving time and again her
           ability and judgment in commanding the Draconis military.
         </p>
-        <p>Malingara -</p>
+        <p>
+          Malingara - Although technically one of the lieutenant generals in
+          ranking, she prefers not to be addressed by the title, going simply as
+          Malingara. Also, despite being director of the secretive jadescale
+          special ops, she puts herself out in the open on a regular basis,
+          welcoming foreigners to the Draconis homeworld of Tasaria, and guiding
+          and training individuals she feels a connection with. In addition to
+          being a remarkably good judge of character, she has the uncanny
+          ability to accurately predict events in the near future, even with
+          minimal information. Malingara truly is a gifted individual, and she
+          will see to it that her talents will keep her precious people safe.
+        </p>
+        <p>
+          <strong>Notable Locations</strong>
+        </p>
+        <p>
+          Tasaria - At the very edge of Sector Alpha lies the Draconisian
+          homeworld, a vibrant planet largely unspoiled by urban sprawl.
+          Civilization has grown to incorporate the landscape into it, which can
+          range from deep jungles to volcanic deserts of black sand, and
+          vine-covered mountainsides. For a long time, the Draconis have merely
+          had to contend with encroaching Thraxian territory, but after joining
+          the Alliance, the inhabitants have become steadily more aware of
+          potential threats approaching from other directions. Fortunately, they
+          possess the military strength and backing from other nations to make
+          this far-off planet an impenetrable stronghold.
+        </p>
+        <p>
+          Baonion - The inhabitants of this world have faced far more than their
+          fair share of hardships. After succumbing to a planetary bombing run
+          by the Hyjakkers, in the midst of rebuilding, the forces of the
+          P.U.N.K.s decided to set up shop in their wreckage to recruit the
+          angry and disillusioned from the population. In response to the
+          ongoing chaos, the Draconis have established and maintained the
+          massive compound of Fort Tyrol in order to support the relief effort
+          and keep their sworn enemies, the P.U.N.K.s, at bay. Their enemies
+          will be difficult to uproot; the P.U.N.K.s control a fort of their
+          own, an inactive helicarrier protected by one of the strongest force
+          fields tested by military might, and arrays of firebases with an
+          endless supply of anti-spacecraft missile silos.
+        </p>
+        <p>
+          Braultlin-15 - Once a terraformed planet utilized as a training ground
+          and research facility for the Draconis, the P.U.N.K.s launched an
+          assault on the atmosphere generator on one of the planet&#39;s poles,
+          causing a rapid global temperature rise, melting the ice caps and
+          flooding the planet within hours. The citadel of Aurabage was almost
+          completely submerged, with only the tallest of skyscrapers poking
+          above the waves now. The site is now contested between Draconis
+          wishing to recover their data and tech, Vigilantes scavenging what
+          they can, and the P.U.N.K. invaders sowing chaos and trying to
+          establish dominance over their sworn enemies.
+        </p>
+        <p>
+          <strong>Notable Relations</strong>
+        </p>
+        <p>
+          {/* eslint-disable-next-line */}
+          <a onClick={() => updateLore("P.U.N.K.")}>P.U.N.K.</a> - Among all the
+          new threats the Draconis have had to contend with since joining the
+          Alliance, this band of anarchapitalists serves as the antithesis to
+          what they stand for. The P.U.N.K. make rules to be broken, exclusively
+          work to better themselves at the cost of anyone else they come into
+          contact with, and deeply despise the Draconis Integrities to the core.
+          They are considered the most dangerous threat to the peace and
+          security of a stable society, and will be shown no mercy.
+        </p>
+        <p>
+          {/* eslint-disable-next-line */}
+          <a onClick={() => updateLore("Thrax")}>Thrax</a> - Due to the
+          Draconisian homeworld orbiting in a system closer to the center of the
+          galaxy than most of the Alliance, they have had to deal with this
+          cybernetic race at their doorstep for a long time. While the P.U.N.K.
+          are diametrically opposed ideologically, the Thrax are the opposite to
+          what the Draconis are physically; evolving artificial beings with no
+          ties to themselves. They have been fighting for so long, in fact, the
+          Draconis know more intel and strategies than even the Porturuxeans on
+          these foes.
+        </p>
+        <p>
+          {/* eslint-disable-next-line */}
+          <a onClick={() => updateLore("Porturuxeans")}>Porturuxeans</a> - Even
+          staunch allies can disagree, and being the other military-driven race
+          in the Galactic Alliance, the Draconis have much to disagree with how
+          the Porturuxeans conduct themselves. Their primary issue is the fact
+          that this race has no problems sending robots to war, which they
+          perceive as dishonorable and removed from the actions they are held
+          accountable for, no matter the opponent. In turn, the Porturuxeans
+          worry the Draconis are needlessly expending a finite number of troops
+          into a war that will likely last for generations. Time will tell how
+          these two will reconcile on the details, but for now they will set
+          aside their differences to defeat an agreed scourge.
+        </p>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => state;
+const mapStateToProps = state => {
+  const { lore } = state;
+  return { lore };
+};
 
-export default connect(mapStateToProps)(DraconisLore);
+export default connect(
+  mapStateToProps,
+  { updateLore }
+)(DraconisLore);

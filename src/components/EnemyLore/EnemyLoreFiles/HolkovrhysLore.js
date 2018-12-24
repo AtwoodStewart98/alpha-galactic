@@ -157,6 +157,7 @@ class HolkovrhysLore extends Component {
           <strong>Notable Relations</strong>
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("Hyjakkers")}>Hyjakker</a> - It would be
           typically assumed that two selfish, race-centric factions would be at
           odds with one another, but such is not the case between the Xiphave

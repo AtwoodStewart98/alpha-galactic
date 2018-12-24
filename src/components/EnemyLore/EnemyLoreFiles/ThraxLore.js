@@ -121,6 +121,7 @@ class ThraxLore extends Component {
           <strong>Notable Relations</strong>
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("Colossus, Inc")}>Colossus, Inc</a> -
           Although the Thrax generally prefer to not associate with anyone
           outside their own ranks, they have fostered what can only be described
@@ -133,6 +134,7 @@ class ThraxLore extends Component {
           albeit aggressive retaliations and cut their losses, at least for now.
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("...")}>Robotics</a> - On occasion, the
           Thrax will recruit from the ranks of mercenary AIs to accompany them
           on excursions and to provide extra firepower. Despite their

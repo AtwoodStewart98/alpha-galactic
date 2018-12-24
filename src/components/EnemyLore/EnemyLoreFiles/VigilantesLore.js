@@ -111,6 +111,7 @@ class VigilantesLore extends Component {
           <strong>Notable Relations</strong>
         </p>
         <p>
+          {/* eslint-disable-next-line */}
           <a onClick={() => updateLore("GDOS")}>GDOS</a> - The Vigilantes tend
           to get a lot of attention from the GDOS, and not just because
           they&#39;re one of the more successful criminal organizations in the

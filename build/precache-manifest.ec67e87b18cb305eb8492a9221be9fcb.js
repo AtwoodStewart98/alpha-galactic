@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/spacestation.175dc670.png"
   },
   {
-    "revision": "3c6a0659ccaf92fdc056",
-    "url": "/static/css/main.7d166c87.chunk.css"
+    "revision": "e1706a1d6e0934cabdaf",
+    "url": "/static/css/main.b87133e3.chunk.css"
   },
   {
     "revision": "113b8d6a5214a307ad39",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/static/media/enemy-faction.05d69581.png"
   },
   {
-    "revision": "3c6a0659ccaf92fdc056",
-    "url": "/static/js/main.3c6a0659.chunk.js"
+    "revision": "e1706a1d6e0934cabdaf",
+    "url": "/static/js/main.e1706a1d.chunk.js"
   },
   {
     "revision": "940ab008379171e9b6544db45d398860",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/static/media/foresttakeoff.af0d7d87.png"
   },
   {
-    "revision": "7f3a9ed3ae2dc8bbdcde8bfeef098196",
+    "revision": "ea972ca8c023f4a11a356b86b4e023e7",
     "url": "/index.html"
   }
 ];

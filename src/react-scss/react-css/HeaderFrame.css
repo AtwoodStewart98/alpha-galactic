@@ -14,7 +14,8 @@
   width: 100%; }
 
 .nav-flexer {
-  background-color: #3a3a3a; }
+  background-color: #3a3a3a;
+  color: #fff; }
   .nav-flexer a:hover {
     color: #8ac6ef;
     text-decoration: none; }

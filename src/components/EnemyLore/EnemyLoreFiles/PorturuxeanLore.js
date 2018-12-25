@@ -10,7 +10,7 @@ class PorturuxeanLore extends Component {
           <strong>Good Faction</strong>
         </p>
         <p>
-          <strong>Lvls 1-10</strong>
+          <strong>Lvls 3-10</strong>
         </p>
         <p>
           <strong>Description</strong>
@@ -25,12 +25,111 @@ class PorturuxeanLore extends Component {
           Alliance than most, however the other nations allow this due to the
           fact the Porturuxean Democracy tends to recognize the fact that their
           strength is derived from their close relationships with their allies.
-          Their only faults are derived from their tendency to distrust the
+          Their only true faults are derived from their tendency to distrust the
           religious and mystical, and their bitter, although somewhat justified,
           racism towards the Holkovrhys.
         </p>
         <p>
           <strong>Hierarchy</strong>
+        </p>
+        <p>
+          There is no central ruler in the Porturuxean Democracy, instead power
+          is focused in a council of presidents, who each are elected to lead a
+          planet or small collective of colonies. Traditionally, one member from
+          the capital planet of Kipleite heads the council with executive veto
+          power, who is currently the economically conservative Andar Balleem.
+          The Porturuxean military is considered separate from politics and has
+          plenty of autonomy to do as it sees fit, but must answer to the will
+          of the council. General Zevon Korringer is the commander-in-chief, who
+          dictates the actions of the army as well as assigns missions to the
+          Comet operatives, a cell of agents who too work independently and can
+          even refuse or adapt orders from the general. The majority of the
+          Porturuxean forces are the AAD, or advanced attack droids, and are
+          supplemented by pods of living soldiers of diverse specialties.
+        </p>
+        <p>
+          <strong>Notable Members</strong>
+        </p>
+        <p>
+          Incarcerator-Class Portal Deployer - The orbit-to-land teleportal
+          deployment drones, or portal deployers, are the backbone of
+          Porturuxean military technology. Heavily armed and armored, these
+          firebase-like machines can be launched from outside the atmosphere to
+          land on a planet&#39;s surface, where they will clear an area before
+          establishing a teleportational connection a helicarrier or base, where
+          they can constantly summon AAD and soldiers to secure an area. At the
+          request of the GDOS, an experimental prototype was developed with the
+          capabilities to detain instead of kill, in order to take in desired
+          prisoners.
+        </p>
+        <p>
+          Comet Commander Delira - In a world of diverse peoples and economies,
+          the free market must be protected, except when it&#39;s being used to
+          exploit and terrorize citizens. This motivated Porturuxean is
+          stationed out in the wilds of Ancap Atoll, keeping tabs on the
+          goings-on under P.U.N.K. supervision, and the possible unethical
+          transactions taking place involving Colossus, Inc and the Hyjakkers.
+          She&#39;s got her hands full, but still got a full grip on the task at
+          hand.
+        </p>
+        <p>
+          AAD Comet Artillery Commander - This hulking droid is the product of
+          scientists asking themselves, &#39;if we can make mobile bases in the
+          form of portal deployers, can it be done for anti-spacecraft
+          turrets?&#39; While not very agile, this thing&#39;s sheer firepower
+          from its six independently calibrated cannons makes fighter pilots
+          consider twice before swooping in on Porturuxean troops.
+        </p>
+        <p>
+          Comet Commander Zacharias - Despite being not very high in rank,
+          Zacharias is a name starting to get renown not just among Porturuxean
+          leadership, but also members of the Holkovrhys inner circle. He was
+          there during the fall of Barter-2 to the forces of Emperor
+          Docstiertun, and watched in horror as the entire population was
+          slaughtered. Blaming himself for the atrocity, a clear flame of
+          vengeance has lit inside his heart, and he will embark on even the
+          most difficult assignments if it means he can try to right his wrongs.
+          Fortunately for him, he has the inexplicable ability to not die;
+          he&#39;s been clinically declared deceased on several occasions, only
+          to regain consciousness later. Despite the suggestion he has been
+          blessed by a force from above, Zacharias is not religious, and
+          maintains he has simply beaten the odds at every encounter.
+        </p>
+        <p>
+          Spec Ops Comet Karkaron - A seasoned operative with a specialty in
+          xenobiology, Karkaron strongly believes that the Porturuxean Comets
+          are too narrow in scope and ability and are not enough to effectively
+          combat the forces the Alliance is assailed by. In his view, the most
+          effective intelligence cell acts as a symbiotic organism,
+          complementing itself with its varied parts. He has approached both
+          General Korringer and President Balleem in forming a new organization
+          to include specialists from other races, but even they are hesitant to
+          completely open up their intel to their allies, fearing it may
+          intercepted in transmission. Karkaron will not give up, however, in
+          creating the perfect fighting force, and is more than willing to work
+          alongside trustworthy mercs willing to devote their loyalty to the
+          Alliance.
+        </p>
+        <p>
+          Comet Colonel Katherine - In an effort to better understand her new
+          allies of the Draconis, Katherine tutored and learned under the famed
+          lieutenant general Malingara. She has picked up on most aspects of the
+          Integrities that do not openly conflict with Porturuxean policies, and
+          as such acts more in alignment with Draconis ideologies than her
+          native people. She is a reserved individual who picks up on mental
+          flaws, providing profound insight to her allies, and tripping up her
+          enemies. She is currently trying to locate the missing soldier Ides
+          within enemy territory, but first she has a Hyjakker problem she needs
+          to take care of.
+        </p>
+        <p>
+          Factory Comet Portal Deployer - It may be expensive to manufacture,
+          but the sheer amount of technology and firepower outfitted in this
+          thing ensures it will secure its foothold on the ground. With three
+          times as many teleportational gateways, armor capable of resisting
+          fighter bombs, and a pair of anti-spacecraft cannons, it is a
+          nightmare for enemy forces to deal with. Any territory around it may
+          as well be considered lost from the enemy.
         </p>
       </div>
     );

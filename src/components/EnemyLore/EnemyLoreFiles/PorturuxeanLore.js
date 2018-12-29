@@ -131,6 +131,74 @@ class PorturuxeanLore extends Component {
           nightmare for enemy forces to deal with. Any territory around it may
           as well be considered lost from the enemy.
         </p>
+        <p>
+          Siege - The masterpiece of Porturuxean war science, the Super
+          Intelligent EnGagement Engine, or SIEGE, is a massive AAD enhanced by
+          hacked Thraxian A.I, capable of leading expeditions and defending
+          bases all by itself. Designed by the same Porturuxean inventor who
+          created the artificial element cryptopitanium, it is capable of taking
+          on spacecrafts with its twin lightning cannons, and perfectly
+          analyzing enemy forces with its supply of seeker drones.
+        </p>
+        <p>
+          General Zevon Korringer - Mastermind of the Porturuxean armed forces,
+          the rigid General Korringer despises the public eye, preferring to
+          recluse himself to his war rooms where he can work in peace. In his
+          soldiering days, he lost his right arm and side of his face, which has
+          since been augmented with stolen Thraxian cybernetics, augmenting his
+          intelligence and lifespan. He sees all the conflicts surrounding
+          himself and handles them by dividing them into separate grids with
+          their individual details within, such as a master chessboard made up
+          of smaller chessboards. He acknowledges sacrifices must be made to
+          eventually outwit the enemy, but he does his best to make sure the
+          pieces lost are AAD and not living beings. On rare occasions he will
+          go out into the field himself, for reasons unknown even to the
+          Porturuxean council, but it seems certain he is searching for
+          something of great importance to securing his victory.
+        </p>
+        <p>
+          <strong>Notable Locations</strong>
+        </p>
+        <p>
+          Kipleite-2 - The original Porturuxean homeworld of Kipleite was the
+          first ever subject to an anti-matter &#39;planet buster&#39; bomb, set
+          off by the Holkovrhys Empire generations ago in an early attempt to
+          exterminate their race. The Porturuxeans survived, however, rebuilding
+          an exact copy of their civilization on the nearest suitable planet,
+          and terraforming it in the image of their lost paradise. The capital
+          city of New Darsun is home to all races within the Galactic Alliance,
+          and houses the Hall of the Council where the various presidents
+          convene. They have never forgotten their loss, however, and any
+          Holkovrhys that sets foot on the planet will be subject to prejudice,
+          whether in alignment with the Empire or not.
+        </p>
+        <p>
+          Barter-2 - This colonial world filled with swaths of jungle and open
+          desert was once a cultural center for the Porturuxeans, housing
+          museums of cultural artifacts from across Sector Alpha, until it was
+          discovered that underneath the desert sands were veins of murdalyn, a
+          highly reactive mineral compound thought only to be artificially
+          manufacturable. Once the Holkovrhys caught wind of this, they launched
+          an all-out assault on the planet, decimating the defensive forces and
+          totally massacring the populace. They have tried to take back this
+          planet for its strategic value, but it is protected at all times by a
+          full fleet of Empire fighters and helicarriers. Now no one knows what
+          the surface has been transformed into.
+        </p>
+        <p>
+          Kila Saido - Still in the infant stages of its life, this planet is
+          mostly warm oceans and developing continents, and ruled by epic-class
+          fauna capable of razing most developing colonies. The Porturuxeans
+          came here far away from the reaches of most other enemy civilizations,
+          and established a research colony focused on teleportational
+          technology, where they can test new models of portal deployers and the
+          like. However, the Thrax feel this is too close to their own
+          territory, so the facility is frequently threatened and invaded by
+          them. So far, they have not been able to do any lasting damage.
+        </p>
+        <p>
+          <strong>Notable Relations</strong>
+        </p>
       </div>
     );
   }

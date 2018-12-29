@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.b87133e3.chunk.css",
-  "main.js": "/static/js/main.e1706a1d.chunk.js",
-  "main.js.map": "/static/js/main.e1706a1d.chunk.js.map",
+  "main.css": "/static/css/main.5290c20f.chunk.css",
+  "main.js": "/static/js/main.c054e697.chunk.js",
+  "main.js.map": "/static/js/main.c054e697.chunk.js.map",
   "static/js/1.113b8d6a.chunk.js": "/static/js/1.113b8d6a.chunk.js",
   "static/js/1.113b8d6a.chunk.js.map": "/static/js/1.113b8d6a.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -12,10 +12,10 @@
   "static/media/characterDesignSplash.png": "/static/media/characterDesignSplash.940ab008.png",
   "static/media/rainsoldier.png": "/static/media/rainsoldier.89d225ad.png",
   "static/media/loreizon.png": "/static/media/loreizon.e25e4ad4.png",
-  "static/media/HomePage.css": "/static/media/foresttakeoff.af0d7d87.png",
+  "static/media/HomePage.css": "/static/media/homesplash.de2261db.png",
   "static/media/arthrotera.png": "/static/media/arthrotera.edcca90c.png",
-  "static/css/main.b87133e3.chunk.css.map": "/static/css/main.b87133e3.chunk.css.map",
+  "static/css/main.5290c20f.chunk.css.map": "/static/css/main.5290c20f.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.ec67e87b18cb305eb8492a9221be9fcb.js": "/precache-manifest.ec67e87b18cb305eb8492a9221be9fcb.js",
+  "precache-manifest.12deac7869c21aff2100127d90b1bfc0.js": "/precache-manifest.12deac7869c21aff2100127d90b1bfc0.js",
   "service-worker.js": "/service-worker.js"
 }

@@ -16,7 +16,7 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.8",
     "@fortawesome/react-fontawesome": "^0.0.18",
     "auth0-js": "^9.4.1",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "cryptiles": "^4.1.3",

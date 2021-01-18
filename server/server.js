@@ -2,11 +2,13 @@ const express = require("express");
 const session = require("express-session");
 const { json } = require("body-parser");
 const cors = require("cors");
-const massive = require("massive");
+//const massive = require("massive");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
 const path = require("path");
 const dotenv = require("dotenv").config();
+const mysql = require('mysql')
+const db = "db"
 
 //const config = require("./config.js");
 //const { secret, dbUser, database, domain, clientID, clientSecret } = config;
@@ -16,16 +18,25 @@ const dotenv = require("dotenv").config();
 //   process.env.database
 // }`;
 
-//localhost
-const connectionString = `postgres://${process.env.DB_USER}@localhost/${
-  process.env.DATABASE
-}`;
+// localhost
+const connectionString = mysql.createConnection({
+  host: "localhost",
+  user: process.env.DB_USER,
+  password: process.env.DB_PWD,
+  database: process.env.DATABASE,
+  insecureAuth: true
+})
 
-massive(connectionString)
-  .then(db => {
-    app.set("db", db);
-  })
-  .catch(console.log());
+connectionString.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!")
+})
+
+// massive(connectionString)
+//    .then(db => {
+//      app.set("db", db);
+//    })
+//    .catch(console.log());
 
 const port = process.env.PORT || 4200;
 
@@ -60,27 +71,62 @@ passport.use(
     },
     (accessToken, refreshToken, extraParams, profile, done) => {
       console.log(profile);
-      const db = app.get("db");
-      db.getUserByAuthId([profile.id])
-        .then((user, err) => {
-          console.log(`INITIAL: ${user}`);
-          if (!user[0]) {
-            console.log(`CREATING USER`);
-            db.createUserByAuth([profile.id, profile.displayName]).then(
-              (user, err) => {
-                console.log(`USER CREATED: ${JSON.stringify(user[0])}`);
-                return done(err, user[0]);
-              }
-            );
-          } else {
-            console.log(`FOUND USER: ${user[0]}`);
-            return done(err, user[0]);
-          }
-        })
-        .catch(err => `CREATE ERROR: ${err}`);
+      connectionString.query('SELECT * FROM `users` WHERE  `authid` = ?', [profile.id]).then(rows => {
+        console.log("hit")
+        console.log(rows)
+      })
+        // .then((user, err) => {
+        //   console.log(`INITIAL: ${user}`);
+        //   if (!user[0]) {
+        //     console.log(`CREATING USER`);
+        //     db.createUserByAuth([profile.id, profile.displayName]).then(
+        //       (user, err) => {
+        //         console.log(`USER CREATED: ${JSON.stringify(user[0])}`);
+        //         return done(err, user[0]);
+        //       }
+        //     );
+        //   } else {
+        //     console.log(`FOUND USER: ${user[0]}`);
+        //     return done(err, user[0]);
+        //   }
+        // })
+        // .catch(err => `CREATE ERROR: ${err}`);
     }
   )
 );
+
+// passport.use(
+//   new Auth0Strategy(
+//     {
+//       domain: process.env.DOMAIN,
+//       clientID: process.env.CLIENT_ID,
+//       clientSecret: process.env.CLIENT_SECRET,
+//       callbackURL: "/auth",
+//       scope: "openid profile"
+//     },
+//     (accessToken, refreshToken, extraParams, profile, done) => {
+//       console.log(profile);
+//       const db = app.get("db");
+//       db.getUserByAuthId([profile.id])
+//         .then((user, err) => {
+//           console.log(`INITIAL: ${user}`);
+//           if (!user[0]) {
+//             console.log(`CREATING USER`);
+//             db.createUserByAuth([profile.id, profile.displayName]).then(
+//               (user, err) => {
+//                 console.log(`USER CREATED: ${JSON.stringify(user[0])}`);
+//                 return done(err, user[0]);
+//               }
+//             );
+//           } else {
+//             console.log(`FOUND USER: ${user[0]}`);
+//             return done(err, user[0]);
+//           }
+//         })
+//         .catch(err => `CREATE ERROR: ${err}`);
+//     }
+//   )
+// );
 
 passport.serializeUser((user, done) => {
   console.log("serializeUser: ", user);

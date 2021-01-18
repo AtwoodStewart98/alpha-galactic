@@ -8,6 +8,7 @@ import cityscape from "../../assets/cityscape.png";
 import arthrotera from "../../assets/arthrotera.png";
 import enemyfaction from "../../assets/enemy-faction.png";
 import spacestation from "../../assets/spacestation.png";
+import facebook from "../../assets/fb.png"
 
 import "../../react-scss/react-css/HomePage.css";
 import fontawesome from "@fortawesome/fontawesome";
@@ -46,6 +47,7 @@ class HomePage extends Component {
                     information.
                   </p>
                   <a href="http://localhost:4200/auth">
+                  {/* ^^^ 4200 FOR LIVE ^^^ // ^^^ 3000 FOR TEST */}
                     <button>LOGIN TO ACCOUNT</button>
                   </a>
                   <p>Login With:</p>
@@ -57,7 +59,7 @@ class HomePage extends Component {
                     />
                     <img
                       width="50px"
-                      src="http://www.dfmalherbe.co.za/wp-content/uploads/2016/01/facebook-logo-png-transparent-background.png"
+                      src={facebook}
                       alt="facebook"
                     />
                     <img

@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 
 import "../../react-scss/react-css/WeaponGenerator.css";
 
-import { updateWeapon, updateRewardWeapon } from "../../ducks/reducer.js";
+import { updateWeapon, updateRewardWeapon, updateEpicWeapon, update1OAKWeapon } from "../../ducks/reducer.js";
 import rainsoldier from "../../assets/rainsoldier.png";
 import weapons from "../../weapons.json";
 
 class WeaponGenerator extends Component {
   render() {
-    const { updateWeapon, updateRewardWeapon, spawnWeapon } = this.props;
+    const { updateWeapon, updateRewardWeapon, updateEpicWeapon, update1OAKWeapon, spawnWeapon } = this.props;
 
     let AoE = null;
     if (spawnWeapon.AoE === 1) {
@@ -178,6 +178,12 @@ class WeaponGenerator extends Component {
           <button onClick={() => updateRewardWeapon(weapons.missionrewards)}>
             REWARD
           </button>
+          <button onClick={() => updateEpicWeapon(weapons.epicweapons)}>
+            EPIC
+          </button>
+          <button onClick={() => update1OAKWeapon(weapons.oneofakind)}>
+            ONEOFAKIND
+          </button>
         </div>
       </div>
     );
@@ -191,5 +197,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { updateWeapon, updateRewardWeapon }
+  { updateWeapon, updateRewardWeapon, updateEpicWeapon, update1OAKWeapon }
 )(WeaponGenerator);

@@ -39,6 +39,8 @@ const UPDATE_ENCOUNTER_VIEW = "UPDATE_ENCOUNTER_VIEW";
 const UPDATE_LORE = "UPDATE_LORE";
 const UPDATE_WEAPON = "UPDATE_WEAPON";
 const UPDATE_REWARD_WEAPON = "UPDATE_REWARD_WEAPON";
+const UPDATE_EPIC_WEAPON = "UPDATE_EPIC_WEAPON";
+const UPDATE_1OAK_WEAPON = "UPDATE_1OAK_WEAPON";
 const GET_USER = "GET_USER";
 
 function reducer(state = initialState, action) {
@@ -108,6 +110,10 @@ function reducer(state = initialState, action) {
     case UPDATE_WEAPON:
       return Object.assign({}, state, { spawnWeapon: action.payload });
     case UPDATE_REWARD_WEAPON:
+      return Object.assign({}, state, { spawnWeapon: action.payload });
+    case UPDATE_EPIC_WEAPON:
+      return Object.assign({}, state, { spawnWeapon: action.payload });
+    case UPDATE_1OAK_WEAPON:
       return Object.assign({}, state, { spawnWeapon: action.payload });
     case `${GET_USER}_PENDING`:
       return Object.assign({}, state, { isLoading: true });
@@ -282,6 +288,8 @@ export function updateLore(lore) {
     payload: lore
   };
 }
+
+// -- WEAPON GENERATOR -- //
 
 export function updateWeapon(spawnWeapon, manufacsArr, initial) {
   let randomType = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
@@ -542,6 +550,8 @@ export function updateWeapon(spawnWeapon, manufacsArr, initial) {
   };
 }
 
+// -- REWARD WEAPON GENERATOR -- //
+
 export function updateRewardWeapon(spawnWeapon) {
   let randomVal = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
   randomVal.lvl = Math.floor(Math.random() * 10);
@@ -550,6 +560,32 @@ export function updateRewardWeapon(spawnWeapon) {
     type: UPDATE_REWARD_WEAPON,
     payload: randomVal
   };
+}
+
+// -- EPIC WEAPON GENERATOR -- //
+
+export function updateEpicWeapon(spawnWeapon) {
+  let randomVal = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
+  randomVal.lvl = Math.floor(Math.random() * 10);
+  randomVal.prefix = randomVal.manufacturer
+
+  return {
+    type: UPDATE_EPIC_WEAPON,
+    payload: randomVal
+  }
+}
+
+// -- ONEOFAKIND WEAPON GENERATOR -- //
+
+export function update1OAKWeapon(spawnWeapon) {
+  let randomVal = spawnWeapon[Math.floor(Math.random() * spawnWeapon.length)];
+  randomVal.lvl = Math.floor(Math.random() * 10);
+  randomVal.prefix = randomVal.manufacturer
+
+  return {
+    type: UPDATE_1OAK_WEAPON,
+    payload: randomVal
+  }
 }
 
 export function getUser() {

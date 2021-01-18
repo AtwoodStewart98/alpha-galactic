@@ -29,6 +29,8 @@ massive(connectionString)
 
 const port = process.env.PORT || 4200;
 
+// ^^^ PORT 3000 LOCAL ^^^ PORT 4200 LIVE ^^^ //
+
 const app = express();
 
 app.use(express.static(`${__dirname}/../build`));

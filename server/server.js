@@ -1,22 +1,16 @@
 const express = require("express");
+const path = require("path");
 const session = require("express-session");
-const { json } = require("body-parser");
-const cors = require("cors");
-//const massive = require("massive");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
-const path = require("path");
 const dotenv = require("dotenv").config();
 const mysql = require('mysql')
-const db = "db"
-
-//const config = require("./config.js");
-//const { secret, dbUser, database, domain, clientID, clientSecret } = config;
+const { json } = require("body-parser");
+const cors = require("cors");
 
 // PRODUCTION
-// const connectionString = `postgres://${process.env.dbUser}@localhost/${
-//   process.env.database
-// }`;
+// const config = require("./config.js");
+// const { secret, dbUser, database, domain, clientID, clientSecret } = config;
 
 // localhost
 const connectionString = mysql.createConnection({
@@ -32,17 +26,30 @@ connectionString.connect(function(err) {
   console.log("Connected!")
 })
 
-// massive(connectionString)
-//    .then(db => {
-//      app.set("db", db);
-//    })
-//    .catch(console.log());
-
-const port = process.env.PORT || 4200;
-
-// ^^^ PORT 3000 LOCAL ^^^ PORT 4200 LIVE ^^^ //
+class Database {
+  constructor(connectionString) {
+    this.connection = mysql.createConnection(connectionString)
+  }
+  query(sql, args) {
+    return new Promise((res, rej) => {
+      this.connection.query(sql, args, (err, rows) => {
+        if (err) return rej(err)
+        res(rows)
+      })
+    })
+  }
+  close() {
+    return new Promise((res, rej) => {
+      this.connection.end(err => {
+        if (err) return rej(err)
+        res()
+      })
+    })
+  }
+}
 
 const app = express();
+const port = process.env.PORT || 4200;
 
 app.use(express.static(`${__dirname}/../build`));
 
@@ -52,6 +59,7 @@ app.use(json());
 app.use(
   session({
     secret: process.env.SECRET,
+    cookie: {},
     resave: false,
     saveUninitialized: false
   })
@@ -71,62 +79,26 @@ passport.use(
     },
     (accessToken, refreshToken, extraParams, profile, done) => {
       console.log(profile);
-      connectionString.query('SELECT * FROM `users` WHERE  `authid` = ?', [profile.id]).then(rows => {
-        console.log("hit")
-        console.log(rows)
+      connectionString.query('SELECT * FROM `users` WHERE `authid` = ?', [profile.id], function (err, results, fields) {
+        if (err) throw err;
+        console.log(results)
+        if (results === undefined || results.length == 0) {
+          connectionString.query('INSERT INTO `users` (authid, username) VALUES (?, ?)', [profile.id, profile.displayName], function (err, results, fields) {
+            if (err) throw err;
+            console.log(`RESULTS: ${JSON.stringify(results)}`)
+            console.log(fields)
+            console.log(`USER CREATED: ${JSON.stringify(results[0])}`);
+            return done(err, results[0]);
+          })
+        } else {
+          console.log(`FOUND USER: ${results[0]}`);
+          console.log(results[0])
+          return done(err, results[0]);
+        }
       })
-        // .then((user, err) => {
-        //   console.log(`INITIAL: ${user}`);
-        //   if (!user[0]) {
-        //     console.log(`CREATING USER`);
-        //     db.createUserByAuth([profile.id, profile.displayName]).then(
-        //       (user, err) => {
-        //         console.log(`USER CREATED: ${JSON.stringify(user[0])}`);
-        //         return done(err, user[0]);
-        //       }
-        //     );
-        //   } else {
-        //     console.log(`FOUND USER: ${user[0]}`);
-        //     return done(err, user[0]);
-        //   }
-        // })
-        // .catch(err => `CREATE ERROR: ${err}`);
     }
   )
 );
-
-// passport.use(
-//   new Auth0Strategy(
-//     {
-//       domain: process.env.DOMAIN,
-//       clientID: process.env.CLIENT_ID,
-//       clientSecret: process.env.CLIENT_SECRET,
-//       callbackURL: "/auth",
-//       scope: "openid profile"
-//     },
-//     (accessToken, refreshToken, extraParams, profile, done) => {
-//       console.log(profile);
-//       const db = app.get("db");
-//       db.getUserByAuthId([profile.id])
-//         .then((user, err) => {
-//           console.log(`INITIAL: ${user}`);
-//           if (!user[0]) {
-//             console.log(`CREATING USER`);
-//             db.createUserByAuth([profile.id, profile.displayName]).then(
-//               (user, err) => {
-//                 console.log(`USER CREATED: ${JSON.stringify(user[0])}`);
-//                 return done(err, user[0]);
-//               }
-//             );
-//           } else {
-//             console.log(`FOUND USER: ${user[0]}`);
-//             return done(err, user[0]);
-//           }
-//         })
-//         .catch(err => `CREATE ERROR: ${err}`);
-//     }
-//   )
-// );
 
 passport.serializeUser((user, done) => {
   console.log("serializeUser: ", user);
@@ -160,9 +132,9 @@ app.get("/auth/logout", (req, res) => {
 });
 
 app.post("/saveCharacter", (req, res, next) => {
+  console.log("REQUEST BODY:")
   console.log(req.body);
-  const db = app.get("db");
-  db.saveCharacter([
+  connectionString.query(`INSERT INTO saved_chars (userid, name, race, alignment, training, faction, description) VALUES (?, ?, ?, ?, ?, ?, ?)`, [
     req.body.user.id,
     req.body.charName,
     req.body.race,
@@ -170,12 +142,24 @@ app.post("/saveCharacter", (req, res, next) => {
     req.body.training,
     req.body.faction,
     req.body.charDesc
-  ])
-    .then(response => {
-      console.log(response);
-      res.status(200).json(response);
-    })
-    .catch(error => console.log(`Post Error: ${error}`));
+  ]
+  , function (err, results, fields) {
+    if (err) throw err;
+    res.status(200).json(results);
+  })
+  connectionString.query(`SELECT * FROM saved_chars WHERE userid = ? AND name = ? AND race = ? AND alignment = ? AND training = ? AND faction = ? AND description = ?`, [
+    req.body.user.id,
+    req.body.charName,
+    req.body.race,
+    req.body.alignment,
+    req.body.training,
+    req.body.faction,
+    req.body.charDesc
+  ], function (err, results, fields) {
+    if (err) throw err;
+    console.log("SELECT RESULTS:")
+    console.log(results[0])
+  })
 });
 
 app.post("/saveCharacter/updateWeapon", (req, res, next) => {

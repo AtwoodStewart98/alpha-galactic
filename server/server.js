@@ -85,9 +85,12 @@ passport.use(
         if (results === undefined || results.length == 0) {
           connectionString.query('INSERT INTO `users` (authid, username) VALUES (?, ?)', [profile.id, profile.displayName], function (err, results, fields) {
             if (err) throw err;
-            console.log(`RESULTS: ${JSON.stringify(results)}`)
-            console.log(fields)
-            console.log(`USER CREATED: ${JSON.stringify(results[0])}`);
+            console.log(`USER CREATED`);
+          })
+          connectionString.query('SELECT * FROM `users` WHERE `authid` = ?', [profile.id], function(err, results, fields) {
+            if (err) throw err;
+            console.log(`RETRIEVED USER: ${results[0]}`);
+            console.log(results[0])
             return done(err, results[0]);
           })
         } else {
@@ -142,10 +145,8 @@ app.post("/saveCharacter", (req, res, next) => {
     req.body.training,
     req.body.faction,
     req.body.charDesc
-  ]
-  , function (err, results, fields) {
+  ], function (err, results, fields) {
     if (err) throw err;
-    res.status(200).json(results);
   })
   connectionString.query(`SELECT * FROM saved_chars WHERE userid = ? AND name = ? AND race = ? AND alignment = ? AND training = ? AND faction = ? AND description = ?`, [
     req.body.user.id,
@@ -159,16 +160,17 @@ app.post("/saveCharacter", (req, res, next) => {
     if (err) throw err;
     console.log("SELECT RESULTS:")
     console.log(results[0])
+    res.status(200).json(results)
   })
 });
 
 app.post("/saveCharacter/updateWeapon", (req, res, next) => {
+  console.log("REQUEST BODY:")
   console.log(req.body);
-  const db = app.get("db");
-  db.updateWeaponToChar([
+  connectionString.query(`INSERT INTO saved_weapons (char_id, name, prefix, lvl, damage, rng, firerate, reload, magazine, other, area_of_effect, capacitor, critical, knockback, melee, resist, stealth, velocity, consumption, projectiles, manufacturer, type) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`, [
     req.body.character.id,
-    req.body.weapon.prefix,
     req.body.weapon.name,
+    req.body.weapon.accessory,
     req.body.weapon.lvl,
     req.body.weapon.damage,
     req.body.weapon.range,
@@ -176,27 +178,52 @@ app.post("/saveCharacter/updateWeapon", (req, res, next) => {
     req.body.weapon.reload,
     req.body.weapon.magazine,
     req.body.weapon.other,
-    req.body.weapon.AoE,
+    req.body.weapon.area_of_effect,
     req.body.weapon.capacitor,
     req.body.weapon.critical,
-    req.body.weapon.kB,
+    req.body.weapon.knockback,
     req.body.weapon.melee,
     req.body.weapon.resist,
     req.body.weapon.stealth,
     req.body.weapon.velocity,
     req.body.weapon.consumption,
     req.body.weapon.projectiles,
-    req.body.weapon.manufacturer,
+    req.body.weapon.prefix,
     req.body.weapon.type
-  ])
-    .then(response => {
-      console.log(response);
-      res.status(200).json(response);
-    })
-    .catch(error => console.log(`Weapon Error: ${error}`));
+  ],function (err, results, fields) {
+    if (err) throw err;
+  })
+  connectionString.query(`SELECT * FROM saved_weapons WHERE char_id = ? AND name = ? AND lvl = ? AND damage = ? AND rng = ? AND firerate = ? AND reload = ? AND magazine = ? AND manufacturer = ? AND type = ?`, [
+    req.body.character.id,
+    req.body.weapon.name,
+    req.body.weapon.lvl,
+    req.body.weapon.damage,
+    req.body.weapon.range,
+    req.body.weapon.firerate,
+    req.body.weapon.reload,
+    req.body.weapon.magazine,
+    req.body.weapon.prefix,
+    req.body.weapon.type
+  ], function (err, results, fields) {
+    if (err) throw err;
+    console.log("SELECT RESULTS:")
+    console.log(results[0])
+    res.status(200).json(results)
+  })
 });
 
-//unsure about this
+app.get("/getCharacter", (req, res, next) => {
+  console.log("REQUEST QUERY:")
+  console.log(req.query.id)
+  connectionString.query(`SELECT * FROM saved_chars sc JOIN saved_weapons sw ON sc.id = sw.char_id WHERE sc.userid = ? LIMIT 1`, [req.query.id], function (err, results, fields) {
+    if (err) throw err;
+    console.log("SELECT RESULTS:")
+    console.log(results[0])
+    res.status(200).json(results)
+  })
+})
+
+// -- unsure about this
 app.get("*", (req, res, next) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });

@@ -74,8 +74,8 @@ class HeaderFrame extends Component {
             <Link to="/encounterGenerator">
               <li>ENEMIES</li>
             </Link>
-            <Link to="/login">
-              <li>LOGIN</li>
+            <Link to="/characterProfile">
+              <li>PROFILE</li>
             </Link>
           </ul>
         </div>
@@ -99,8 +99,8 @@ class HeaderFrame extends Component {
             <Link to="/encounterGenerator" onClick={this.updateBurger}>
               <li>ENEMIES</li>
             </Link>
-            <Link to="/login" onClick={this.updateBurger}>
-              <li>LOGIN</li>
+            <Link to="/characterProfile" onClick={this.updateBurger}>
+              <li>PROFILE</li>
             </Link>
           </ul>
         </div>

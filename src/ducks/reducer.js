@@ -17,6 +17,7 @@ const initialState = {
   charName: "",
   savedCharacter: {},
   savedWeapons: {},
+  charObj: {},
   spawnWeapon: {},
   encounter: "",
   lore: ""
@@ -42,6 +43,7 @@ const UPDATE_REWARD_WEAPON = "UPDATE_REWARD_WEAPON";
 const UPDATE_EPIC_WEAPON = "UPDATE_EPIC_WEAPON";
 const UPDATE_1OAK_WEAPON = "UPDATE_1OAK_WEAPON";
 const GET_USER = "GET_USER";
+const GET_CHAR = "GET_CHAR";
 
 function reducer(state = initialState, action) {
   console.log("REDUCER HIT: Action -> ", action);
@@ -127,6 +129,18 @@ function reducer(state = initialState, action) {
         isLoading: false,
         didErr: true
       });
+    case `${GET_CHAR}_PENDING`:
+      return Object.assign({}, state, { isLoading: true });
+    case `${GET_CHAR}_FULFILLED`:
+      return Object.assign({}, state, {
+        isLoading: false,
+        charObj: action.payload
+      })
+    case `${GET_CHAR}_REJECTED`:
+      return Object.assign({}, state, {
+        isLoading: false,
+        didErr: true
+      })
     default:
       return state;
   }
@@ -595,8 +609,21 @@ export function getUser() {
       .request({ url: "/api/me" })
       .then(response => response.data)
       .catch(err => {
-        console.log(`AXIOS ERR: ${err.message}`);
+        console.log(`AXIOS ERR: ${err.message}`)
         return err.message;
+      })
+  };
+}
+
+export function getChar(id) {
+  return {
+    type: GET_CHAR,
+    payload: axios
+      .get("/getCharacter", { params: { id } })
+      .then(response => response.data[0])
+      .catch(err => {
+        console.log(`AXIOS ERR: ${err.message}`)
+        return err.message
       })
   };
 }

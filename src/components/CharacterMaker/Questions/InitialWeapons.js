@@ -1,17 +1,17 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 import { connect } from "react-redux";
 
 import {
-  updateQuestionNumber,
   updateWeapon,
   saveWeaponToChar
 } from "../../../ducks/reducer.js";
+
 import weapons from "../../../weapons.json";
 
 class InitialWeapons extends Component {
   render() {
     const {
-      updateQuestionNumber,
       updateWeapon,
       saveWeaponToChar,
       spawnWeapon,
@@ -183,14 +183,15 @@ class InitialWeapons extends Component {
             !this.props.spawnWeapon.name ? "disabled-button" : "next-button"
           }
         >
-          <button
-            onClick={() => {
-              updateQuestionNumber(11);
-              saveWeaponToChar(spawnWeapon, savedCharacter);
-            }}
-          >
-            NEXT
-          </button>
+          <Link to="/chracterProfile">
+            <button
+              onClick={() => {
+                saveWeaponToChar(spawnWeapon, savedCharacter);
+              }}
+            >
+              NEXT
+            </button>
+          </Link>
         </div>
       </div>
     );
@@ -203,7 +204,6 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, {
-  updateQuestionNumber,
   updateWeapon,
   saveWeaponToChar
 })(InitialWeapons);

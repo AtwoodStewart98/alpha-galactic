@@ -8,7 +8,7 @@
         "firerate": 0,
         "reload": 0,
         "magazine": 0,
-        "other": "+dmg on single shot"
+        "other": "+dmg when single shot"
       },
       "weapon_types": ["RV", "SMG", "AR", "BS", "SS", "RL"]
     },
@@ -24,6 +24,7 @@
       },
       "weapon_types": [
         "AP",
+        "RV",
         "MP",
         "SMG",
         "AR",
@@ -41,12 +42,12 @@
       "modifiers": {
         "damage": -1,
         "range": 0,
-        "firerate": 0,
+        "firerate": 1,
         "reload": 0,
         "magazine": 2,
         "other": "Creates blast shield"
       },
-      "weapon_types": ["AP", "SMG", "AR", "PS", "SS", "GL", "RL"]
+      "weapon_types": ["AP", "SMG", "AR", "PS", "SS", "GL"]
     },
     {
       "name": "Hyjakker",
@@ -73,10 +74,11 @@
           "SMG": "+rof",
           "AR": "+rel",
           "CS": "+2 projectiles",
-          "SS": "+rng when scoped"
+          "SS": "+rng when scoped",
+          "RL": "+mag"
         }
       },
-      "weapon_types": ["AP", "MP", "SMG", "AR", "CS", "SS"]
+      "weapon_types": ["AP", "SMG", "AR", "CS", "SS", "RL"]
     },
     {
       "name": "Natpnot",
@@ -87,12 +89,12 @@
         "reload": 0,
         "magazine": 0
       },
-      "weapon_types": ["AP", "MP", "LMG", "PS", "CS", "BS", "SS", "GL", "RL"]
+      "weapon_types": ["AP", "MP", "AR", "LMG", "CS", "SS"]
     },
     {
       "name": "Rawdawg",
       "modifiers": {
-        "damage": 0,
+        "damage": -1,
         "range": -1,
         "firerate": 0,
         "reload": 0,
@@ -123,7 +125,7 @@
         "reload": 1,
         "magazine": 0
       },
-      "weapon_types": ["AP", "RV", "SMG", "AR", "PS", "BS", "RL"]
+      "weapon_types": ["AP", "RV", "SMG", "AR", "PS", "BS"]
     }
   ],
   "weapon_classes": [
@@ -155,7 +157,6 @@
           "name": "Holdout",
           "other": "No penalties when dual-wielding",
           "manufacs": [
-            "Crustanix",
             "Hyjakker",
             "Marx Tech",
             "Natpnot",
@@ -168,10 +169,10 @@
           "range": 1,
           "stealth": 1,
           "manufacs": ["Burgnof", "Marx Tech"],
-          "lvl": 6
+          "lvl": 4
         },
         {
-          "name": "MA-0",
+          "name": "Autopistol",
           "manufacs": [
             "Burgnof",
             "Crustanix",
@@ -186,7 +187,7 @@
           "name": "Pepperbox",
           "firerate": 1,
           "manufacs": [
-            "Burgnof",
+            "Crustanix",
             "Hyjakker",
             "Marx Tech",
             "Natpnot",
@@ -203,39 +204,39 @@
         "damage": 2.5,
         "range": 150,
         "firerate": 2,
-        "reload": 2,
+        "reload": 1,
         "magazine": 6
       },
       "variants": [
         {
-          "name": "ARS-4",
-          "manufacs": ["Alphernal", "Rawdawg", "Thorpe", "Zoragon"],
-          "lvl": 1
-        },
-        {
-          "name": "Cobra",
-          "melee": 1,
+          "name": "Relic",
+          "damage": 1,
           "manufacs": ["Alphernal", "Rawdawg", "Thorpe"],
           "lvl": 2
         },
         {
-          "name": "Relic",
-          "damage": 1,
-          "manufacs": ["Alphernal", "Thorpe"],
+          "name": "Revolver",
+          "manufacs": ["Alphernal", "Burgnof", "Rawdawg", "Thorpe", "Zoragon"],
+          "lvl": 1
+        },
+        {
+          "name": "Spur",
+          "melee": 1,
+          "manufacs": ["Burgnof", "Rawdawg", "Thorpe"],
           "lvl": 2
         },
         {
           "name": "Strongarm",
           "range": 1,
           "critical": 1,
-          "manufacs": ["Alphernal", "Thorpe", "Zoragon"],
-          "lvl": 6
+          "manufacs": ["Alphernal", "Burgnof", "Thorpe", "Zoragon"],
+          "lvl": 4
         },
         {
           "name": "Thief",
           "reload": 1,
           "magazine": -1,
-          "manufacs": ["Rawdawg", "Thorpe", "Zoragon"],
+          "manufacs": ["Burgnof", "Rawdawg", "Zoragon"],
           "lvl": 1
         }
       ]
@@ -247,7 +248,7 @@
         "damage": 0.5,
         "range": 150,
         "firerate": 12,
-        "reload": 2,
+        "reload": 1,
         "magazine": 20
       },
       "variants": [
@@ -259,9 +260,8 @@
         },
         {
           "name": "Flesh Ripper",
-          "damage": -1,
-          "range": -2,
-          "firerate": -1,
+          "range": -1,
+          "firerate": -2,
           "magazine": 1,
           "consumption": 1,
           "projectiles": 2,
@@ -272,20 +272,20 @@
           "name": "Hatred",
           "firerate": -1,
           "melee": 1,
-          "manufacs": ["Hyjakker", "Natpnot", "Rawdawg"],
+          "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 1
         },
         {
-          "name": "MFP-66",
+          "name": "Machine Pistol",
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 1
         },
         {
           "name": "Riot",
           "firerate": 1,
-          "other": "Fires ricocheting projectiles",
-          "manufacs": ["Hyjakker", "Natpnot", "Rawdawg"],
-          "lvl": 6
+          "reload": 1,
+          "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
+          "lvl": 4
         }
       ]
     },
@@ -313,7 +313,21 @@
           "lvl": 2
         },
         {
-          "name": "PDW-7",
+          "name": "Recon",
+          "range": 1,
+          "manufacs": ["Alphernal", "Burgnof", "Crustanix", "Marx Tech"],
+          "lvl": 2
+        },
+        {
+          "name": "Shredder",
+          "range": -1,
+          "reload": -1,
+          "magazine": 2,
+          "manufacs": ["Hyjakker", "Zoragon"],
+          "lvl": 1
+        },
+        {
+          "name": "Submachine Gun",
           "manufacs": [
             "Alphernal",
             "Burgnof",
@@ -325,25 +339,11 @@
           "lvl": 1
         },
         {
-          "name": "Recon",
-          "range": 1,
-          "manufacs": ["Alphernal", "Burgnof", "Hyjakker", "Marx Tech"],
-          "lvl": 2
-        },
-        {
-          "name": "Shredder",
-          "range": -1,
-          "reload": -1,
-          "magazine": 2,
-          "manufacs": ["Burgnof", "Hyjakker", "Zoragon"],
-          "lvl": 1
-        },
-        {
           "name": "Vespine",
           "critical": 1,
           "capacitor": 1,
           "manufacs": ["Alphernal", "Burgnof", "Crustanix", "Marx Tech"],
-          "lvl": 6
+          "lvl": 4
         }
       ]
     },
@@ -354,19 +354,37 @@
         "damage": 1,
         "range": 1500,
         "firerate": 12,
-        "reload": 3,
+        "reload": 2,
         "magazine": 24
       },
       "variants": [
         {
-          "name": "Battalion",
-          "range": 1,
-          "other": "Burst-fire only",
-          "critical": 1,
+          "name": "Assault Rifle",
           "manufacs": [
             "Alphernal",
             "Burgnof",
+            "Crustanix",
             "Marx Tech",
+            "Natpnot",
+            "Thorpe",
+            "Zoragon"
+          ],
+          "lvl": 1
+        },
+        {
+          "name": "Battalion",
+          "range": -5,
+          "firerate": -3,
+          "reload": 1,
+          "magazine": -1,
+          "other": "Full-auto replaced with 6-round burst, iron sights",
+          "critical": 2,
+          "manufacs": [
+            "Alphernal",
+            "Burgnof",
+            "Crustanix",
+            "Marx Tech",
+            "Natpnot",
             "Thorpe",
             "Zoragon"
           ],
@@ -375,11 +393,12 @@
         {
           "name": "Commander",
           "damage": 1,
+          "firerate": -1,
+          "magazine": 1,
+          "other": "Burst-fire & full-auto only",
           "manufacs": [
-            "Alphernal",
             "Burgnof",
-            "Marx Tech",
-            "Thorpe",
+            "Natpnot",
             "Zoragon"
           ],
           "lvl": 2
@@ -392,34 +411,23 @@
             "Burgnof",
             "Crustanix",
             "Marx Tech",
+            "Natpnot",
             "Thorpe",
             "Zoragon"
           ],
-          "lvl": 6
+          "lvl": 4
         },
         {
-          "name": "SSA-87",
+          "name": "Trespasser",
+          "capacitor": 1,
+          "other": "Advantaged when semiautomatic",
           "manufacs": [
             "Alphernal",
             "Burgnof",
             "Crustanix",
-            "Marx Tech",
-            "Thorpe",
-            "Zoragon"
+            "Marx Tech"
           ],
-          "lvl": 1
-        },
-        {
-          "name": "Trespasser",
-          "resist": 2,
-          "manufacs": [
-            "Alphernal",
-            "Burgnof",
-            "Marx Tech",
-            "Thorpe",
-            "Zoragon"
-          ],
-          "lvl": 6
+          "lvl": 4
         }
       ]
     },
@@ -437,9 +445,9 @@
         {
           "name": "Demolisher",
           "damage": 1,
-          "other": "Fires rockets",
-          "manufacs": ["Hyjakker", "Rawdawg"],
-          "lvl": 6
+          "other": "Fires piercing projectiles",
+          "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
+          "lvl": 4
         },
         {
           "name": "Halberd",
@@ -449,7 +457,7 @@
           "lvl": 2
         },
         {
-          "name": "HSW-69",
+          "name": "Light Machine Gun",
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
           "lvl": 1
         },
@@ -457,13 +465,13 @@
           "name": "Sentry",
           "range": 1,
           "magazine": 1,
-          "manufacs": ["Burgnof", "Hyjakker", "Natpnot"],
-          "lvl": 6
+          "manufacs": ["Burgnof", "Hyjakker"],
+          "lvl": 4
         },
         {
           "name": "Vengeance",
-          "range": -2,
-          "firerate": -3,
+          "range": -4,
+          "firerate": -2,
           "reload": -1,
           "consumption": 2,
           "projectiles": 3,
@@ -481,17 +489,15 @@
         "firerate": 1,
         "reload": 2,
         "magazine": 6,
-        "projectiles": 10
+        "projectiles": 12
       },
       "variants": [
         {
-          "name": "B-12",
-          "manufacs": ["Burgnof", "Crustanix", "Rawdawg", "Thorpe", "Zoragon"],
-          "lvl": 1
-        },
-        {
           "name": "Backlash",
-          "damage": 5,
+          "damage": 7,
+          "range": 1,
+          "reload": 1,
+          "magazine": -1,
           "consumption": 1,
           "projectiles": 2,
           "manufacs": ["Thorpe", "Zoragon"],
@@ -500,9 +506,12 @@
         {
           "name": "Crossover",
           "firerate": 1,
+          "reload": -1,
+          "magazine": 1,
           "other": "Semiautomatic",
+          "projectiles": 10,
           "manufacs": ["Crustanix", "Thorpe"],
-          "lvl": 6
+          "lvl": 4
         },
         {
           "name": "Hunter",
@@ -510,11 +519,17 @@
           "range": 1,
           "projectiles": 6,
           "manufacs": ["Burgnof", "Rawdawg", "Thorpe", "Zoragon"],
-          "lvl": 6
+          "lvl": 4
+        },
+        {
+          "name": "Pump-Action Shotgun",
+          "manufacs": ["Burgnof", "Crustanix", "Rawdawg", "Thorpe", "Zoragon"],
+          "lvl": 1
         },
         {
           "name": "Vanguard",
-          "magazine": 1,
+          "range": -1,
+          "projetiles": 16,
           "manufacs": ["Burgnof", "Thorpe", "Zoragon"],
           "lvl": 2
         }
@@ -526,8 +541,8 @@
       "stats": {
         "damage": 0.5,
         "range": 150,
-        "firerate": 1,
-        "reload": 3,
+        "firerate": 2,
+        "reload": 2,
         "magazine": 6,
         "projectiles": 8
       },
@@ -537,24 +552,17 @@
           "range": 1,
           "critical": 1,
           "manufacs": ["Hyjakker", "Marx Tech"],
-          "lvl": 6
+          "lvl": 4
         },
         {
           "name": "Buckshot",
           "magazine": 1,
-          "projectiles": 9,
+          "projectiles": 10,
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot", "Rawdawg"],
-          "lvl": 6
+          "lvl": 4
         },
         {
-          "name": "Hammer",
-          "firerate": 1,
-          "other": "2-round burst",
-          "manufacs": ["Burgnof", "Hyjakker", "Natpnot"],
-          "lvl": 2
-        },
-        {
-          "name": "PD-41",
+          "name": "Combat Shotgun",
           "manufacs": [
             "Burgnof",
             "Hyjakker",
@@ -563,6 +571,13 @@
             "Rawdawg"
           ],
           "lvl": 1
+        },
+        {
+          "name": "Hammer",
+          "firerate": 1,
+          "other": "3-round burst",
+          "manufacs": ["Burgnof", "Hyjakker", "Natpnot"],
+          "lvl": 2
         },
         {
           "name": "Ranger",
@@ -581,38 +596,37 @@
         "damage": 5,
         "range": 4000,
         "firerate": 1,
-        "reload": 3,
+        "reload": 2,
         "magazine": 5
       },
       "variants": [
         {
+          "name": "Bolt-Action Sniper",
+          "manufacs": ["Alphernal", "Burgnof", "Thorpe", "Zoragon"],
+          "lvl": 1
+        },
+        {
           "name": "Epoch",
-          "damage": 3,
-          "range": -2,
-          "firerate": 1,
+          "damage": 2,
+          "range": -9,
           "other": "Iron sights",
           "kB": 2,
           "manufacs": ["Alphernal", "Thorpe"],
-          "lvl": 10
-        },
-        {
-          "name": "Headhunter",
-          "other": "+rng when scoped, -rng when not scoped",
-          "critical": 2,
-          "manufacs": ["Alphernal", "Burgnof", "Thorpe"],
           "lvl": 6
         },
         {
-          "name": "LRK-48",
-          "manufacs": ["Alphernal", "Burgnof", "Thorpe", "Zoragon"],
-          "lvl": 1
+          "name": "Headhunter",
+          "other": "Advantaged when advantaged, disadvantaged when disadvantaged",
+          "critical": 2,
+          "manufacs": ["Alphernal", "Burgnof", "Thorpe"],
+          "lvl": 4
         },
         {
           "name": "Opportunity",
           "damage": 1,
           "other": "Fires piercing projectiles",
           "manufacs": ["Alphernal", "Burgnof", "Thorpe", "Zoragon"],
-          "lvl": 6
+          "lvl": 4
         },
         {
           "name": "Uplander",
@@ -626,19 +640,19 @@
       "id": "SS",
       "name": "semiautomatic sniper",
       "stats": {
-        "damage": 2.5,
+        "damage": 3,
         "range": 2500,
         "firerate": 2,
-        "reload": 3,
+        "reload": 2,
         "magazine": 8
       },
       "variants": [
         {
           "name": "Amplifier",
-          "other": "Always capacitated",
+          "damage": 1,
           "capacitor": 2,
           "manufacs": ["Crustanix", "Hyjakker", "Marx Tech"],
-          "lvl": 10
+          "lvl": 6
         },
         {
           "name": "Bane",
@@ -651,7 +665,7 @@
           "magazine": 1,
           "other": "Fires ricocheting projectiles",
           "manufacs": ["Hyjakker", "Marx Tech", "Natpnot"],
-          "lvl": 6
+          "lvl": 4
         },
         {
           "name": "Justiciar",
@@ -664,10 +678,10 @@
             "Marx Tech",
             "Natpnot"
           ],
-          "lvl": 6
+          "lvl": 4
         },
         {
-          "name": "MCSR-574",
+          "name": "Semiautomatic Sniper",
           "manufacs": [
             "Alphernal",
             "Burgnof",
@@ -685,48 +699,49 @@
       "name": "grenade launcher",
       "stats": {
         "damage": 3,
-        "range": 1500,
+        "range": 1000,
         "firerate": 2,
-        "reload": 4,
+        "reload": 3,
         "magazine": 5
       },
       "variants": [
         {
           "name": "Cannon",
-          "damage": 1,
+          "damage": 4,
+          "magazine": -2,
           "AoE": 1,
           "manufacs": ["Crustanix", "Hyjakker", "Natpnot", "Thorpe"],
-          "lvl": 6
+          "lvl": 4
+        },
+        {
+          "name": "Grenade Launcher",
+          "manufacs": ["Burgnof", "Crustanix", "Hyjakker", "Natpnot", "Thorpe"],
+          "lvl": 1
         },
         {
           "name": "Howitzer",
-          "range": 1,
+          "damage": -1,
           "firerate": 2,
           "reload": 1,
           "magazine": -1,
           "other": "4-round burst",
           "manufacs": ["Burgnof", "Crustanix", "Hyjakker", "Thorpe"],
-          "lvl": 10
-        },
-        {
-          "name": "MFEG-VX",
-          "manufacs": ["Burgnof", "Crustanix", "Hyjakker", "Natpnot", "Thorpe"],
-          "lvl": 1
+          "lvl": 2
         },
         {
           "name": "Minelayer",
-          "firerate": 1,
+          "damage": 1,
           "other": "Fires sticky landmines",
           "manufacs": ["Crustanix", "Hyjakker", "Natpnot", "Thorpe"],
-          "lvl": 6
+          "lvl": 4
         },
         {
           "name": "Raknahov",
-          "firerate": -1,
-          "magazine": 1,
+          "firerate": 1,
+          "reload": 1,
           "other": "Fires bouncing grenades",
           "manufacs": ["Burgnof", "Hyjakker", "Natpnot"],
-          "lvl": 2
+          "lvl": 6
         }
       ]
     },
@@ -735,29 +750,18 @@
       "name": "rocket launcher",
       "stats": {
         "damage": 6,
-        "range": 2500,
+        "range": 2000,
         "firerate": 1,
-        "reload": 4,
+        "reload": 3,
         "magazine": 1
       },
       "variants": [
         {
-          "name": "BZKD",
-          "manufacs": [
-            "Alphernal",
-            "Burgnof",
-            "Crustanix",
-            "Rawdawg",
-            "Zoragon"
-          ],
-          "lvl": 1
-        },
-        {
           "name": "Fury",
           "range": 2,
-          "velocity": 1,
+          "other": "Fires homing rocket, 1-turn lock-on",
           "manufacs": ["Alphernal", "Burgnof", "Rawdawg"],
-          "lvl": 10
+          "lvl": 6
         },
         {
           "name": "Liberty",
@@ -771,13 +775,24 @@
           "consumption": 1,
           "AoE": 2,
           "manufacs": ["Burgnof", "Crustanix", "Rawdawg"],
-          "lvl": 6
+          "lvl": 4
         },
         {
           "name": "Quaker",
           "magazine": 2,
           "manufacs": ["Alphernal", "Burgnof", "Rawdawg", "Zoragon"],
-          "lvl": 6
+          "lvl": 4
+        },
+        {
+          "name": "Rocket Launcher",
+          "manufacs": [
+            "Alphernal",
+            "Burgnof",
+            "Crustanix",
+            "Rawdawg",
+            "Zoragon"
+          ],
+          "lvl": 1
         }
       ]
     }
@@ -1211,45 +1226,45 @@
       "type": "AP",
       "manufacturer": "Zoragon",
       "damage": 1,
-      "range": 150,
+      "range": 250,
       "firerate": 3,
       "reload": 0,
       "magazine": 12,
-      "other": "Does not consume ammo, +P ammo regeneration"
-    },
-    {
-      "name": "Alpha Romeo",
-      "type": "AP",
-      "manufacturer": "Marx Tech",
-      "damage": 1.5,
-      "range": 200,
-      "firerate": 4,
-      "reload": 1,
-      "magazine": 20,
-      "melee": 3
+      "other": "Does not consume ammo, regenerates pistol ammo"
     },
     {
       "name": "Compensator",
       "type": "AP",
       "manufacturer": "Crustanix",
-      "damage": 0.5,
+      "damage": 1,
       "range": 150,
-      "firerate": 6,
+      "firerate": 5,
       "reload": 1,
       "magazine": 30,
       "other":
-        "Firing modes; Standard: +KB, Cryo: cryonic, Incendiary: fire, Chemical: radioactive, creates blast shield"
+        "Ammunition modes; Standard: advantaged to attacking, Cryo: cryonic, Incendiary: fire, Chemical: radioactive, no penalites when dual-wielding, creates blast shield"
     },
     {
-      "name": "EK-29",
+      "name": "Dynamo",
       "type": "AP",
       "manufacturer": "Natpnot",
-      "damage": 1.5,
+      "damage": 1,
       "range": 100,
       "firerate": 8,
-      "reload": 0,
+      "reload": 1,
       "magazine": 12,
-      "other": "Alternative fire: 4-round-burst"
+      "other": "Alt-fire: 4-round-burst, pistol ammo can be used for other weapon types"
+    },
+    {
+      "name": "Rho Papa",
+      "type": "AP",
+      "manufacturer": "Marx Tech",
+      "damage": 1.5,
+      "range": 250,
+      "firerate": 4,
+      "reload": 1,
+      "magazine": 20,
+      "melee": 4
     },
     {
       "name": "Virus",
@@ -1261,55 +1276,67 @@
       "reload": 1,
       "magazine": 12,
       "other": "Acid, 3-round burst",
-      "capacitor": 1,
+      "capacitor": 2,
       "stealth": 1
     },
     {
       "name": "Welder",
       "type": "AP",
       "manufacturer": "Hyjakker",
-      "damage": 2,
-      "range": 200,
+      "damage": 1.5,
+      "range": 150,
       "firerate": 4,
       "reload": 2,
       "magazine": 12,
-      "other": "Fire, muzzle flash blinds enemies, laser welder accessory"
+      "other": "Fire, muzzle flash blinds & stuns enemies, hybrid plasma cutter/welder underbarrel"
     },
     {
       "name": "Bloody Justice",
       "type": "RV",
       "manufacturer": "Thorpe",
       "damage": 5,
-      "range": 200,
+      "range": 450,
       "firerate": 1,
-      "reload": 2,
+      "reload": 1,
       "magazine": 5,
       "other": "Fires bullets",
       "critical": 1
     },
     {
-      "name": "Compass",
-      "type": "RV",
-      "manufacturer": "Alphernal",
-      "damage": 2,
-      "range": 400,
-      "firerate": 2,
-      "reload": 2,
-      "magazine": 6,
-      "other": "Lightning, telescopic sight, +dmg when single shot"
-    },
-    {
       "name": "High Roller",
       "type": "RV",
       "manufacturer": "Rawdawg",
-      "damage": 2.5,
+      "damage": 2,
       "range": 75,
       "firerate": 1,
       "reload": 2,
       "magazine": 6,
       "consumption": 5,
-      "other": "On critical kill, enemy drops additional loot",
+      "other": "On critical kill, enemy drops extra variant-tier or higher loot",
       "projectiles": 6
+    },
+    {
+      "name": "Mirage",
+      "type": "RV",
+      "manufacturer": "Burgnof",
+      "damage": 2.5,
+      "range": 150,
+      "firerate": 2,
+      "reload": 1,
+      "magazine": 6,
+      "other": "Alt-fire: 2-round burst, on critical hit, creates static holographic decoy of self",
+      "stealth": 2
+    },
+    {
+      "name": "Navigator",
+      "type": "RV",
+      "manufacturer": "Alphernal",
+      "damage": 2,
+      "range": 650,
+      "firerate": 1,
+      "reload": 1,
+      "magazine": 6,
+      "other": "Lightning, telescopic sight, projectiles ricochet to enemies hit by capacitor effect, +dmg when single shot"
     },
     {
       "name": "Westfeld",
@@ -1318,9 +1345,9 @@
       "damage": 2.5,
       "range": 150,
       "firerate": 1,
-      "reload": 1,
+      "reload": 0,
       "magazine": 6,
-      "other": "Consumes 5/6 ammo, on last shot, fires 3 projectiles"
+      "other": "Hidden seventh chamber that fires 6 projectiles"
     },
     {
       "name": "Blackout",
@@ -1329,9 +1356,9 @@
       "damage": 0.5,
       "range": 250,
       "firerate": 12,
-      "reload": 2,
+      "reload": 1,
       "magazine": 32,
-      "other": "Radioactive, chance to knock out enemies"
+      "other": "Radioactive, chance to KO enemies"
     },
     {
       "name": "Maelstrom",
@@ -1339,12 +1366,23 @@
       "manufacturer": "Rawdawg",
       "damage": 0.5,
       "range": 100,
-      "firerate": 12,
-      "reload": 2,
+      "firerate": 8,
+      "reload": 1,
       "magazine": 50,
       "consumption": 1,
-      "other": "Fires in helix spread pattern",
+      "other": "Fires ricocheting projectiles",
       "projectiles": 3
+    },
+    {
+      "name": "Malaise",
+      "type": "MP",
+      "manufacturer": "Natpnot",
+      "damage": 0.5,
+      "range": 100,
+      "firerate": 20,
+      "reload": 1,
+      "magazine": 50,
+      "other": "Plasma projectiles"
     },
     {
       "name": "Overseer",
@@ -1353,29 +1391,18 @@
       "damage": 0.5,
       "range": 150,
       "firerate": 10,
-      "reload": 2,
+      "reload": 1,
       "magazine": 20,
-      "other": "On kill, high +dmg resist",
-      "melee": 1,
+      "other": "On kill, extreme +dmg resist",
+      "melee": 2,
       "stealth": 1
-    },
-    {
-      "name": "ZK-4",
-      "type": "MP",
-      "manufacturer": "Natpnot",
-      "damage": 0.5,
-      "range": 100,
-      "firerate": 20,
-      "reload": 2,
-      "magazine": 50,
-      "other": "+firerate for every consecutive turn of continuous firing"
     },
     {
       "name": "Brainfreeze",
       "type": "SMG",
       "manufacturer": "Alphernal",
       "damage": 0.5,
-      "range": 600,
+      "range": 750,
       "firerate": 15,
       "reload": 2,
       "magazine": 40,
@@ -1391,8 +1418,7 @@
       "firerate": 15,
       "reload": 2,
       "magazine": 100,
-      "other":
-        "Selective fire, +dmg vs. armor & force fields, creates blast shield",
+      "other": "Selective fire, advantaged to attacking, melee attacks stun, creates blast shield",
       "melee": 1
     },
     {
@@ -1400,9 +1426,9 @@
       "type": "SMG",
       "manufacturer": "Zoragon",
       "damage": 1,
-      "range": 250,
-      "firerate": 10,
-      "reload": 0,
+      "range": 150,
+      "firerate": 5,
+      "reload": 1,
       "magazine": 40,
       "consumption": 1,
       "other": "5-round burst",
@@ -1412,48 +1438,61 @@
       "name": "Rattlecore",
       "type": "SMG",
       "manufacturer": "Hyjakker",
-      "damage": 1.5,
-      "range": 400,
+      "damage": 1,
+      "range": 450,
       "firerate": 10,
-      "reload": 4,
+      "reload": 3,
       "magazine": 50,
-      "other": "Fires rockets",
-      "velocity": -1
+      "other": "Fires rockets"
     },
     {
       "name": "Sigma Golf",
       "type": "SMG",
       "manufacturer": "Marx Tech",
       "damage": 0.5,
-      "range": 100,
-      "firerate": 18,
+      "range": 150,
+      "firerate": 12,
       "reload": 2,
       "magazine": 40,
       "melee": 1,
+      "other": "Disadvantaged to attacking",
       "projectiles": 3
     },
     {
       "name": "Vivisector",
       "type": "SMG",
       "manufacturer": "Burgnof",
-      "damage": 1,
-      "range": 350,
-      "firerate": 15,
+      "damage": 1.5,
+      "range": 450,
+      "firerate": 10,
       "reload": 3,
       "magazine": 30,
+      "other": "Advantaged to attacking while moving",
       "critical": 1,
       "stealth": 1
     },
     {
-      "name": "Bravo Rho",
+      "name": "Alpha Romeo",
       "type": "AR",
       "manufacturer": "Marx Tech",
-      "damage": 1.5,
-      "range": 1500,
-      "firerate": 12,
+      "damage": 2,
+      "range": 2000,
+      "firerate": 8,
       "reload": 1,
       "magazine": 30,
       "melee": 1
+    },
+    {
+      "name": "Democracy",
+      "type": "AR",
+      "manufacturer": "Burgnof",
+      "damage": 1.5,
+      "range": 1500,
+      "firerate": 10,
+      "reload": 2,
+      "magazine": 30,
+      "other": "5-round burst only",
+      "stealth": 1
     },
     {
       "name": "Draconis",
@@ -1461,23 +1500,34 @@
       "manufacturer": "Crustanix",
       "damage": 1,
       "range": 1500,
-      "firerate": 12,
+      "firerate": 15,
+      "reload": 2,
+      "magazine": 60,
+      "other": "+KB when semiautomatic, advantaged to attacking when burst-fire, hybrid flamethrower/grenade launcher underbarrel, creates blast shield"
+    },
+    {
+      "name": "Enterprise",
+      "type": "AR",
+      "manufacturer": "Natpnot",
+      "damage": 1,
+      "range": 1000,
+      "firerate": 10,
       "reload": 3,
       "magazine": 60,
-      "other":
-        "+KB when semiautomatic, under-slung grenade launcher, creates blast shield"
+      "consumption": 1,
+      "other": "100-ft rng grappling launcher underbarrel",
+      "projectiles": 2
     },
     {
       "name": "Gravestone",
       "type": "AR",
       "manufacturer": "Thorpe",
-      "damage": 2.5,
-      "range": 2000,
-      "firerate": 3,
-      "reload": 3,
+      "damage": 2,
+      "range": 2500,
+      "firerate": 6,
+      "reload": 2,
       "magazine": 18,
-      "other":
-        "Semiautomatic & burst-fire only, projectiles disintegrate corpses into rubble, fires bullets",
+      "other": "Semiautomatic & burst-fire only, projectiles calcify & weigh down enemies, -fly & -jump, fires bullets",
       "critical": 1
     },
     {
@@ -1485,46 +1535,35 @@
       "type": "AR",
       "manufacturer": "Alphernal",
       "damage": 1,
-      "range": 2500,
+      "range": 3000,
       "firerate": 12,
-      "reload": 3,
+      "reload": 2,
       "magazine": 24,
-      "other": "+dmg when scoped"
+      "other": "Cryonic & fire, +dmg when scoped",
+      "capacitor": 1
     },
     {
       "name": "Partisan",
       "type": "AR",
       "manufacturer": "Zoragon",
       "damage": 2,
-      "range": 1500,
+      "range": 2000,
       "firerate": 4,
-      "reload": 2,
-      "magazine": 14,
-      "other": "Fire, semiautomatic only",
-      "critical": 1
-    },
-    {
-      "name": "Soracracy",
-      "type": "AR",
-      "manufacturer": "Burgnof",
-      "damage": 2,
-      "range": 1500,
-      "firerate": 15,
-      "reload": 3,
-      "magazine": 24,
-      "other": "5-round burst only",
-      "stealth": 1
+      "reload": 0,
+      "magazine": 30,
+      "other": "Semiautomatic only",
+      "critical": 2
     },
     {
       "name": "Brute Force",
       "type": "LMG",
       "manufacturer": "Rawdawg",
-      "damage": 1.5,
-      "range": 950,
+      "damage": 1,
+      "range": 750,
       "firerate": 5,
       "reload": 4,
       "magazine": 300,
-      "consumption": 5,
+      "consumption": 2,
       "other": "Fires grenades, cannot be accessorized",
       "projectiles": 3
     },
@@ -1532,50 +1571,48 @@
       "name": "Disaster",
       "type": "LMG",
       "manufacturer": "Hyjakker",
-      "damage": 2.5,
+      "damage": 2,
       "range": 2500,
       "firerate": 8,
       "reload": 4,
       "magazine": 100,
-      "other": "Acid, fires oscillating projectiles",
+      "other": "Acid",
       "capacitor": 2
-    },
-    {
-      "name": "IDM-1980",
-      "type": "LMG",
-      "manufacturer": "Natpnot",
-      "damage": 2,
-      "range": 1750,
-      "firerate": 12,
-      "reload": 3,
-      "magazine": 100,
-      "other": "+dmg vs. vehicles"
     },
     {
       "name": "Light Sabre",
       "type": "LMG",
       "manufacturer": "Burgnof",
-      "damage": 1.5,
+      "damage": 2,
       "range": 2000,
       "firerate": 8,
-      "reload": 2,
+      "reload": 1,
       "magazine": 80,
-      "other":
-        "Can transform into a turret, 3-second calibration, cannot be accessorized",
+      "other": "Can transform into an immobile turret, 1-turn deploy",
       "stealth": 1
+    },
+    {
+      "name": "Outbreak",
+      "type": "LMG",
+      "manufacturer": "Natpnot",
+      "damage": 1.5,
+      "range": 1500,
+      "firerate": 12,
+      "reload": 3,
+      "magazine": 100,
+      "other": "Extreme +dmg vs. vehicles"
     },
     {
       "name": "Bodyguard",
       "type": "PS",
       "manufacturer": "Zoragon",
       "damage": 0.5,
-      "range": 150,
+      "range": 250,
       "firerate": 1,
       "reload": 1,
       "magazine": 6,
-      "other":
-        "Muzzle flash creates temporary force field, +projectile at 100ft, +projectile at 50ft",
-      "projectiles": 9
+      "other": "Muzzle flash creates temporary blast shield, -2 projectiles every 50ft",
+      "projectiles": 16
     },
     {
       "name": "Hardstyle",
@@ -1584,36 +1621,23 @@
       "damage": 1,
       "range": 50,
       "firerate": 1,
-      "reload": 2,
+      "reload": 4,
       "magazine": 12,
-      "capacitor": 1,
       "consumption": 3,
+      "other": "Disadvantaged to attacking",
       "projectiles": 20
     },
     {
       "name": "Lawbringer",
       "type": "PS",
       "manufacturer": "Thorpe",
-      "damage": 0.5,
-      "range": 200,
-      "firerate": 1,
-      "reload": 2,
-      "magazine": 2,
-      "other": "On ally kill, +critical, fires bullets",
-      "projectiles": 12
-    },
-    {
-      "name": "Lockht",
-      "type": "PS",
-      "manufacturer": "Burgnof",
-      "damage": 4,
+      "damage": 1,
       "range": 250,
       "firerate": 1,
-      "reload": 2,
-      "magazine": 6,
-      "other": "Fires arcing grenades",
-      "capacitor": -1,
-      "stealth": 1
+      "reload": 1,
+      "magazine": 2,
+      "other": "Stacking effect: on ally kill, advantaged to attacking & +critical, fires bullets",
+      "projectiles": 9
     },
     {
       "name": "Polarshock",
@@ -1621,11 +1645,24 @@
       "manufacturer": "Crustanix",
       "damage": 0.5,
       "range": 150,
-      "firerate": 1,
+      "firerate": 2,
       "reload": 2,
       "magazine": 12,
       "other": "Cryonic & lightning, creates blast shield",
-      "projectiles": 8
+      "capacitor": 1,
+      "projectiles": 10
+    },
+    {
+      "name": "Predator",
+      "type": "PS",
+      "manufacturer": "Burgnof",
+      "damage": 5,
+      "range": 250,
+      "firerate": 1,
+      "reload": 2,
+      "magazine": 6,
+      "other": "Fires arcing grenades",
+      "stealth": 1
     },
     {
       "name": "Blacksteel",
@@ -1633,40 +1670,50 @@
       "manufacturer": "Rawdawg",
       "damage": 0.5,
       "range": 100,
-      "firerate": 2,
-      "reload": 3,
-      "magazine": 20,
+      "firerate": 3,
+      "reload": 2,
+      "magazine": 9,
       "consumption": 1,
-      "other":
-        "Extreme +explosive resist, when explosive dmged, +HP regeneration",
+      "other": "Extreme +resist AoE, when AoE dmged, +HP regeneration",
       "projectiles": 12
+    },
+    {
+      "name": "Chi Sierra",
+      "type": "CS",
+      "manufacturer": "Marx Tech",
+      "damage": 0.5,
+      "range": 150,
+      "firerate": 3,
+      "reload": 1,
+      "magazine": 20,
+      "melee": 1,
+      "projectiles": 10
     },
     {
       "name": "Fallout",
       "type": "CS",
       "manufacturer": "Burgnof",
       "damage": 0.5,
-      "range": 75,
-      "firerate": 1,
-      "reload": 3,
+      "range": 150,
+      "firerate": 2,
+      "reload": 2,
       "magazine": 6,
       "consumption": 1,
-      "other": "Radioactive",
-      "capacitor": 1,
-      "projectiles": 16,
+      "other": "Radioactive, creates lingering zone on hit that deals <3 DoT",
+      "projectiles": 12,
       "stealth": 1
     },
     {
-      "name": "Kappa Sierra",
+      "name": "Hysteria",
       "type": "CS",
-      "manufacturer": "Marx Tech",
+      "manufacturer": "Natpnot",
       "damage": 0.5,
-      "range": 200,
-      "firerate": 1,
-      "reload": 3,
-      "magazine": 9,
-      "melee": 1,
-      "projectiles": 13
+      "range": 100,
+      "firerate": 4,
+      "reload": 2,
+      "magazine": 6,
+      "other": "When no shield, fires 12 projectiles, +speed, -rel & -rng",
+      "projectiles": 8
     },
     {
       "name": "Invasion",
@@ -1674,144 +1721,128 @@
       "manufacturer": "Hyjakker",
       "damage": 1,
       "range": 100,
-      "firerate": 1,
-      "reload": 4,
-      "magazine": 6,
-      "kB": 3,
-      "projectiles": 7
-    },
-    {
-      "name": "ZZ-87",
-      "type": "CS",
-      "manufacturer": "Natpnot",
-      "damage": 0.5,
-      "range": 100,
-      "firerate": 3,
+      "firerate": 2,
       "reload": 3,
       "magazine": 6,
-      "other": "When no force field, +dmg, +firerate, +speed & -rng",
-      "projectiles": 8
+      "kB": 4,
+      "projectiles": 7
     },
     {
       "name": "Braveheart",
       "type": "BS",
       "manufacturer": "Thorpe",
-      "damage": 7,
-      "range": 6000,
-      "firerate": 1,
-      "reload": 3,
-      "magazine": 4,
-      "other": "8K range when scoped, fires bullets",
-      "critical": 2,
-      "velocity": 1
-    },
-    {
-      "name": "Cheapscope",
-      "type": "BS",
-      "manufacturer": "Zoragon",
-      "damage": 5,
-      "range": 2500,
+      "damage": 9,
+      "range": 8000,
       "firerate": 1,
       "reload": 2,
-      "magazine": 5,
-      "other":
-        "High +aim speed, under-slung grenade launcher, cannot be accessorized"
+      "magazine": 4,
+      "other": "Fires bullets",
+      "critical": 2
     },
     {
       "name": "Othdoul",
       "type": "BS",
       "manufacturer": "Alphernal",
-      "damage": 7,
+      "damage": 8,
       "range": 5000,
       "firerate": 1,
-      "reload": 3,
+      "reload": 2,
       "magazine": 5,
-      "other": "Acid, killed enemies bleed bacta, +dmg when single shot",
-      "capacitor": 1
+      "other": "Acid, killed enemies bleed bacta, +dmg when single shot"
+    },
+    {
+      "name": "Quickscope",
+      "type": "BS",
+      "manufacturer": "Zoragon",
+      "damage": 5,
+      "range": 2500,
+      "firerate": 1,
+      "reload": 1,
+      "magazine": 5,
+      "other": "Grenade launcher underbarrel, no penalties when moving, does not cost a turn to swap, advantaged to attacking when swapped to"
     },
     {
       "name": "Washington",
       "type": "BS",
       "manufacturer": "Burgnof",
-      "damage": 3,
+      "damage": 5,
       "range": 4500,
       "firerate": 1,
-      "reload": 3,
+      "reload": 2,
       "magazine": 5,
-      "other": "Fire, fires tracer rounds, scope audio-records traced enemies",
+      "other": "Alt-fire: fires tracer darts that tracks target's location, audio-records traced enemies, deactivate dart to ignite enemy",
       "stealth": 1
     },
     {
       "name": "Commando",
       "type": "SS",
       "manufacturer": "Burgnof",
-      "damage": 3,
-      "range": 2000,
+      "damage": 4,
+      "range": 2500,
       "firerate": 2,
-      "reload": 2,
+      "reload": 3,
       "magazine": 6,
-      "other": "On critical kill, +SR ammo regeneration",
+      "other": "On critical hit, regenerate all ammo in magazine",
       "capacitor": 2,
       "stealth": 1
     },
     {
-      "name": "Harpoon",
-      "type": "SS",
-      "manufacturer": "Alphernal",
-      "damage": 2.5,
-      "range": 4000,
-      "firerate": 2,
-      "reload": 3,
-      "magazine": 6,
-      "other": "No penalties when underwater, +dmg when single shot",
-      "velocity": 1
-    },
-    {
-      "name": "Psi Alfa",
-      "type": "SS",
-      "manufacturer": "Marx Tech",
-      "damage": 2.5,
-      "range": 2500,
-      "firerate": 2,
-      "reload": 3,
-      "magazine": 8,
-      "other": "+rng when scoped",
-      "melee": 1,
-      "stealth": 2
-    },
-    {
-      "name": "O66-M",
+      "name": "Pentagram",
       "type": "SS",
       "manufacturer": "Natpnot",
       "damage": 2,
       "range": 2000,
       "firerate": 5,
-      "reload": 2,
+      "reload": 1,
       "magazine": 15,
-      "other": "5-round burst when scoped"
+      "other": "Advantaged to attacking, alt-fire: 5-round burst"
+    },
+    {
+      "name": "Phantom",
+      "type": "SS",
+      "manufacturer": "Alphernal",
+      "damage": 3,
+      "range": 4000,
+      "firerate": 2,
+      "reload": 2,
+      "magazine": 8,
+      "other": "+dmg when single shot",
+      "stealth": 4
+    },
+    {
+      "name": "Tau Bravo",
+      "type": "SS",
+      "manufacturer": "Marx Tech",
+      "damage": 3,
+      "range": 3000,
+      "firerate": 2,
+      "reload": 2,
+      "magazine": 8,
+      "melee": 1
     },
     {
       "name": "Trident Ray",
       "type": "SS",
       "manufacturer": "Crustanix",
-      "damage": 4,
+      "damage": 2.5,
       "range": 2500,
-      "firerate": 2,
-      "reload": 3,
+      "firerate": 3,
+      "reload": 2,
       "magazine": 15,
       "consumption": 2,
-      "other": "1-turn lock-on, 5-round burst, creates blast shield"
+      "other": "1-turn lock-on & each barrel locks onto a different enemy, creates blast shield",
+      "projectiles": 3
     },
     {
       "name": "Waylayer",
       "type": "SS",
       "manufacturer": "Hyjakker",
-      "damage": 3,
+      "damage": 3.5,
       "range": 2500,
       "firerate": 2,
-      "reload": 4,
+      "reload": 3,
       "magazine": 12,
-      "other": "Radioactive, ejected magazines become landmines",
+      "other": "Lightning, on reload, empty magazine becomes tripmine",
       "capacitor": 2
     },
     {
@@ -1819,33 +1850,31 @@
       "type": "GL",
       "manufacturer": "Thorpe",
       "damage": 5,
-      "range": 1750,
+      "range": 1250,
       "firerate": 2,
-      "reload": 4,
+      "reload": 3,
       "magazine": 4,
-      "other":
-        "Fires sticky grenades that bore into center mass then explode, cannot be capacitated"
+      "other": "Fires sticky grenades that bore into center mass then explode, cannot be capacitated"
     },
     {
       "name": "Nightmare",
       "type": "GL",
       "manufacturer": "Hyjakker",
       "damage": 4,
-      "range": 1500,
+      "range": 1000,
       "firerate": 2,
-      "reload": 5,
+      "reload": 4,
       "magazine": 5,
-      "other":
-        "Creates clouds of pure darkness, inhalation of gas induces nightmarish hallucinations"
+      "other": "Creates clouds of pure darkness, inhalation of gas induces nightmarish hallucinations"
     },
     {
       "name": "NTO-859",
       "type": "GL",
       "manufacturer": "Natpnot",
       "damage": 2.5,
-      "range": 950,
+      "range": 450,
       "firerate": 4,
-      "reload": 4,
+      "reload": 3,
       "magazine": 5,
       "other": "Fires explosive sawblades",
       "projectiles": 2
@@ -1854,14 +1883,13 @@
       "name": "Rainstorm",
       "type": "GL",
       "manufacturer": "Burgnof",
-      "damage": 1500,
-      "range": 950,
+      "damage": 3.5,
+      "range": 1250,
       "firerate": 2,
-      "reload": 5,
+      "reload": 3,
       "magazine": 6,
       "consumption": 2,
-      "other": "Explodes into 2 grenades upon proximity or maximum range",
-      "capacitor": 1,
+      "other": "2-round burst, explodes into 2 grenades upon proximity or maximum distance",
       "stealth": 1
     },
     {
@@ -1869,12 +1897,11 @@
       "type": "GL",
       "manufacturer": "Crustanix",
       "damage": 2.5,
-      "range": 1500,
-      "firerate": 2,
-      "reload": 4,
+      "range": 1000,
+      "firerate": 3,
+      "reload": 3,
       "magazine": 8,
-      "other":
-        "Firing modes; Wide Area Web: no dmg, creates sticky webs, Frag: +KB, Venom: radioactive & -resist, creates blast shield"
+      "other": "Grenade modes; Web: no dmg, creates sticky immobilizing webs, Frag: +KB, Venom: radioactive & -resist, creates blast shield"
     },
     {
       "name": "Exosaurus",
@@ -1942,12 +1969,13 @@
       "name": "Eternity",
       "type": "AP",
       "manufacturer": "Burgnof",
-      "damage": 2,
-      "range": 150,
+      "damage": 2.5,
+      "range": 200,
       "firerate": 3,
       "reload": 1,
       "magazine": 10,
       "other": "Illusionary disguise kit",
+      "critical": 1,
       "stealth": 2
     },
     {
@@ -1957,10 +1985,11 @@
       "damage": 4,
       "range": 250,
       "firerate": 1,
-      "reload": 2,
+      "reload": 1,
       "magazine": 5,
       "other":
-        "Iron sights, when dmged, +dmg equal to 1/2 dmg taken, fires bullets"
+        "When dmged, +dmg equal to 1/2 dmg dealt, fires bullets",
+      "critical": 1
     },
     {
       "name": "Doppelgünner",
@@ -1969,10 +1998,10 @@
       "damage": 0.5,
       "range": 100,
       "firerate": 18,
-      "reload": 2,
+      "reload": 1,
       "magazine": 20,
       "other":
-        "No penalties when dual-wielding, when dual-wielding, is a copy of other weapon & +firerate"
+        "No penalties when dual-wielding, when dual-wielding, copies offhand weapon with +rof & +mag"
     },
     {
       "name": "Iota Mauris",
@@ -1992,8 +2021,8 @@
       "manufacturer": "Crustanix",
       "damage": 1,
       "range": 1500,
-      "firerate": 12,
-      "reload": 3,
+      "firerate": 15,
+      "reload": 2,
       "magazine": 60,
       "other":
         "Under-slung Widow, +KB when semiautomatic, creates blast shield",
@@ -2003,12 +2032,11 @@
       "name": "Pebonhynr",
       "type": "LMG",
       "manufacturer": "Natpnot",
-      "damage": 2,
-      "range": 1750,
+      "damage": 2.5,
+      "range": 2000,
       "firerate": 15,
-      "reload": 4,
-      "magazine": 300,
-      "other": "Never capacitated"
+      "reload": 3,
+      "magazine": 300
     },
     {
       "name": "X-Terminator",
@@ -2018,9 +2046,9 @@
       "range": 200,
       "firerate": 1,
       "reload": 2,
-      "magazine": 9,
-      "other": "No penalties when dual-wielding, enables SG dual-wielding",
-      "projectiles": 15
+      "magazine": 12,
+      "other": "No penalties when dual-wielding, allows dual-wielding with shotguns",
+      "projectiles": 18
     },
     {
       "name": "Vandalizer",
@@ -2028,24 +2056,24 @@
       "manufacturer": "Hyjakker",
       "damage": 4,
       "range": 150,
-      "firerate": 1,
-      "reload": 3,
+      "firerate": 2,
+      "reload": 2,
       "magazine": 9,
-      "kB": 3,
-      "other": "Fires sonic blasts, scrambles technology, never capacitated",
+      "kB": 2,
+      "other": "Fires sonic EMP blasts, never capacitated",
       "resist": 1
     },
     {
-      "name": "Vigilante",
+      "name": "Aperture",
       "type": "BS",
       "manufacturer": "Zoragon",
-      "damage": 6,
-      "range": 4500,
+      "damage": 8,
+      "range": 4000,
       "firerate": 1,
-      "reload": 2,
+      "reload": 1,
       "magazine": 5,
       "other":
-        "Fires teleportation beacons, beacons explode into flashbangs after 2 seconds, +SR ammo regeneration"
+        "Alt fire: fires teleportation beacons, beacons explode into flashbangs after 2 turns, +SR ammo regeneration"
     },
     {
       "name": "Bloodmoon",
@@ -2054,7 +2082,7 @@
       "damage": 5,
       "range": 5000,
       "firerate": 2,
-      "reload": 3,
+      "reload": 2,
       "magazine": 15,
       "critical": 1,
       "other":
@@ -2064,27 +2092,28 @@
       "name": "Deterrent",
       "type": "GL",
       "manufacturer": "Burgnof",
-      "damage": 3.5,
-      "range": 2000,
+      "damage": 3,
+      "range": 1500,
       "firerate": 2,
-      "reload": 3,
+      "reload": 4,
       "magazine": 6,
       "consumption": 2,
-      "other": "Fires proximity mines, mines explode into smaller mines",
+      "other": "Fires proximity mines, mines explode into smaller grenades",
       "projectiles": 4,
       "stealth": 1
     },
     {
       "name": "Quantum",
       "type": "RL",
-      "manufacturer": "Crustanix",
-      "damage": 2.5,
+      "manufacturer": "Marx Tech",
+      "damage": 3,
       "range": 2000,
       "firerate": 1,
-      "reload": 4,
-      "magazine": 4,
+      "reload": 3,
+      "magazine": 2,
       "AoE": 1,
       "consumption": 2,
+      "melee": 1,
       "other": "Unobserved rockets deal infinite damage",
       "velocity": 1
     }
